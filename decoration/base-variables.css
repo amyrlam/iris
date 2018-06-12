@@ -1,0 +1,9 @@
+:root {
+  /* worthwhile ? */
+  --decor-radius-1: 2px;
+  --decor-radius-2: 4px;
+
+  --decor-border-1: 1px solid;
+  --decor-border-2: 2px solid;
+  --decor-border-3: 3px solid;
+}

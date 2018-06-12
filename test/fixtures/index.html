@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title></title>
+        <link type="text/css" rel="stylesheet" href="../../color/base-variables.css" />
+    </head>
+    <style>
+        ul, li {
+          display: block;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        }
+
+        li li {
+          display: block;
+          width: 180px;
+          height: 25px;
+        }
+        div > ul {
+          overflow: hidden;
+        }
+        div > ul > li {
+          float: left;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <ul>
+                ${
+                  [
+                    'gray', 'blue', 'purple', 'magenta',
+                    'teal', 'cyan',
+                    'green', 'red', 'orange', 'yellow'
+                  ].map(
+                  (item, i, arr) => {
+                      return `
+                        <li>
+                          <ul>
+                            ${
+                            ['050'].concat([...Array.from(Array(11).keys()).map(item => `${item}00`).slice(1, -1)]).map(
+                                (index, i, arr) => {
+                                  return `
+                                  <li style="background-color: var(--${item}-${index})">${item}-${index}</li>
+                                  `;
+                                }
+                              ).join('')
+                            }
+                          </ul>
+                        </li>
+                      `;
+                    }
+                  ).join('')
+                }
+            </ul>
+        </div>
+    </body>
+</html>

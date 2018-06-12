@@ -1,0 +1,20 @@
+:root {
+  /* families */
+  --typo-family-sans: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --typo-family-mono: monospace;
+
+  /* sizes */
+  --typo-size-0: 16px;
+  --typo-size-4: 1.5rem; /* $size-large? 24 */
+  --typo-size-5: 1.125rem; /* $size-medium? // 18 */
+  --typo-size-6: 0.875rem; /* $size-normal? // 14 */
+  --typo-size-7: 0.8125rem; /* $size-small? // 13 */
+  --typo-size-8: 0.75rem; /* $size-small? // 12 */
+
+  /* weights */
+  --typo-weight-light: 300;
+  --typo-weight-normal: 400;
+  --typo-weight-medium: 500;
+  --typo-weight-semibold: 600;
+  --typo-weight-bold: 700;
+}

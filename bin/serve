@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+const Koa = require('koa');
+const serveDirectory = require('koa-static');
+const path = require('path');
+const promisify = require('util').promisify;
+const read = promisify(require('fs').readFile);
+const TemplateLiteral = require('@gardenhq/tick-control')();
+const app = new Koa();
+const root = path.dirname(__dirname);
+
+app.use(
+  function(ctx, next) {
+    if(ctx.request.url === '/') {
+      return read(`${root}/test/fixtures/index.html`).then(
+        function(content) {
+          const template = new TemplateLiteral(content.toString());
+          ctx.body = template.render();
+          return ctx;
+        }
+      );
+    } else {
+      return next();
+    }
+  }
+);
+app.use(serveDirectory(root, {}));
+const port = process.argv.reduce(
+  function(prev, item, i, arr) {
+    var port;
+    switch(true) {
+      case item === '--port':
+      case item === '-p':
+        port = parseInt(arr[i + 1]);
+        if(!isNaN(port)) {
+          return port;
+        }
+    }
+    return prev;
+  },
+  !isNaN(process.env.HC_IRIS_PORT) && process.env.HC_IRIS_PORT || 3000
+);
+console.log(`Serving on port: ${port}`);
+app.listen(port);

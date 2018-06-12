@@ -1,0 +1,25 @@
+{
+  "name": "iris",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "devDependencies": {
+    "@gardenhq/tick-control": "^2.0.0",
+    "cssnano": "^3.10.0",
+    "custom-properties-sass": "^0.1.0",
+    "koa": "^2.5.1",
+    "koa-static": "^4.0.3",
+    "mocha": "^5.2.0",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-import": "^11.1.0"
+  },
+  "scripts": {
+    "test": "mocha ./test/index.js",
+    "build": "./bin/sassify",
+    "start": "./bin/serve"
+  },
+  "author": "",
+  "license": "ISC"
+}

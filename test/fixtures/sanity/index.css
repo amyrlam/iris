@@ -1,0 +1,6 @@
+@import "../../../index.css";
+html {
+  color: var(--black);
+  font-size: var(--typo-size-0);
+  border: var(--decor-border-1);
+}
