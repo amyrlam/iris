@@ -1,0 +1,27 @@
+:root {
+  --ui-color-primary: var(--ui-blue-500);
+  --ui-color-dangerous: var(--ui-red-500);
+  --ui-color-primary-disabled: var(--ui-blue-500);
+  --ui-color-transparent: transparent; /* useful or not? If I'm doing this what about $ui-color-current ?*/
+
+  --ui-color-neutral: var(--ui-gray-500);
+  --ui-color-action: var(--ui-blue-500);
+  /*--ui-color-active: var(--ui-blue-500); ?? form pre-focus*/
+  --ui-color-success: var(--ui-green-500);
+  --ui-color-failure: var(--ui-red-500);
+  --ui-color-danger: var(--ui-red-500);
+  --ui-color-warning: var(--ui-yellow-500);
+  --ui-color-alert: var(--ui-orange-500);
+
+  /* --ui-color-keyline-000: var(--ui-white); */
+  /* --ui-color-keyline-050: var(); */
+  /* --ui-color-keyline-100: var(--ui-gray-100); */
+  /* --ui-color-keyline-200: var(--ui-gray-200); */
+  /* --ui-color-keyline-300: var(--ui-gray-300); */
+  /* --ui-color-keyline-400: var(--ui-gray-400); */
+  /* --ui-color-keyline-500: var(--ui-gray-500); */
+  /* --ui-color-keyline-600: var(--ui-gray-600); */
+  /* --ui-color-keyline-700: var(); */
+  /* --ui-color-keyline-800: var(); */
+  /* --ui-color-keyline-900: var(--ui-black); */
+}

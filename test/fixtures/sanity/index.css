@@ -1,6 +1,6 @@
 @import "../../../index.css";
 html {
-  color: var(--black);
-  font-size: var(--typo-size-0);
-  border: var(--decor-border-1);
+  color: var(--ui-black);
+  font-size: var(--typo-size-000);
+  border: var(--decor-border-100);
 }

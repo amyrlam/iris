@@ -37,7 +37,7 @@ const port = process.argv.reduce(
     }
     return prev;
   },
-  !isNaN(process.env.HC_IRIS_PORT) && process.env.HC_IRIS_PORT || 3000
+  !isNaN(process.env.HC_IRIS_PORT) && process.env.HC_IRIS_PORT || 3030
 );
 console.log(`Serving on port: ${port}`);
 app.listen(port);

@@ -1,12 +1,11 @@
 {
-  "name": "iris",
+  "name": "@hashicorp/iris",
   "version": "1.0.0",
   "description": "",
   "main": "index.css",
   "devDependencies": {
     "@gardenhq/tick-control": "^2.0.0",
     "cssnano": "^3.10.0",
-    "custom-properties-sass": "^0.1.0",
     "koa": "^2.5.1",
     "koa-static": "^4.0.3",
     "mocha": "^5.2.0",
@@ -21,5 +20,5 @@
     "start": "./bin/serve"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MPL-2.0"
 }

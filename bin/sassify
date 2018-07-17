@@ -3,32 +3,63 @@ const path = require('path');
 const promisify = require('util').promisify;
 const read = promisify(require('fs').readFile);
 const write = promisify(require('fs').writeFile);
+const postcss = require('postcss');
 const root = path.dirname(__dirname);
 
-
-const postcss = require('postcss');
-// temporarily use this
-const variablify = require('custom-properties-sass');
-const compiler = postcss().use(variablify());
+const variablify = function() {
+  return function (root) {
+    root.walkRules(function (rule) {
+      if (rule.selector === ':root') {
+        rule.walkDecls(function (declaration) {
+          if (declaration.prop.match(/^\-\-/)) {
+            root.append(
+              `${declaration.prop.replace(/^\-\-/, '$')}: ${declaration.value.replace(/^var\(--(.*)\)/, '$$$1')}`
+            );
+          }
+        });
+        rule.remove();
+      }
+      rule.walkDecls(function (declaration) {
+        declaration.value.replace(/^var\(--(.*)\)/, '$$$1');
+      });
+    });
+    root.walkDecls(function (declaration) {
+      if (declaration.raws.before.trim().length === 0) {
+        declaration.raws.before = '\n';
+      }
+      declaration.parent.raws.semicolon = true;
+    });
+  }
+  return root;
+};
+const compiler = postcss().use(variablify())
 const compile = function(src) {
-  return Promise.resolve(compiler.process(src).css.split(';').join(";\n"));
+  return compiler.process(src).then(
+    function(result) {
+      return result.css;//.split(';').join(";\n")
+    }
+  );
 };
 // TODO: Log in the right order
 console.log(`Writing CSS custom properties to SASS variables:`);
 [
   `${root}/color/base-variables`,
+  `${root}/color/system-variables`,
   `${root}/decoration/base-variables`,
-  `${root}/typography/base-variables`
+  `${root}/typography/base-variables`,
+  `${root}/reset/base-variables`,
+  `${root}/reset/minireset`,
+  `${root}/reset/system`
 ].forEach(
   function(src) {
     return read(`${src}.css`).then(
       function(css) {
-        return compile(css);
+        return compile(css.toString());
       }
     ).then(
       function(sass) {
-        console.log(`- ${src}.css > ${src}.sass`);
-        return write(`${src}.sass`, sass);
+        console.log(`- ${src}.css > ${src}.scss`);
+        return write(`${src}.scss`, sass);
       }
     );
   }
@@ -38,17 +69,19 @@ console.log(`Writing CSS @imports to SASS @imports:`);
   `${root}/color/index`,
   `${root}/decoration/index`,
   `${root}/typography/index`,
+  `${root}/reset/index`,
+  `${root}/reset/index`,
   `${root}/index`
 ].forEach(
   function(src) {
     return read(`${src}.css`).then(
       function(css) {
-        return css.toString().replace('.css', '');
+        return css.toString().replace(/\.css/g, '');
       }
     ).then(
       function(sass) {
-        console.log(`- ${src}.css > ${src}.sass`);
-        return write(`${src}.sass`, sass);
+        console.log(`- ${src}.css > ${src}.scss`);
+        return write(`${src}.scss`, sass);
       }
     );
   }

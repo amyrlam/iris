@@ -1,0 +1,74 @@
+/* Currently more or less pulled from bulma, subject to change (with breaking bump)*/
+/* TODO: Consider %bulma-reset-*, %reset-* etc for easy cold turkey?*/
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %reset-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %reset-typo;
+}
+ul {
+  @extend %reset-list;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block
+}
+img,
+embed,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+

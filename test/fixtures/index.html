@@ -1,20 +1,23 @@
 <html>
     <head>
         <title></title>
-        <link type="text/css" rel="stylesheet" href="../../color/base-variables.css" />
+        <link type="text/css" rel="stylesheet" href="../../color/index.css" />
     </head>
     <style>
         ul, li {
           display: block;
-          padding: 0;
           margin: 0;
+          padding: 0;
           list-style-type: none;
         }
 
         li li {
           display: block;
           width: 180px;
-          height: 25px;
+          height: 20px;
+          padding: 16px;
+          font-family: sans-serif;
+          font-size: .9rem;
         }
         div > ul {
           overflow: hidden;
@@ -28,9 +31,10 @@
             <ul>
                 ${
                   [
-                    'gray', 'blue', 'purple', 'magenta',
-                    'teal', 'cyan',
-                    'green', 'red', 'orange', 'yellow'
+                    'brand-gray', 'brand-blue', 'brand-purple', 'brand-magenta',
+                    'brand-teal', 'brand-cyan',
+                    'ui-gray',
+                    'ui-green', 'ui-red', 'ui-orange', 'ui-yellow', 'ui-blue'
                   ].map(
                   (item, i, arr) => {
                       return `
@@ -40,13 +44,28 @@
                             ['050'].concat([...Array.from(Array(11).keys()).map(item => `${item}00`).slice(1, -1)]).map(
                                 (index, i, arr) => {
                                   return `
-                                  <li style="background-color: var(--${item}-${index})">${item}-${index}</li>
+                                  <li style="background-color: var(--${item}-${index});color: var(${ i > 5 ? '--ui-white' : '--ui-black' });">${item}-${index}</li>
                                   `;
                                 }
                               ).join('')
                             }
                           </ul>
                         </li>
+                        ${ item === 'ui-gray' ? `
+                        <li>
+                          <ul>
+                            ${
+                              [...Array.from(Array(11).keys()).slice(1)].reverse().map(
+                                (index, i, arr) => {
+                                  return `
+                                  <li style="background-color: var(--ui-gray-${index})">ui-gray-${index} (mktg)</li>
+                                  `;
+                                }
+                              ).join('')
+                            }
+                          </ul>
+                        </li>
+                        ` : ``}
                       `;
                     }
                   ).join('')
