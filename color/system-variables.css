@@ -6,6 +6,7 @@
 
   --ui-color-neutral: var(--ui-gray-500);
   --ui-color-action: var(--ui-blue-500);
+  --ui-color-info: var(--ui-blue-500);
   /*--ui-color-active: var(--ui-blue-500); ?? form pre-focus*/
   --ui-color-success: var(--ui-green-500);
   --ui-color-failure: var(--ui-red-500);
