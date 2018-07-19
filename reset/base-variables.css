@@ -12,4 +12,17 @@
 %reset-list {
   list-style: none;
 }
-
+%reset-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+%reset-table th,
+%reset-table td {
+  padding: 0;
+  text-align: left;
+}
+/* move to layout? */
+%responsive-media {
+  height: auto;
+  max-width: 100%;
+}

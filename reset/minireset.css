@@ -36,12 +36,26 @@ h6 {
 ul {
   @extend %reset-list;
 }
+table {
+  @extend %reset-table;
+}
+img,
+embed,
+object,
+audio,
+video {
+  @extend %responsive-media;
+}
 button,
 input,
 select,
 textarea {
   margin: 0;
 }
+iframe {
+  border: 0;
+}
+/* pretty sure we don't need this nowadays? */
 article,
 aside,
 figure,
@@ -50,25 +64,5 @@ header,
 hgroup,
 section {
   display: block
-}
-img,
-embed,
-object,
-audio,
-video {
-  height: auto;
-  max-width: 100%;
-}
-iframe {
-  border: 0;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td,
-th {
-  padding: 0;
-  text-align: left;
 }
 

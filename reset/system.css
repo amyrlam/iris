@@ -41,8 +41,6 @@ strong {
 html {
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-}
-html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
