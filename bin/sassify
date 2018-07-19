@@ -20,7 +20,8 @@ const variablify = function() {
         rule.remove();
       }
       rule.walkDecls(function (declaration) {
-        declaration.value.replace(/^var\(--(.*)\)/, '$$$1');
+        declaration.value = declaration.value.replace(/^var\(--(.*)\)/, '$$$1');
+        return declaration;
       });
     });
     root.walkDecls(function (declaration) {
@@ -36,7 +37,7 @@ const compiler = postcss().use(variablify())
 const compile = function(src) {
   return compiler.process(src).then(
     function(result) {
-      return result.css;//.split(';').join(";\n")
+      return result.css;
     }
   );
 };
