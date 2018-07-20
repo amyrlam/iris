@@ -34,7 +34,7 @@ const compile = function(src) {
 console.log(`Writing CSS custom properties to SASS variables:`);
 Promise.all([
   `color/base-variables`,
-  `color/system-variables`,
+  `color/semantic-variables`,
   `decoration/base-variables`,
   `typography/base-variables`,
   `reset/base-variables`,
