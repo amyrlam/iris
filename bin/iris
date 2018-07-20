@@ -35,7 +35,9 @@ console.log(`Writing CSS custom properties to SASS variables:`);
 Promise.all([
   `color/base-variables`,
   `color/semantic-variables`,
+  `color/box-placeholders`,
   `decoration/base-variables`,
+  `decoration/base-placeholders`,
   `typography/base-variables`,
   `reset/base-variables`,
   `reset/minireset`,
