@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+const path = require('path');
+const postcss = require('postcss');
+const varibilify = require('../lib/varibilify.js');
+const options = process.argv.reduce(
+  function(prev, item, i, arr) {
+    switch(true) {
+      case item === '--input-path':
+      case item === '-i':
+        prev.inputPath = arr[i + 1];
+        break;
+      case item === '--output-path':
+      case item === '-o':
+        prev.outputPath = arr[i + 1];
+        break;
+    }
+    return prev;
+  },
+  {
+    inputPath: process.env.HC_IRIS_INPUT_PATH || path.dirname(__dirname),
+    outputPath: process.env.HC_IRIS_OUTPUT_PATH || path.dirname(__dirname)
+  }
+);
+const filter = require('../lib/filter.js')(path.resolve(options.inputPath), path.resolve(options.outputPath));
+
+const compiler = postcss().use(varibilify())
+const compile = function(src) {
+  return compiler.process(src).then(
+    function(result) {
+      return result.css;
+    }
+  );
+};
+console.log(`Writing CSS custom properties to SASS variables:`);
+Promise.all([
+  `color/base-variables`,
+  `color/system-variables`,
+  `decoration/base-variables`,
+  `typography/base-variables`,
+  `reset/base-variables`,
+  `reset/minireset`,
+  `reset/system`
+].map(
+  filter(
+    function(input) {
+      return compile(input);
+    }
+  )
+)).then(
+  function() {
+    console.log(`Writing CSS @imports to SASS @imports:`);
+    return [
+      `color/index`,
+      `decoration/index`,
+      `typography/index`,
+      `reset/index`,
+      `reset/index`,
+      `index`
+    ].map(
+      filter(
+        function(input) {
+          return input.replace(/\.css/g, '');
+        }
+      )
+    );
+
+  }
+);

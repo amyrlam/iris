@@ -1,4 +1,5 @@
 :root {
+  /* ui needs to be removed here */
   --ui-color-primary: var(--ui-blue-500);
   --ui-color-dangerous: var(--ui-red-500);
   --ui-color-primary-disabled: var(--ui-blue-500);
