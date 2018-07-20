@@ -1,7 +1,7 @@
 {
   "name": "@hashicorp/iris",
   "version": "1.0.0",
-  "description": "",
+  "description": "Iris is a collection of 'low-level' CSS delivered in a lightweight format.",
   "main": "index.css",
   "devDependencies": {
     "@gardenhq/tick-control": "^2.0.0",
@@ -16,8 +16,11 @@
   },
   "scripts": {
     "test": "mocha ./test/index.js",
-    "build": "./bin/sassify",
+    "build": "./bin/iris",
     "start": "./bin/serve"
+  },
+  "bin": {
+    "iris": "./bin/iris"
   },
   "author": "",
   "license": "MPL-2.0",

@@ -2,7 +2,125 @@
 
 "...like a rainbow"
 
-## Description
+Iris is a collection of 'low-level' CSS delivered in a lightweight format.
+
+- [Usage](#usage)
+- [Collections/Reference](#collections)
+- [Rationale](#rationale)
+
+## Usage
+
+```bash
+npm install --save[-dev] @hashicorp/iris # (right now this isn't published yet)
+# or
+yarn add -D @hashicorp/iris # (right now this isn't published yet)
+```
+
+
+```sass
+// sass
+@import '@hashicorp/iris/index';
+@import '@hashicorp/iris/reset/index';
+```
+```css
+/* css */
+@import '@hashicorp/iris/index.css';
+@import '@hashicorp/iris/reset/index.css';
+```
+
+Recommended usage would be install as a dependency and import the files from iris itself, but you can also 'burn' iris into your project by using:
+
+```bash
+iris -output-path ./folder/to/where/you/want/iris/
+```
+
+This will add the SASS (but not the CSS _currently_) for iris into your project where you specify, so you can continue on without CSS or the extra dependency, just be sure to commit the generated files into source control.
+
+If you then edit the 'burnt' files, make sure you remove the:
+
+```
+/* iris: generated ...
+```
+
+...comment at the beginning of the file to prevent it from being overwritten if you rerun `iris`
+
+## Collections
+
+- [Color](#color)
+- [Typography](#typography)
+- [Decoration](#decoration)
+- [Reset](#reset)
+
+Some collections use the format:
+
+```
+--something-{color}-{num}
+```
+
+To illustrate variations. `{num}` is always a 3 digit number, generally like `000`, `050`, `100` up to `900`. Color could be `blue`, `green` etc and is generally dependent on what is defined in the collection.
+
+### Color
+
+If you are unable to import the iris entirely, you can import just the color collection with:
+
+```
+@import '@hashicorp/iris/color/index{.css,.scss}';
+```
+
+The Color Collection consists of 2 groups of variables and a set of semantic names for color related functions which map back to certain color variables to easily use common values.
+
+- `--ui-{color}-{num}` (e.g. `--ui-blue-500`)
+- `--brand-{color}-{num}` (e.g. `--brand-blue-500`)
+- `--ui-color-primary` (e.g. this might map to `--ui-blue-500`)
+
+See `iris/color/` for reference (please note `iris/color/index.css` is the only file guaranteed to stay with the same name between minor/patch versions)
+
+### Typography
+
+If you are unable to import the iris entirely, you can import just the decoration collection with:
+
+```
+@import '@hashicorp/iris/typography/index{.css,.scss}';
+```
+
+The Typography Collection consists of 1 group of variables prefixed with `typo` and a set of semantic names to easily use common vlaues
+
+- `--typo-{type}-{num}` (e.g. `--typo-size-500`)
+- `--typo-family-{variation}` (e.g. `--typo-family-sans`)
+- `--typo-weight-{variation}` (e.g. `--typo-weight-light`)
+
+
+See `iris/typography/` for reference (please note `iris/typography/index.css` is the only file guaranteed to stay with the same name between minor/patch versions)
+
+### Decoration
+
+If you are unable to import the iris entirely, you can import just the decoration collection with:
+
+```
+@import '@hashicorp/iris/decoration/index{.css,.scss}';
+```
+
+The Decoration Collection consists of 1 group of variables, prefixed with `decor`.
+
+- `--decor-{type}-{num}` (e.g. `--decor-radius-500`)
+
+See `iris/decoration/` for reference (please note `iris/decoration/index.css` is the only file guaranteed to stay with the same name between minor/patch versions)
+
+### Reset
+
+The Reset Collection is slightly different from the rest of the collections in that it _currently_ does not produce an empty file if you don't use any of the rules. Therefore you should include this as a second import if you need want to use it (also see [Usage](#usage)).
+
+```
+@import '@hashicorp/iris/reset/index{.css,.scss}';
+```
+
+If you are _migrating to_ iris, you might not want to import the Reset Collection immediately and continue to use whatever reset you are already using.
+
+The Reset collection currently consists of a reasonably common 'reset', but also contains work towards providing different resets to aid migration. It **does** set styles on base DOM elements like `html, body, p, h1, h2, h3, h4, h5` etc and **therefore will add weight to your final CSS file**.
+
+
+
+## Rationale
 
 HashiCorp has a diverse range of web based user interfaces for their products, plus an even more diverse portfolio of marketing, documentation and educational websites.
 
@@ -27,12 +145,12 @@ Overall see [Semantic Versioning](https://semver.org/#summary)
 * Changing an already existing custom property/variable name.
 * Changing an existing custom property/variable value that isn't part of a bug fix (see below).
 * Changing the path of an already existing file.
-* Removing an included file from `index.css`
+* Removing a 'Collection' from the `iris/index.css` file
 
 ### A feature/functionality addition (backwards compatible)
 
 * Adding a new custom property/variable
-* Adding a new file and including it in the `index.css` file (unless you use the new features in the file, it will not add to the compiled weight of your CSS output, see above)
+* Adding a 'Collection' and optionally including it in the `iris/index.css` file (unless you use the new features in the file, it will not add to the compiled weight of your CSS output, see above)
 
 ### Bugfixes (backwards compatible)
 
