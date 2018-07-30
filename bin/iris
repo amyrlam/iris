@@ -13,15 +13,20 @@ const options = process.argv.reduce(
       case item === '-o':
         prev.outputPath = arr[i + 1];
         break;
+      case item === '--no-include-header':
+      case item === '--no-header':
+        prev.includeHeader = false;
+        break;
     }
     return prev;
   },
   {
     inputPath: process.env.HC_IRIS_INPUT_PATH || path.dirname(__dirname),
-    outputPath: process.env.HC_IRIS_OUTPUT_PATH || path.dirname(__dirname)
+    outputPath: process.env.HC_IRIS_OUTPUT_PATH || path.dirname(__dirname),
+    includeHeader: true
   }
 );
-const filter = require('../lib/filter.js')(path.resolve(options.inputPath), path.resolve(options.outputPath));
+const filter = require('../lib/filter.js')(path.resolve(options.inputPath), path.resolve(options.outputPath), options.includeHeader);
 
 const compiler = postcss().use(varibilify())
 const compile = function(src) {
