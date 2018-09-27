@@ -1,5 +1,5 @@
 {
-  "name": "@hashicorp/iris",
+  "name": "@johncowen/iris",
   "version": "1.0.0",
   "description": "Iris is a collection of 'low-level' CSS delivered in a lightweight format.",
   "main": "index.css",

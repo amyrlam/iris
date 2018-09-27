@@ -11,21 +11,21 @@ Iris is a collection of 'low-level' CSS delivered in a lightweight format.
 ## Usage
 
 ```bash
-npm install --save[-dev] @hashicorp/iris # (right now this isn't published yet)
+npm install --save[-dev] @johncowen/iris # (right now this isn't published yet)
 # or
-yarn add -D @hashicorp/iris # (right now this isn't published yet)
+yarn add -D @johncowen/iris # (right now this isn't published yet)
 ```
 
 
 ```sass
 // sass
-@import '@hashicorp/iris/index';
-@import '@hashicorp/iris/reset/index';
+@import '@johncowen/iris/index';
+@import '@johncowen/iris/reset/index';
 ```
 ```css
 /* css */
-@import '@hashicorp/iris/index.css';
-@import '@hashicorp/iris/reset/index.css';
+@import '@johncowen/iris/index.css';
+@import '@johncowen/iris/reset/index.css';
 ```
 
 Recommended usage would be install as a dependency and import the files from iris itself, but you can also 'burn' iris into your project by using:
@@ -64,7 +64,7 @@ To illustrate variations. `{num}` is always a 3 digit number, generally like `00
 If you are unable to import the iris entirely, you can import just the color collection with:
 
 ```
-@import '@hashicorp/iris/color/index{.css,.scss}';
+@import '@johncowen/iris/color/index{.css,.scss}';
 ```
 
 The Color Collection consists of 2 groups of variables and a set of semantic names for color related functions which map back to certain color variables to easily use common values.
@@ -80,7 +80,7 @@ See `iris/color/` for reference (please note `iris/color/index.css` is the only 
 If you are unable to import the iris entirely, you can import just the decoration collection with:
 
 ```
-@import '@hashicorp/iris/typography/index{.css,.scss}';
+@import '@johncowen/iris/typography/index{.css,.scss}';
 ```
 
 The Typography Collection consists of 1 group of variables prefixed with `typo` and a set of semantic names to easily use common vlaues
@@ -97,7 +97,7 @@ See `iris/typography/` for reference (please note `iris/typography/index.css` is
 If you are unable to import the iris entirely, you can import just the decoration collection with:
 
 ```
-@import '@hashicorp/iris/decoration/index{.css,.scss}';
+@import '@johncowen/iris/decoration/index{.css,.scss}';
 ```
 
 The Decoration Collection consists of 1 group of variables, prefixed with `decor`.
@@ -111,7 +111,7 @@ See `iris/decoration/` for reference (please note `iris/decoration/index.css` is
 The Reset Collection is slightly different from the rest of the collections in that it _currently_ does not produce an empty file if you don't use any of the rules. Therefore you should include this as a second import if you need want to use it (also see [Usage](#usage)).
 
 ```
-@import '@hashicorp/iris/reset/index{.css,.scss}';
+@import '@johncowen/iris/reset/index{.css,.scss}';
 ```
 
 If you are _migrating to_ iris, you might not want to import the Reset Collection immediately and continue to use whatever reset you are already using.
@@ -122,11 +122,11 @@ The Reset collection currently consists of a reasonably common 'reset', but also
 
 ## Rationale
 
-HashiCorp has a diverse range of web based user interfaces for their products, plus an even more diverse portfolio of marketing, documentation and educational websites.
+Products can have a diverse range of web based user interfaces, other web based project such as marketing, documentation and educational websites can be even more diverse.
 
 Diversity is good. Using diversity together we can make a stronger whole ...like a rainbow.
 
-This package contains the some of the visible/design elements (or Design System) shared between the HashiCorp portfolio of products - i.e. things you see, with your eye... your [Iris](https://en.wikipedia.org/wiki/Iris_(mythology)) (the personification of a rainbow, also known for communication and messaging).
+This package contains the some of the visible/design elements (or Design System) that could be shared between a portfolio of products - i.e. things you see, with your eye... your [Iris](https://en.wikipedia.org/wiki/Iris_(mythology)) (the personification of a rainbow, also known for communication and messaging).
 
 Iris lets DOM nodes be whatever they want to be. When using a compiler, if you don't use any features from Iris, an empty file is produced. You can pick and choose what you want to use (via CSS custom properties or SASS variables) and avoid bloat in your CSS.
 
