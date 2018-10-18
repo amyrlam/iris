@@ -1,5 +1,4 @@
 :root {
-/* brand */
   --brand-gray-050: #f5f6f7;
   --brand-gray-100: #e1e4e7;
   --brand-gray-200: #cdd3d7;
@@ -20,7 +19,7 @@
   --brand-magenta-600: #9e2159;
   --brand-magenta-700: #7d1a47;
   --brand-magenta-800: #5a1434;
-  --brand-magenta-900: #360c1F;
+  --brand-magenta-900: #360c1f;
 
   --brand-blue-050: #f0f5ff;
   --brand-blue-100: #bfd4ff;
@@ -146,7 +145,6 @@
   --ui-yellow-900: #453601;
 
   --transparent: transparent;
-  --ui-white: #FFF;
+  --ui-white: #fff;
   --ui-black: #000;
 }
-

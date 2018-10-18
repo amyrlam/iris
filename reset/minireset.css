@@ -1,5 +1,3 @@
-/* Currently more or less pulled from bulma, subject to change (with breaking bump)*/
-/* TODO: Consider %bulma-reset-*, %reset-* etc for easy cold turkey?*/
 html,
 body,
 p,
@@ -55,7 +53,6 @@ textarea {
 iframe {
   border: 0;
 }
-/* pretty sure we don't need this nowadays? */
 article,
 aside,
 figure,
