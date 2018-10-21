@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+      @import '../../index.css';
+        ul, li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+
+        li {
+          display: block;
+          width: 140px;
+          height: 20px;
+          padding: 8px;
+          padding-top: 35px;
+          padding-bottom: 0;
+          margin: 4px;
+          font-family: sans-serif;
+          font-size: .7rem;
+          background-position: center 8px;
+          background-repeat: no-repeat;
+          background-size: 20px 20px;
+          border: 1px solid grey;
+          text-align: center;
+        }
+        div > ul {
+          overflow: hidden;
+        }
+        div > ul > li {
+          float: left;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <ul>
+                ${
+                  [
+                  "alert-circle-fill.svg",
+                  "alert-circle-outline.svg",
+                  "alert-triangle.svg",
+                  "arrow-down.svg",
+                  "arrow-left.svg",
+                  "arrow-right.svg",
+                  "arrow-up.svg",
+                  "calendar.svg",
+                  "cancel-circle-fill.svg",
+                  "cancel-circle-outline.svg",
+                  "cancel-plain.svg",
+                  "cancel-square-fill.svg",
+                  "cancel-square-outline.svg",
+                  "caret-down.svg",
+                  "caret-up.svg",
+                  "check-circle-fill.svg",
+                  "check-circle-outline.svg",
+                  "check-plain.svg",
+                  "chevron-down 2.svg",
+                  "chevron-down.svg",
+                  "chevron-left.svg",
+                  "chevron-right.svg",
+                  "chevron-up.svg",
+                  "clock-fill.svg",
+                  "clock-outline.svg",
+                  "code.svg",
+                  "consul-logo-color.svg",
+                  "copy-action.svg",
+                  "copy-success.svg",
+                  "disabled.svg",
+                  "download.svg",
+                  "edit.svg",
+                  "exit.svg",
+                  "expand-less.svg",
+                  "expand-more.svg",
+                  "eye.svg",
+                  "file-fill.svg",
+                  "file-outline.svg",
+                  "filter.svg",
+                  "flag.svg",
+                  "folder-fill.svg",
+                  "folder-outline.svg",
+                  "git-branch.svg",
+                  "git-commit.svg",
+                  "git-pull-request.svg",
+                  "hashicorp-logo.svg",
+                  "help-circle-fill.svg",
+                  "help-circle-outline.svg",
+                  "history.svg",
+                  "info-circle-fill.svg",
+                  "info-circle-outline.svg",
+                  "kubernetes-logo-color.svg",
+                  "link.svg",
+                  "loading.css",
+                  "loading.svg",
+                  "lock-closed.svg",
+                  "lock-disabled.svg",
+                  "lock-open.svg",
+                  "menu.svg",
+                  "minus-circle-fill.svg",
+                  "minus-circle-outline.svg",
+                  "minus-plain.svg",
+                  "minus-square-fill.svg",
+                  "minus.svg",
+                  "more-horizontal.svg",
+                  "more-vertical.svg",
+                  "nomad-logo-color.svg",
+                  "plus-circle-fill.svg",
+                  "plus-circle-outline.svg",
+                  "plus-plain.svg",
+                  "plus-square-fill.svg",
+                  "queue.svg",
+                  "refresh.svg",
+                  "run.css",
+                  "run.svg",
+                  "search.svg",
+                  "settings.svg",
+                  "star-fill.svg",
+                  "star-outline.svg",
+                  "star.svg",
+                  "sub-arrow-left.svg",
+                  "sub-arrow-right.svg",
+                  "swap-horizontal.svg",
+                  "swap-vertical.svg",
+                  "terraform-logo-color.svg",
+                  "tier-enterprise.svg",
+                  "tier-oss.svg",
+                  "trash.svg",
+                  "tune.svg",
+                  "unfold-less.svg",
+                  "unfold-more.svg",
+                  "upload.svg",
+                  "user-organization.svg",
+                  "user-plain.svg",
+                  "user-square-fill.svg",
+                  "user-square-outline.svg",
+                  "user-team.svg",
+                  "visibility-hide.svg",
+                  "visibility-show.svg"
+                  ].map(
+                    (item, i, arr) => {
+                      const name = item.replace('.', '-');
+                      return `
+                      <li style="background-image: var(--${name});">--${name}</li>
+                      `;
+                    }
+                  ).join('')
+                }
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const path = require('path');
 const postcss = require('postcss');
+const fs = require('fs');
 const varibilify = require('../lib/varibilify.js');
 const options = process.argv.reduce(
   function(prev, item, i, arr) {
@@ -36,6 +37,24 @@ const compile = function(src) {
     }
   );
 };
+const icons = fs.readdirSync(options.inputPath + '/svg').filter(
+  function(item) {
+    return item.indexOf('.css') === -1;
+  }
+).map(
+  function(item) {
+    const svg = fs.readFileSync(options.inputPath + '/svg/' + item).toString();
+    return `--${item.replace('.', '-').replace(' ', '-')}: url('data:image/svg+xml;charset=UTF-8,${svg.replace("#", "%23").replace('currentColor', '%23000')}');`;
+  }
+).reduce(
+  function(prev, item) {
+    return `${prev}
+${item}`;
+  }
+);
+fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
+  ${icons} 
+}`);
 console.log(`Writing CSS custom properties to SASS variables:`);
 Promise.all([
   `color/base-variables`,
