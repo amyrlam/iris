@@ -6,80 +6,152 @@
   /* same as decor-border-000 - but need to think about being able to import color on its own*/
   border-style: solid;
 }
-%frame-yellow-500 {
+
+/* possibly filter bar */
+/* modal close button */
+%frame-gray-050 {
   @extend %frame-border-000;
-  background-color: var(--ui-yellow-050);
-  border-color: var(--ui-color-warning);
+  background-color: var(--gray-050);
+  border-color: var(--gray-300);
+  color: var(--gray-400);
 }
-%frame-green-500 {
+/* modal main content */
+%frame-gray-100 {
   @extend %frame-border-000;
-  background-color: var(--ui-green-050);
-  border-color: var(--ui-green-500);
-  color: var(--ui-green-500);
+  background-color: var(--white);
+  border-color: var(--gray-300);
+  color: var(--gray-600); /*  wasn't set */
+}
+/* hover */
+%frame-gray-200 {
+  @extend %frame-border-000;
+  background-color: var(--transparent);
+  border-color: var(--gray-700);
+  color: var(--gray-800);
+}
+%frame-gray-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--gray-700);
+  color: var(--gray-800);
+}
+/* button */
+/**/
+%frame-gray-400 {
+  @extend %frame-border-000;
+  background-color: var(--gray-050);
+  border-color: var(--gray-300);
+  color: var(--gray-800);
 }
 %frame-gray-500 {
   @extend %frame-border-000;
-  background-color: var(--ui-gray-050);
-  border-color: var(--ui-gray-300);
-  color: var(--ui-gray-400);
+  background-color: var(--gray-050);
+  border-color: var(--gray-300);
+  color: var(--gray-400);
+}
+
+/* tabs */
+%frame-gray-600 {
+  @extend %frame-border-000;
+  background-color: var(--gray-100);
+  border-color: var(--gray-500);
+  color: var(--gray-500);
+}
+/* active */
+%frame-gray-700 {
+  @extend %frame-border-000;
+  background-color: var(--gray-200);
+  border-color: var(--gray-700);
+  color: var(--gray-800);
+}
+/* modal bars */
+%frame-gray-800 {
+  @extend %frame-border-000;
+  background-color: var(--gray-050);
+  border-color: var(--gray-300);
+  color: var(--gray-900);
+}
+%frame-gray-900 {
+  @extend %frame-border-000;
+  background-color: var(--gray-100);
+  border-color: var(--gray-300);
+  color: var(--gray-900);
+}
+
+%frame-yellow-500 {
+  @extend %frame-border-000;
+  background-color: var(--yellow-050);
+  border-color: var(--color-warning);
+}
+%frame-green-500 {
+  @extend %frame-border-000;
+  background-color: var(--green-050);
+  border-color: var(--green-500);
+  color: var(--green-500);
+}
+%frame-blue-500 {
+  @extend %frame-border-000;
+  background-color: var(--blue-050);
+  border-color: var(--blue-500);
+  color: var(--blue-800);
 }
 %frame-blue-600 {
   @extend %frame-border-000;
-  background-color: var(--ui-blue-200);
-  border-color: var(--ui-gray-400);
-  color: var(--ui-blue-050);
+  background-color: var(--blue-200);
+  border-color: var(--gray-400);
+  color: var(--blue-050);
 }
 %frame-blue-700 {
   @extend %frame-border-000;
-  background-color: var(--ui-blue-400);
-  border-color: var(--ui-blue-800);
-  color: var(--ui-white);
+  background-color: var(--blue-400);
+  border-color: var(--blue-800);
+  color: var(--white);
 }
 %frame-blue-800 {
   @extend %frame-border-000;
-  background-color: var(--ui-blue-500);
-  border-color: var(--ui-blue-800);
-  color: var(--ui-white);
+  background-color: var(--blue-500);
+  border-color: var(--blue-800);
+  color: var(--white);
 }
 %frame-blue-900 {
   @extend %frame-border-000;
-  background-color: var(--ui-blue-700);
-  border-color: var(--ui-blue-800);
-  color: var(--ui-white);
+  background-color: var(--blue-700);
+  border-color: var(--blue-800);
+  color: var(--white);
 }
 %frame-red-300 {
   @extend %frame-border-000;
-  background-color: var(--ui-white);
-  border-color: var(--ui-red-500);
-  color: var(--ui-red-500);
+  background-color: var(--white);
+  border-color: var(--red-500);
+  color: var(--red-500);
 }
 %frame-red-500 {
   @extend %frame-border-000;
-  background-color: var(--ui-red-050);
-  border-color: var(--ui-red-500);
-  color: var(--ui-red-800);
+  background-color: var(--red-050);
+  border-color: var(--red-500);
+  color: var(--red-800);
 }
 %frame-red-600 {
   @extend %frame-border-000;
-  background-color: var(--ui-red-200);
-  border-color: var(--ui-gray-400);
-  color: var(--ui-white);
+  background-color: var(--red-200);
+  border-color: var(--gray-400);
+  color: var(--white);
 }
 %frame-red-700 {
   @extend %frame-border-000;
-  background-color: var(--ui-red-500);
-  border-color: var(--ui-red-800);
-  color: var(--ui-white);
+  background-color: var(--red-500);
+  border-color: var(--red-800);
+  color: var(--white);
 }
 %frame-red-900 {
   @extend %frame-border-000;
-  background-color: var(--ui-red-700);
-  border-color: var(--ui-red-800);
-  color: var(--ui-white);
+  background-color: var(--red-700);
+  border-color: var(--red-800);
+  color: var(--white);
 }
 %frame-magenta-300 {
   @extend %frame-border-000;
-  background-color: var(--ui-white);
-  border-color: var(--brand-magenta-600);
-  color: var(--brand-magenta-600);
+  background-color: var(--white);
+  border-color: var(--magenta-600);
+  color: var(--magenta-600);
 }
