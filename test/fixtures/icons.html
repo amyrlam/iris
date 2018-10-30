@@ -24,10 +24,10 @@
           background-position: center 8px;
           background-repeat: no-repeat;
           background-size: 20px 20px;
-          background-color: red;
+/*          background-color: red;
           -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: 20px 20px;
-          -webkit-mask-position: center;
+          -webkit-mask-position: center;*/
           border: 1px solid grey;
           text-align: center;
         }
@@ -61,7 +61,7 @@
                   "check-circle-fill.svg",
                   "check-circle-outline.svg",
                   "check-plain.svg",
-                  "chevron-down 2.svg",
+                  "chevron-down-2.svg",
                   "chevron-down.svg",
                   "chevron-left.svg",
                   "chevron-right.svg",
@@ -96,7 +96,6 @@
                   "info-circle-outline.svg",
                   "kubernetes-logo-color.svg",
                   "link.svg",
-                  "loading.css",
                   "loading.svg",
                   "lock-closed.svg",
                   "lock-disabled.svg",
@@ -116,7 +115,6 @@
                   "plus-square-fill.svg",
                   "queue.svg",
                   "refresh.svg",
-                  "run.css",
                   "run.svg",
                   "search.svg",
                   "settings.svg",
@@ -146,7 +144,7 @@
                     (item, i, arr) => {
                       const name = item.replace('.', '-');
                       return `
-                      <li style="-webkit-mask-image: var(--${name});">--${name}</li>
+                      <li style="background-image: var(--${name});">--${name}</li>
                       `;
                     }
                   ).join('')
