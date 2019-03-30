@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Tooltip </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      html, body {
+        height: 100%;
+      }
+      body {
+        font-family: sans-serif;
+        font-size: .9em;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        @extend %with-tooltip;
+      }
+      li {
+        @extend %pill;
+        @extend %with-pseudo-tooltip;
+      }
+      li:nth-child(1) {
+        @extend %visually-hidden-text;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <h1>
+            h1 %with-tooltip
+            <span role="tooltip">this text is set with an element inside with a role="tooltip"</span>
+          </h1>
+          <ul>
+            <li data-tooltip="%with-pseudo-tooltip along with hidden text">
+              some text
+            </li>
+            <li data-tooltip="this is text is set with data-tooltip">
+              %with-pseudo-tooltip
+            </li>
+          </ul>
+        </div>
+    </body>
+</html>

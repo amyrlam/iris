@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> Pill </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-size: .9em;
+      }
+
+
+      button[type='submit'] {
+        @extend %primary-button;
+      }
+      button[type='reset'] {
+        @extend %secondary-button;
+      }
+      button.type-delete {
+        @extend %dangerous-button;
+      }
+      button.type-copy {
+        @extend %copy-button;
+      }
+      div:nth-child(2) button.type-copy {
+        @extend %with-tooltip;
+      }
+      [data-tooltip] {
+        @extend %with-pseudo-tooltip;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <div style="margin-bottom: 1em;">
+            <button type="submit">Save</button>
+            <button type="reset">Cancel</button>
+            <button class="type-delete">Delete</button>
+            <button class="type-copy">Copy</button>
+            <button class="type-copy"></button>
+          </div>
+          <div>
+            <button data-tooltip="Click here to save" type="submit">Save</button>
+            <button data-tooltip="Cancel what you just did" type="reset">Cancel</button>
+            <button data-tooltip="This is dangerous!!" class="type-delete">Delete</button>
+            <button class="type-copy">Copy<span role="tooltip">Copy this text</span></button>
+            <button class="type-copy"><span role="tooltip">Copy this text</span></button>
+          </div>
+        </div>
+    </body>
+</html>

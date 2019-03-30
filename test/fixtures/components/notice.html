@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> Pill </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-size: .9em;
+      }
+      ${
+        ['success', 'info', 'highlight', 'warning', 'error'].map(
+          (item, i) =>`
+      #wrapper > div:nth-child(${i + 1}) {
+        @extend %notice-${item};
+      }
+          `).join('')
+      }
+      [data-tooltip] {
+        @extend %with-pseudo-tooltip;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          ${
+            ['success', 'info', 'highlight', 'warning', 'error'].map(
+              item => `
+                  <div style="margin-bottom: 1em;">
+                    <p>
+                      %notice-${item} - some text here
+                    </p>
+                  </div>
+              `).join('')
+          }
+        </div>
+    </body>
+</html>
