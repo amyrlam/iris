@@ -31,7 +31,7 @@ yarn add -D @johncowen/iris # (right now this isn't published yet)
 Recommended usage would be install as a dependency and import the files from iris itself, but you can also 'burn' iris into your project by using:
 
 ```bash
-iris -output-path ./folder/to/where/you/want/iris/
+iris --output-path ./folder/to/where/you/want/iris/
 ```
 
 This will add the SASS (but not the CSS _currently_) for iris into your project where you specify, so you can continue on without CSS or the extra dependency, just be sure to commit the generated files into source control.
