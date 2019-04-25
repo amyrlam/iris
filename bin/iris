@@ -41,7 +41,9 @@ const icons = fs.readdirSync(options.inputPath + '/svg').filter(
   function(item) {
     return item.indexOf('.css') === -1;
   }
-).map(
+);
+console.log(`Writing SVG icons to inline CSS properties:`);
+const inlineIcons = icons.map(
   function(item) {
     const svg = fs.readFileSync(options.inputPath + '/svg/' + item).toString();
     return `--${item.replace('.', '-').replace(' ', '-')}: url('data:image/svg+xml;charset=UTF-8,${svg.trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');`;
@@ -53,8 +55,29 @@ ${item}`;
   }
 );
 fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
-  ${icons} 
+  ${inlineIcons}
 }`);
+
+console.log(`Writing inline icons to icon %with- placeholders:`);
+const placeholderIcons = icons.map(
+  function(item) {
+    const property = item.replace('.', '-').replace(' ', '-');
+    return `%with-${property.replace('svg', 'icon')} {
+      @extend %with-icon;
+      background-image: var(--${property});
+    }
+`
+  }
+).reduce(
+  function(prev, item) {
+    return `${prev}
+${item}`;
+  }
+);
+fs.writeFileSync(options.inputPath + '/icons/icon-placeholders.css', placeholderIcons);
+
+
+
 console.log(`Writing CSS custom properties to SASS variables:`);
 Promise.all([
   `color/base-variables`,
@@ -65,6 +88,8 @@ Promise.all([
   `typography/base-variables`,
   `typography/semantic-variables`,
   `icons/base-variables`,
+  `icons/base-placeholders`,
+  `icons/icon-placeholders`,
   `reset/base-variables`,
   `reset/minireset`,
   `reset/system`
