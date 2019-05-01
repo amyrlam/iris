@@ -51,15 +51,19 @@ If you then edit the 'burnt' files, make sure you remove the:
 - [Decoration](#decoration)
 - [Reset](#reset)
 
+All examples below use CSS properties for examples, but if you are using SASS these can be interchanged with SASS variables (i.e. --blue-500 = $blue-500)
+
 Some collections use the format:
 
 ```
---something-{color}-{num}
+--{something}-{num}
 ```
 
 To illustrate variations. `{num}` is always a 3 digit number, generally like `000`, `050`, `100` up to `900`. Color could be `blue`, `green` etc and is generally dependent on what is defined in the collection.
 
 ### Color
+
+#### Properties/Variables
 
 If you are unable to import the iris entirely, you can import just the color collection with:
 
@@ -69,13 +73,19 @@ If you are unable to import the iris entirely, you can import just the color col
 
 The Color Collection consists of 2 groups of variables and a set of semantic names for color related functions which map back to certain color variables to easily use common values.
 
-- `--ui-{color}-{num}` (e.g. `--ui-blue-500`)
-- `--brand-{color}-{num}` (e.g. `--brand-blue-500`)
-- `--ui-color-primary` (e.g. this might map to `--ui-blue-500`)
+- `--{color}-{num}` (e.g. `--blue-500`)
+- `--color-primary` (e.g. this might map to `--blue-500`)
 
 See `iris/color/` for reference (please note `iris/color/index.css` is the only file guaranteed to stay with the same name between minor/patch versions)
 
+#### Placeholders
+
+`%frame-{000-900}`
+
+
 ### Typography
+
+#### Properties/Variables
 
 If you are unable to import the iris entirely, you can import just the decoration collection with:
 
@@ -85,10 +95,16 @@ If you are unable to import the iris entirely, you can import just the decoratio
 
 The Typography Collection consists of 1 group of variables prefixed with `typo` and a set of semantic names to easily use common vlaues
 
-- `--typo-{type}-{num}` (e.g. `--typo-size-500`)
+- `--typo-size-{num}` (e.g. `--typo-size-500`)
 - `--typo-family-{variation}` (e.g. `--typo-family-sans`)
 - `--typo-weight-{variation}` (e.g. `--typo-weight-light`)
+- `--typo-lead-{num}` (e.g. `--typo-lead-200`)
 
+#### Placeholders
+
+- `%h{1-6}`
+- `%p{1-3}`
+- `%typo-body`
 
 See `iris/typography/` for reference (please note `iris/typography/index.css` is the only file guaranteed to stay with the same name between minor/patch versions)
 
