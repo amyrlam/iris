@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> Typography </title>
+    </head>
+    <style>
+      @import '../../index.css';
+      html, body {
+        height: 100%;
+      }
+      body {
+        @extend %typo-body;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        @extend %h1;
+      }
+      h2 {
+        @extend %h2;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        border-bottom: 1px solid var(--gray-200);
+      }
+      h4 + p {
+        @extend %p1;
+      }
+      h5 + p {
+        @extend %p2;
+      }
+      h6 + p {
+        @extend %p3;
+      }
+      h4 + p:before {
+        content: '%p1 - ';
+        display: inline;
+      }
+      h5 + p:before {
+        content: '%p2 - ';
+        display: inline;
+      }
+      h6 + p:before {
+        content: '%p3 - ';
+        display: inline;
+      }
+
+
+    </style>
+    <body>
+        <div id="wrapper">
+          <h1>
+            Header 1<br />Multiple lines
+          </h1>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+          <h2>
+            Header 2<br />Multiple lines
+          </h2>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+          <h3>
+            Header 3<br />Multiple lines
+          </h3>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+          <h4>
+            Header 4<br />Multiple lines
+          </h4>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+          <h5>
+            Header 5<br />Multiple lines
+          </h5>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+          <h6>
+            Header 6<br />Multiple lines
+          </h6>
+          <p><strong>Lorem <em>ipsum</em></strong> <em><strong>dolor</strong> sit amet</em>, <u>consectetur adipiscing elit</u>.<br />Vestibulum iaculis venenatis hendrerit. Morbi at eros metus. Nulla rutrum purus non erat hendrerit, non dictum nibh malesuada. Etiam semper nisi non consectetur semper.</p>
+        </div>
+    </body>
+</html>
