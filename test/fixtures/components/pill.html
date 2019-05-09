@@ -39,11 +39,11 @@
       label [type=checkbox] {
         @extend %visually-hidden;
       }
-      label  [type=checkbox]:focus + * {
+      label [type=checkbox]:focus + * {
         outline: 1px solid var(--blue-300);
         box-shadow: 0 0 10px var(--blue-600);
       }
-      label  [type=checkbox]:checked + * {
+      label [type=checkbox]:checked + * {
         @extend %frame-red-600;
       }
       li:nth-child(4),
@@ -52,9 +52,8 @@
       }
       li:nth-child(4) span::before,
       li:nth-child(5) span::before {
-        @extend %with-icon;
+        @extend %with-calendar-icon;
         @extend %as-pseudo;
-        background-image: var(--calendar-svg);
         width: 16px;
         height: 16px;
       }
