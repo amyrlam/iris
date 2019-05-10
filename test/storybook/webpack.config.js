@@ -1,7 +1,7 @@
 const path = require('path');
 
-module.exports = (storybookBaseConfig, configType, defaultConfig) => {
-  defaultConfig.module.rules[2].use = [
+module.exports = ({config}) => {
+  config.module.rules[2].use = [
     {
       loader: require.resolve('text-loader')
     },
@@ -9,5 +9,5 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
       loader: require.resolve('./loader.js')
     }
   ];
-  return defaultConfig;
+  return config;
 };

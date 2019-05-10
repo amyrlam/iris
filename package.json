@@ -4,15 +4,15 @@
   "description": "Iris is a collection of 'low-level' CSS delivered in a lightweight format.",
   "main": "index.css",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.4.4",
     "@gardenhq/tick-control": "^2.0.0",
-    "@storybook/cli": "^4.0.0",
-    "@storybook/html": "^4.0.0",
-    "babel-loader": "^8.0.4",
+    "@storybook/cli": "^5.0.11",
+    "@storybook/html": "^5.0.11",
+    "babel-loader": "^8.0.5",
     "dom-walk": "^0.1.1",
     "mocha": "^5.2.0",
     "parse5": "^5.1.0",
-    "svgo": "^1.1.1",
+    "svgo": "^1.2.2",
     "text-loader": "0.0.1"
   },
   "scripts": {
@@ -28,10 +28,10 @@
   "author": "",
   "license": "MPL-2.0",
   "dependencies": {
-    "postcss": "^6.0.23",
-    "postcss-custom-properties": "^7.0.0",
+    "postcss": "^7.0.16",
+    "postcss-custom-properties": "^8.0.10",
     "postcss-extend": "^1.0.5",
-    "postcss-import": "^11.1.0",
+    "postcss-import": "^12.0.1",
     "mkdirp": "^0.5.1"
   }
 }
