@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title> action-group </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      .action-group {
+        @extend %action-group;
+      }
+      li:first-child button::after {
+        @extend %with-calendar-icon;
+        @extend %as-pseudo;
+        margin-left: 5px;
+      }
+      li:last-child button::before {
+        @extend %with-loading-icon;
+        @extend %as-pseudo;
+        margin-right: 5px;
+      }
+      [data-tooltip] {
+        @extend %with-pseudo-tooltip;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <input type="radio" name="actions" id="actions_close" style="display: none;" />
+          ${
+            [0, 1, 2].map(
+              i => `
+                <div class="action-group">
+                  <input type="radio" ${i == 0 ? ` name="actions"` : ``} id="actions_0" ${i > 0 ? ` checked="checked"` : ``} value="0" />
+                  <label for="actions_0">
+                      <span>Open</span>
+                  </label>
+                  <label for="actions_close">
+                      <span>Close</span>
+                  </label>
+                  <ul ${i == 0 ? ` class="above"` : ``}${i == 2 ? ` class="above left"` : ``}>
+                    <li>
+                      <button type="button">Action One</button>
+                    </li>
+                    <li data-tooltip="Explanation">
+                      <button type="button">Action Two</button>
+                    </li>
+                    <li>
+                      <button type="button">Action Three</button>
+                    </li>
+                  </ul>
+                </div>
+              `
+            ).join('')
+          }
+        </div>
+    </body>
+</html>

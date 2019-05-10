@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> toggle-button </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      label {
+        @extend %toggle-button;
+      }
+      label:nth-child(2) {
+        @extend %toggle-button-intent;
+      }
+      label:nth-child(3) {
+        @extend %toggle-button-active;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <label>
+            Normal
+          </label>
+          <label>
+            Intent
+          </label>
+          <label>
+            Active
+          </label>
+        </div>
+    </body>
+</html>

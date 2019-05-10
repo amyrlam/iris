@@ -1,0 +1,42 @@
+%action-group label:first-of-type {
+  @extend %toggle-button;
+}
+%action-group input[type='radio']:checked + label:first-of-type {
+  /* frame-gray */
+  background-color: var(--gray-050);
+}
+%action-group label,
+%action-group-action {
+  cursor: pointer;
+}
+%action-group label:first-of-type::after {
+  @extend %with-more-horizontal-icon;
+  @extend %as-pseudo;
+  opacity: 0.7;
+}
+%action-group ul {
+  border: var(--decor-border-100);
+  border-radius: var(--radius-small);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.21);
+}
+%action-group ul::before {
+  border-top: var(--decor-border-100);
+  border-left: var(--decor-border-100);
+}
+%action-group ul,
+%action-group ul::before {
+  border-color: var(--color-action);
+}
+%action-group-action {
+  background-color: var(--white);
+}
+%action-group-action:hover {
+  @extend %frame-blue-800;
+}
+%action-group ul,
+%action-group ul::before {
+  background-color: var(--white);
+}
+%action-group li {
+  list-style-type: none;
+}

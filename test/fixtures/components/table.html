@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> tables </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      #wrapper {
+        width: 600px;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <table>
+            <caption>Caption</caption>
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Header</th>
+                <th>&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${
+                [0, 1, 2, 3].map(
+                  i => `
+                    <tr>
+                      <td>One</td>
+                      <td>Two</td>
+                      <td>Three</td>
+                    </tr>
+                  `
+                ).join('')
+              }
+            </tbody>
+          </table>
+        </div>
+    </body>
+</html>
