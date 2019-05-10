@@ -4,24 +4,13 @@
     </head>
     <style>
       @import '../../../index.css';
-      html, body {
-        height: 100%;
+      body {
+        @extend %typo-body;
       }
       ul {
         margin: 0;
         padding: 0;
       }
-
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      body {
-        @extend %typo-body;
-      }
-
       li,
       div > span,
       label > span {
