@@ -6,6 +6,8 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@gardenhq/tick-control": "^2.0.0",
+    "@storybook/addon-centered": "^5.0.11",
+    "@storybook/addon-notes": "^5.0.11",
     "@storybook/cli": "^5.0.11",
     "@storybook/html": "^5.0.11",
     "babel-loader": "^8.0.5",
