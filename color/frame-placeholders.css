@@ -155,3 +155,33 @@
   border-color: var(--magenta-600);
   color: var(--magenta-600);
 }
+%frame-steel-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--steel-600);
+  color: var(--steel-600);
+}
+%frame-cobalt-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--cobalt-600);
+  color: var(--cobalt-600);
+}
+%frame-indigo-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--indigo-600);
+  color: var(--indigo-600);
+}
+%frame-teal-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--teal-600);
+  color: var(--teal-600);
+}
+%frame-cyan-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--cyan-600);
+  color: var(--cyan-600);
+}

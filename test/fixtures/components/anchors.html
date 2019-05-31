@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> anchors </title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      a:nth-child(1) {
+        @extend %anchor;
+      }
+      a:nth-child(2) {
+        @extend %anchor-intent;
+      }
+      a:nth-child(3) {
+        @extend %anchor-active;
+      }
+    </style>
+    <body>
+        <div id="wrapper">
+          <a href="#">Anchor Normal</a>
+          <a href="#">Anchor Intent</a>
+          <a href="#">Anchor Active</a>
+        </div>
+    </body>
+</html>

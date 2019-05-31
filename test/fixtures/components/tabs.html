@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>tabs</title>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      nav {
+        @extend %tab-nav;
+        margin-bottom: 1em;
+      }
+      li:nth-child(2) a {
+        @extend %tab-button-intent;
+      }
+      li:nth-child(3) a {
+        @extend %tab-button-active;
+      }
+      ${
+        [
+          'magenta', 'steel', 'cobalt', 'indigo', 'teal', 'cyan'
+        ].map(
+          (item, i) => `
+            /* %tab-button-selected */
+            nav:nth-child(${i + 1}) li:nth-child(4) a {
+              @extend %frame-${item}-300;
+            }
+          `
+        )
+      }
+    </style>
+  </head>
+    <body>
+      <div>
+      ${
+        [
+          'magenta', 'steel', 'cobalt', 'indigo', 'teal', 'cyan'
+        ].map(
+          item => `
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Tab Normal</a>
+                </li>
+                <li>
+                  <a href="#">Tab Intent</a>
+                </li>
+                <li>
+                  <a href="#">Tab Active</a>
+                </li>
+                <li>
+                  <a href="#">Tab Selected</a>
+                </li>
+              </ul>
+            </nav>
+          `
+        ).join('')
+       }
+      </div>
+    </body>
+</html>

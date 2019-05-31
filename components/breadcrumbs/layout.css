@@ -1,0 +1,16 @@
+/*%breadcrumbs {
+  position: absolute;
+  top: -38px;
+}*/
+
+%breadcrumbs {
+  display: inline-flex;
+}
+%breadcrumbs li > * {
+  display: inline-flex;
+  align-items: center;
+}
+%breadcrumbs li > *::before,
+%breadcrumbs li {
+  margin-right: .5em;
+}

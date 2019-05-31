@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>breadcrumbs</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      #wrapper {
+        width: 600px;
+      }
+      ol {
+        @extend %breadcrumbs;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <body>
+      <ol>
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">Three</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+    </body>
+</html>

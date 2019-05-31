@@ -1,41 +1,55 @@
 <html>
     <head>
-        <title> tables </title>
+      <title>tables</title>
+      <style>
+        @import '../../../index.css';
+        body {
+          @extend %typo-body;
+        }
+        table {
+          @extend %table;
+          width: 300px;
+          float: left;
+        }
+        table:nth-child(1) {
+          margin-right: 1em;
+        }
+        table:nth-child(2) {
+          @extend %table-flex;
+        }
+      </style>
     </head>
-    <style>
-      @import '../../../index.css';
-      body {
-        @extend %typo-body;
-      }
-      #wrapper {
-        width: 600px;
-      }
-    </style>
     <body>
-        <div id="wrapper">
-          <table>
-            <caption>Caption</caption>
-            <thead>
-              <tr>
-                <th>Header</th>
-                <th>Header</th>
-                <th>&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${
-                [0, 1, 2, 3].map(
-                  i => `
-                    <tr>
-                      <td>One</td>
-                      <td>Two</td>
-                      <td>Three</td>
-                    </tr>
-                  `
-                ).join('')
-              }
-            </tbody>
-          </table>
-        </div>
+      <div>
+      ${
+        ['table', 'table-flex'].map(
+          item => `
+            <table>
+              <caption>${item}</caption>
+              <thead>
+                <tr>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${
+                  [0, 1, 2, 3].map(
+                    i => `
+                      <tr>
+                        <td>One ${i}</td>
+                        <td>Two ${i}</td>
+                        <td>Three ${i}</td>
+                      </tr>
+                    `
+                  ).join('')
+                }
+              </tbody>
+            </table>
+          `
+        ).join('')
+      }
+      </div>
     </body>
 </html>

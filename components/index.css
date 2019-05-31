@@ -3,6 +3,9 @@
 @import './buttons/index.css';
 @import './pill/index.css';
 @import './tooltip/index.css';
+@import './breadcrumbs/index.css';
 @import './table/index.css';
 @import './notice/index.css';
+@import './anchors/index.css';
+@import './tabs/index.css';
 

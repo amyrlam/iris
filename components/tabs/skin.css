@@ -1,0 +1,45 @@
+%tab-nav {
+  /* %frame-gray-something */
+  border-bottom: var(--decor-border-100);
+  border-top: var(--decor-border-200);
+}
+%tab-nav {
+  /* %frame-gray-something */
+  border-color: var(--gray-200);
+}
+%tab-nav ul {
+  list-style-type: none;
+}
+%tab-nav label {
+  cursor: pointer;
+}
+%tab-button {
+  white-space: nowrap;
+  text-decoration: none;
+}
+%tab-button {
+  border-bottom: var(--decor-border-200);
+}
+%tab-button {
+  border-color: var(--color-transparent);
+  color: var(--gray-500);
+}
+%tab-button-intent,
+%tab-button-active {
+  /* %frame-gray-something */
+  border-color: var(--color-transparent);
+  background-color: var(--gray-100);
+}
+%tab-nav li > * {
+  @extend %tab-button;
+}
+%tab-nav li:not(.selected) a:hover,
+%tab-nav li:not(.selected) a:focus {
+  @extend %tab-button-intent;
+}
+%tab-nav li:not(.selected) a:active {
+  @extend %tab-button-active;
+}
+%tab-nav .selected a {
+  @extend %tab-button-selected;
+}
