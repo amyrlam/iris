@@ -19,29 +19,52 @@
       button.type-copy {
         @extend %copy-button;
       }
-      div:nth-child(2) button.type-copy {
+      section:last-of-type button.type-copy {
         @extend %with-tooltip;
       }
       [data-tooltip] {
         @extend %with-pseudo-tooltip;
       }
+      section {
+        margin-bottom: 1em;
+      }
+      ${
+        [
+          'magenta', 'steel', 'cobalt', 'indigo', 'teal', 'cyan'
+        ].map(
+          (item, i) => `
+            section:nth-child(${i + 1}) button[type='submit'] {
+              @extend %frame-${item}-800;
+            }
+          `
+        )
+      }
+
     </style>
     <body>
-        <div id="wrapper">
-          <div style="margin-bottom: 1em;">
+      <div>
+      ${
+        [
+          'magenta', 'steel', 'cobalt', 'indigo', 'teal', 'cyan'
+        ].map(
+          item => `
+          <section>
             <button type="submit">Save</button>
             <button type="reset">Cancel</button>
             <button class="type-delete">Delete</button>
             <button class="type-copy">Copy</button>
             <button class="type-copy"></button>
-          </div>
-          <div>
+          </section>
+          `
+        ).join('')
+       }
+          <section>
             <button data-tooltip="Click here to save" type="submit">Save</button>
             <button data-tooltip="Cancel what you just did" type="reset">Cancel</button>
             <button data-tooltip="This is dangerous!!" class="type-delete">Delete</button>
             <button class="type-copy">Copy<span role="tooltip">Copy this text</span></button>
             <button class="type-copy"><span role="tooltip">Copy this text</span></button>
-          </div>
-        </div>
+          </section>
+      </div>
     </body>
 </html>
