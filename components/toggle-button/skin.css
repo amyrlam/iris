@@ -1,5 +1,5 @@
 %toggle-button {
-  border-radius: var(--radius-small);
+  border-radius: var(--decor-radius-100);
   cursor: pointer;
 }
 %toggle-button-intent {
