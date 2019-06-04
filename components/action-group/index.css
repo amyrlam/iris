@@ -1,2 +1,7 @@
+@import '../toggle-button/index.css';
 @import './skin.css';
 @import './layout.css';
+
+%action-group label:first-of-type {
+  @extend %toggle-button;
+}

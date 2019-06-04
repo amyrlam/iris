@@ -1,4 +1,4 @@
-%breadcrumbs {
+%breadcrumbs li {
   list-style-type: none;
 }
 %breadcrumb::before {
