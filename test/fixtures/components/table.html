@@ -8,15 +8,39 @@
         }
         table {
           @extend %table;
-          width: 300px;
+          max-width: 300px;
           float: left;
         }
         table:nth-child(1) {
           margin-right: 1em;
         }
+        table:nth-child(1) tr > * {
+          max-width: 100px;
+        }
         table:nth-child(2) {
           @extend %table-flex;
         }
+        table:nth-child(2) tr > * {
+          width: calc(100% / 3);
+        }
+        th span::after {
+          @extend %with-info-circle-outline-icon;
+          @extend %as-pseudo;
+          opacity: 0.6;
+        }
+        th span {
+          @extend %with-tooltip;
+          margin-left: 2px;
+        }
+        th span em::after {
+        }
+        th span em {
+          max-width: 250px;
+          min-width: 150px;
+          font-style: normal;
+          white-space: normal !important;
+        }
+
       </style>
     </head>
     <body>
@@ -28,7 +52,9 @@
               <caption>${item}</caption>
               <thead>
                 <tr>
-                  <th>Header</th>
+                  <th>
+                    Header<span><em role="tooltip">An icon with a tooltip and wrap some text please</em></span>
+                  </th>
                   <th>Header</th>
                   <th>Header</th>
                 </tr>
@@ -38,9 +64,9 @@
                   [0, 1, 2, 3].map(
                     i => `
                       <tr>
-                        <td>One ${i}</td>
-                        <td>Two ${i}</td>
-                        <td>Three ${i}</td>
+                        <td><a href="">One ${i}${i === 0 ? 'lots of long text to test truncation' : ''}</a></td>
+                        <td><p>Two ${i}${i === 0 ? 'lots of long text to test truncation' : ''}</p></td>
+                        <td><p>Three ${i}</p></td>
                       </tr>
                     `
                   ).join('')
