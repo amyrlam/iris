@@ -153,6 +153,11 @@
       background-image: var(--disabled-svg);
     }
 
+%with-docs-icon {
+      @extend %with-icon;
+      background-image: var(--docs-svg);
+    }
+
 %with-download-icon {
       @extend %with-icon;
       background-image: var(--download-svg);
@@ -261,6 +266,11 @@
 %with-kubernetes-logo-color-icon {
       @extend %with-icon;
       background-image: var(--kubernetes-logo-color-svg);
+    }
+
+%with-learn-icon {
+      @extend %with-icon;
+      background-image: var(--learn-svg);
     }
 
 %with-link-icon {

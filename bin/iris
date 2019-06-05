@@ -39,47 +39,68 @@ const compile = function(src) {
     }
   );
 };
-const icons = fs.readdirSync(options.inputPath + '/svg').filter(
-  function(item) {
-    return item.indexOf('.css') === -1;
+
+const STRUCTURE_ICONS = '/node_modules/@hashicorp/structure-icons/dist';
+const IRIS_ICONS = '/svg';
+console.log(`Writing SVG icons to inline CSS properties:`);
+const icons = function(path) {
+  return fs.readdirSync(`${options.inputPath}${path}`).filter(
+    function(item) {
+      return item.indexOf('.svg') !== -1;
+    }
+  ).reduce(
+    function(prev, item) {
+      prev[item] = fs.readFileSync(`${options.inputPath}${path}/${item}`).toString();
+      return prev;
+    },
+    {}
+  )
+}
+const items = {
+  ...icons(STRUCTURE_ICONS),
+  ...icons(IRIS_ICONS)
+};
+const inlineIcons = Object.keys(items).sort().reduce(
+  function(prev, key) {
+    // console.log(`"${key}",`);
+    prev.push(
+      `--${key.replace('.', '-').replace(' ', '-')}: url('data:image/svg+xml;charset=UTF-8,${items[key].trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');`
+    );
+    return prev;
+  },
+  []
+).reduce(
+  function(prev, item) {
+    return `${prev}
+${item}`;
   }
 );
-// console.log(`Writing SVG icons to inline CSS properties:`);
-// const inlineIcons = icons.map(
-//   function(item) {
-//     const svg = fs.readFileSync(options.inputPath + '/svg/' + item).toString();
-//     return `--${item.replace('.', '-').replace(' ', '-')}: url('data:image/svg+xml;charset=UTF-8,${svg.trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');`;
-//   }
-// ).reduce(
-//   function(prev, item) {
-//     return `${prev}
-// ${item}`;
-//   }
-// );
-// fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
-//   ${inlineIcons}
-// }`);
 
-// console.log(`Writing inline icons to icon %with- placeholders:`);
-// const placeholderIcons = icons.map(
-//   function(item) {
-//     const property = item.replace('.', '-').replace(' ', '-');
-//     return `%with-${property.replace('svg', 'icon')} {
-//       @extend %with-icon;
-//       background-image: var(--${property});
-//     }
-// `
-//   }
-// ).reduce(
-//   function(prev, item) {
-//     return `${prev}
-// ${item}`;
-//   }
-// );
-// fs.writeFileSync(options.inputPath + '/icons/icon-placeholders.css', placeholderIcons);
+fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
+  ${inlineIcons}
+}`);
+
+console.log(`Writing inline icons to icon %with- placeholders:`);
+const placeholderIcons = Object.keys(items).sort().map(
+  function(item) {
+    const property = item.replace('.', '-').replace(' ', '-');
+    return `%with-${property.replace('svg', 'icon')} {
+      @extend %with-icon;
+      background-image: var(--${property});
+    }
+`
+  }
+).reduce(
+  function(prev, item) {
+    return `${prev}
+${item}`;
+  }
+);
+fs.writeFileSync(options.inputPath + '/icons/icon-placeholders.css', placeholderIcons);
 
 
-
+console.log(`Writing CSS custom properties to SASS variables:`);
+console.log(`Writing CSS @imports to SASS @imports:`);
 glob(`${options.inputPath}/${'**'}/${'*'}.css`,
   {
     ignore: [
@@ -99,8 +120,6 @@ glob(`${options.inputPath}/${'**'}/${'*'}.css`,
   }
 ).then(
   function(files) {
-    console.log(`Writing CSS custom properties to SASS variables:`);
-    console.log(`Writing CSS @imports to SASS @imports:`);
     Promise.all(files.map(
       filter(
         function(input) {
