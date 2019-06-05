@@ -1,9 +1,3 @@
-/* This needs to go into table */
-/* %action-group { */
-/*   position: absolute; */
-/*   top: 8px; */
-/*   right: 15px; */
-/* } */
 %action-group {
   display: inline-block;
   position: relative;

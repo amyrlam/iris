@@ -1,6 +1,3 @@
-%action-group label:first-of-type {
-  @extend %toggle-button;
-}
 %action-group input[type='radio']:checked + label:first-of-type {
   /* frame-gray */
   background-color: var(--gray-050);
