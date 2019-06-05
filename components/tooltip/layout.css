@@ -37,7 +37,7 @@
 }
 %tooltip-tail {
   left: 50%;
-  margin-left: -10px;
+  margin-left: -9px;
   bottom: -13px;
 }
 /* TODO: Try and use the same vertical positioning all tooltips */
