@@ -8,6 +8,11 @@
       background-image: var(--alert-circle-outline-svg);
     }
 
+%with-alert-triangle-color-icon {
+      @extend %with-icon;
+      background-image: var(--alert-triangle-color-svg);
+    }
+
 %with-alert-triangle-icon {
       @extend %with-icon;
       background-image: var(--alert-triangle-svg);
@@ -21,6 +26,11 @@
 %with-arrow-left-icon {
       @extend %with-icon;
       background-image: var(--arrow-left-svg);
+    }
+
+%with-arrow-right-color-icon {
+      @extend %with-icon;
+      background-image: var(--arrow-right-color-svg);
     }
 
 %with-arrow-right-icon {
@@ -53,6 +63,11 @@
       background-image: var(--cancel-plain-svg);
     }
 
+%with-cancel-square-fill-color-icon {
+      @extend %with-icon;
+      background-image: var(--cancel-square-fill-color-svg);
+    }
+
 %with-cancel-square-fill-icon {
       @extend %with-icon;
       background-image: var(--cancel-square-fill-svg);
@@ -71,6 +86,11 @@
 %with-caret-up-icon {
       @extend %with-icon;
       background-image: var(--caret-up-svg);
+    }
+
+%with-check-circle-fill-color-icon {
+      @extend %with-icon;
+      background-image: var(--check-circle-fill-color-svg);
     }
 
 %with-check-circle-fill-icon {
@@ -146,6 +166,16 @@
 %with-copy-success-icon {
       @extend %with-icon;
       background-image: var(--copy-success-svg);
+    }
+
+%with-deny-color-icon {
+      @extend %with-icon;
+      background-image: var(--deny-color-svg);
+    }
+
+%with-deny-icon {
+      @extend %with-icon;
+      background-image: var(--deny-svg);
     }
 
 %with-disabled-icon {
@@ -253,6 +283,11 @@
       background-image: var(--history-svg);
     }
 
+%with-info-circle-fill-color-icon {
+      @extend %with-icon;
+      background-image: var(--info-circle-fill-color-svg);
+    }
+
 %with-info-circle-fill-icon {
       @extend %with-icon;
       background-image: var(--info-circle-fill-svg);
@@ -316,6 +351,11 @@
 %with-minus-plain-icon {
       @extend %with-icon;
       background-image: var(--minus-plain-svg);
+    }
+
+%with-minus-square-fill-color-icon {
+      @extend %with-icon;
+      background-image: var(--minus-square-fill-color-svg);
     }
 
 %with-minus-square-fill-icon {
