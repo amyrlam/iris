@@ -7,7 +7,7 @@
 }
 %stats-card header a > *,
 %stats-card li a > :last-child {
-  /* TODO: %truncated */
+  /* TODO: %truncate */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -24,10 +24,11 @@
 }
 %stats-card-icon:last-child {
   position: absolute;
-  background-size: 60%;
+  background-size: 16px;
+  background-position: 5px 5px;
   font-size: 1.5em;
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   top: calc(-28px / 2);
   left: 15px;
   font-size: 0;
