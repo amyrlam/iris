@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>stats-card</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      .stats-card {
+        width: 240px;
+        margin: 10px;
+      }
+      .stats-card {
+        @extend %stats-card;
+      }
+      %stats-card header > :not(a):last-child {
+        @extend %with-star-icon;
+      }
+      %stats-card header > :not(a):first-child {
+        @extend %with-minus-circle-outline-icon;
+      }
+      %stats-card li a > :first-child {
+        font-size: 0;
+        height: 16px;
+        min-width: 16px;
+      }
+      %stats-card li a > :first-child {
+        @extend %with-minus-circle-outline-icon;
+      }
+      [data-tooltip] {
+        @extend %with-pseudo-tooltip;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+    <body>
+      <div class="stats-card">
+        <header>
+          <em>0</em>
+          <a href="#">
+            <strong>Header with enough text to truncate</strong>
+            <span>Secondary with enough text to truncate</span>
+          </a>
+          <span data-tooltip="Leader">Leader</span>
+        </header>
+      </div>
+      <div class="stats-card">
+        <header>
+          <span data-tooltip="This has zero healthchecks">0</span>
+          <a href="#">
+            <strong>Header with enough text to truncate</strong>
+            <span>Secondary with enough text to truncate</span>
+          </a>
+          <span data-tooltip="Leader">Leader</span>
+        </header>
+        <ul>
+          <li>
+            <a href="#">
+              <strong data-tooltip="critical">critical</strong>&nbsp;<span>Connect sidecar listening with enough text to truncate</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <strong data-tooltip="warning">warning</strong>&nbsp;<span>Connect sidecar listening with enough text to truncate</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <strong data-tooltip="passing">something</strong>&nbsp;<span>12 Connect sidecar listening with enough text to truncate</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="stats-card">
+        <header>
+          <a href="#">
+            <strong>Header with enough text to truncate</strong>
+            <span>Secondary with enough text to truncate</span>
+          </a>
+          <em data-tooltip="Leader">Leader</em>
+        </header>
+        <ul></ul>
+      </div>
+    </body>
+</html>
