@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>stats-card</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      form {
+        width: 1000px;
+        display: flex;
+      }
+      fieldset {
+        width: 22%;
+      }
+      fieldset:not(:last-child) {
+        margin-right: 1%;
+      }
+      legend {
+        font-style: italic;
+      }
+      label {
+        @extend %form-element;
+      }
+      label.error {
+        @extend %form-element-error;
+      }
+      label.focus input,
+      label.focus textarea {
+        @extend %form-element-text-input-focus;
+      }
+      label.hover input,
+      label.hover textarea {
+        @extend %form-element-text-input-hover;
+      }
+    </style>
+    <body>
+      <form>
+        <fieldset>
+          <legend>Normal</legend>
+          <label class="type-text">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+          <label class="type-text">
+            <span>Text Input</span>
+            <input type="text" value="Some text" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+          <label class="type-text type-password">
+            <span>Password Input</span>
+            <input type="password" value="" placeholder="Placeholder" />
+          </label>
+          <label class="type-text">
+            <span>Textarea</span>
+            <textarea>Some text</textarea>
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hovered</legend>
+          <label class="type-text hover">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+          <label class="type-text type-password hover">
+            <span>Password Input</span>
+            <input type="password" value="" placeholder="Placeholder" />
+          </label>
+          <label class="type-text hover">
+            <span>Textarea</span>
+            <textarea></textarea>
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Error</legend>
+          <label class="type-text error">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is an error</strong>
+          </label>
+          <label class="type-text type-password error">
+            <span>Password Input</span>
+            <input type="password" value="" placeholder="Placeholder" />
+            <strong>This is an error</strong>
+          </label>
+          <label class="type-text error">
+            <span>Textarea</span>
+            <textarea></textarea>
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is an error</strong>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Focussed</legend>
+          <label class="type-text focus">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+          <label class="type-text type-password focus">
+            <span>Password Input</span>
+            <input type="password" value="" placeholder="Placeholder" />
+          </label>
+          <label class="type-text focus">
+            <span>Textarea</span>
+            <textarea></textarea>
+            <em>A note/hint with <code>some code</code></em>
+          </label>
+        </fieldset>
+
+      </form>
+    </body>
+</html>

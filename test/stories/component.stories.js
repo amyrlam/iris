@@ -14,6 +14,7 @@ import sortControl from '../fixtures/components/sort-control.html';
 // potentially shouldn't be in components?
 import table from '../fixtures/components/table.html';
 import anchors from '../fixtures/components/anchors.html';
+import formElements from '../fixtures/components/form-elements.html';
 
 storiesOf('Components', module)
   .addDecorator(centered)
@@ -28,4 +29,5 @@ storiesOf('Components', module)
   .add('Pill', () => pill)
   .add('Tooltip', () => tooltip)
   .add('StatsCard', () => statsCard)
-  .add('SortControl', () => sortControl);
+  .add('SortControl', () => sortControl)
+  .add('FormElements', () => formElements);

@@ -1,0 +1,22 @@
+@import './skin.css';
+@import './layout.css';
+%form-element {
+  @extend %form-row;
+}
+%form-element > span {
+  @extend %form-element-label;
+}
+%form-element > em {
+  @extend %form-element-note;
+}
+%form-element [type='text'],
+%form-element [type='password'],
+%form-element textarea {
+  @extend %form-element-text-input;
+}
+%form-element-text-input:hover {
+  @extend %form-element-text-input-hover;
+}
+%form-element-text-input:focus {
+  @extend %form-element-text-input-focus;
+}
