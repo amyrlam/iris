@@ -1,11 +1,16 @@
 <html>
     <head>
-        <title>stats-card</title>
+      <title>form-elements</title>
     </head>
     <style>
       @import '../../../index.css';
-      body {
+      body,
+      %form-element-text-input {
         @extend %typo-body;
+      }
+      %form-element-label {
+        @extend %p2;
+        font-weight: var(--typo-weight-semibold);
       }
       form {
         width: 1000px;
