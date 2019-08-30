@@ -22,8 +22,7 @@
   margin-bottom: 1.4em;
 }
 %form-element-label {
-  margin-bottom: 0.5em;
-  margin-bottom: 0.4em !important;
+  margin-bottom: 0.3em;
 }
 %form-element [type='text'],
 %form-element [type='password'] {
