@@ -32,6 +32,8 @@ Recommended usage would be install as a dependency and import the files from iri
 
 ```bash
 iris --output-path ./folder/to/where/you/want/iris/
+iris -o ./folder/to/where/you/want/iris/
+iris --no-header -o ./folder/to/where/you/want/iris/
 ```
 
 This will add the SASS (but not the CSS _currently_) for iris into your project where you specify, so you can continue on without CSS or the extra dependency, just be sure to commit the generated files into source control.
@@ -42,7 +44,19 @@ If you then edit the 'burnt' files, make sure you remove the:
 /* iris: generated ...
 ```
 
-...comment at the beginning of the file to prevent it from being overwritten if you rerun `iris`
+...comment at the beginning of the file to prevent it from being overwritten if you rerun `iris`.
+
+Using the `--no-header` flag whilst 'burning' omits the header from the produced files, so in order to overwrite them, they will need manually deleting.
+
+```
+iris --no-header -o ./folder/to/where/you/want/iris/
+```
+
+Iris currently doesn't format your CSS whilst burning/copying files over like this, so you may need to run your CSS formatter afterwards. For example:
+
+```
+yarn run format:css
+```
 
 ## Collections
 
