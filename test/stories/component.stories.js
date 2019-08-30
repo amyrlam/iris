@@ -10,6 +10,7 @@ import toggleButton from '../fixtures/components/toggle-button.html';
 import breadcrumbs from '../fixtures/components/breadcrumbs.html';
 import tabs from '../fixtures/components/tabs.html';
 import statsCard from '../fixtures/components/stats-card.html';
+import sortControl from '../fixtures/components/sort-control.html';
 // potentially shouldn't be in components?
 import table from '../fixtures/components/table.html';
 import anchors from '../fixtures/components/anchors.html';
@@ -26,4 +27,5 @@ storiesOf('Components', module)
   .add('Notice', () => notice)
   .add('Pill', () => pill)
   .add('Tooltip', () => tooltip)
-  .add('StatsCard', () => statsCard);
+  .add('StatsCard', () => statsCard)
+  .add('SortControl', () => sortControl);
