@@ -11,6 +11,7 @@ import breadcrumbs from '../fixtures/components/breadcrumbs.html';
 import tabs from '../fixtures/components/tabs.html';
 import statsCard from '../fixtures/components/stats-card.html';
 import sortControl from '../fixtures/components/sort-control.html';
+import radioGroup from '../fixtures/components/radio-group.html';
 // potentially shouldn't be in components?
 import table from '../fixtures/components/table.html';
 import anchors from '../fixtures/components/anchors.html';
@@ -30,4 +31,5 @@ storiesOf('Components', module)
   .add('Tooltip', () => tooltip)
   .add('StatsCard', () => statsCard)
   .add('SortControl', () => sortControl)
-  .add('FormElements', () => formElements);
+  .add('FormElements', () => formElements)
+  .add('RadioGroup', () => radioGroup);

@@ -1,0 +1,78 @@
+<html>
+    <head>
+      <title>radio-group</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      form {
+        width: 1000px;
+        display: flex;
+      }
+      fieldset {
+        width: 22%;
+      }
+      fieldset:not(:last-child) {
+        margin-right: 1%;
+      }
+      legend {
+        font-style: italic;
+      }
+      label {
+        @extend %form-element;
+      }
+
+      [role=radiogroup] {
+        @extend %radio-group;
+      }
+
+      /* TODO: Right now we don't support links in sub labels etc*/
+      label span a::after {
+        @extend %with-docs-icon;
+        @extend %as-pseudo;
+        opacity: 0.6;
+      }
+      label span span::after {
+        @extend %with-info-circle-outline-icon;
+        @extend %as-pseudo;
+        opacity: 0.6;
+        margin-left: 2px;
+      }
+      label span span {
+        @extend %with-tooltip;
+      }
+    </style>
+    <body>
+      <form>
+        <fieldset>
+          <legend>Normal</legend>
+          <div role="radiogroup">
+            <label>
+              <span>Label 1</span>
+              <input type="radio" name="Type" value="{{type}}" checked=checked />
+            </label>
+            <label>
+              <span>Label 2</span>
+              <input type="radio" name="Type" value="{{type}}" />
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Error</legend>
+          <div role="radiogroup" class="error">
+            <label>
+              <span>Label 1</span>
+              <input type="radio" name="Type" value="{{type}}" checked=checked />
+            </label>
+            <label>
+              <span>Label 2</span>
+              <input type="radio" name="Type" value="{{type}}" />
+            </label>
+          </div>
+        </fieldset>
+
+      </form>
+    </body>
+</html>
