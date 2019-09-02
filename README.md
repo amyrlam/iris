@@ -5,8 +5,20 @@
 Iris is a collection of 'low-level' CSS delivered in a lightweight format.
 
 - [Usage](#usage)
+- [Development](#development)
 - [Collections/Reference](#collections)
 - [Rationale](#rationale)
+
+## Development
+
+As well as other tests, a storybook based install is provided to help with
+development of CSS. Components **should not use** frontend javascript but be
+built with CSS and HTML only.
+
+```bash
+npm install
+npm run storybook
+```
 
 ## Usage
 
@@ -16,11 +28,10 @@ npm install --save[-dev] @johncowen/iris # (right now this isn't published yet)
 yarn add -D @johncowen/iris # (right now this isn't published yet)
 ```
 
-
 ```sass
 // sass
-@import '@johncowen/iris/index';
-@import '@johncowen/iris/reset/index';
+@import '@johncowen/iris/index'
+@import '@johncowen/iris/reset/index'
 ```
 ```css
 /* css */
@@ -48,15 +59,17 @@ If you then edit the 'burnt' files, make sure you remove the:
 
 Using the `--no-header` flag whilst 'burning' omits the header from the produced files, so in order to overwrite them, they will need manually deleting.
 
-```
+```bash
 iris --no-header -o ./folder/to/where/you/want/iris/
 ```
 
 Iris currently doesn't format your CSS whilst burning/copying files over like this, so you may need to run your CSS formatter afterwards. For example:
 
-```
+```bash
 yarn run format:css
 ```
+
+
 
 ## Collections
 
@@ -64,6 +77,7 @@ yarn run format:css
 - [Typography](#typography)
 - [Decoration](#decoration)
 - [Reset](#reset)
+- [Components](#components)
 
 All examples below use CSS properties for examples, but if you are using SASS these can be interchanged with SASS variables (i.e. --blue-500 = $blue-500)
 
@@ -81,7 +95,7 @@ To illustrate variations. `{num}` is always a 3 digit number, generally like `00
 
 If you are unable to import the iris entirely, you can import just the color collection with:
 
-```
+```css
 @import '@johncowen/iris/color/index{.css,.scss}';
 ```
 
@@ -148,6 +162,26 @@ If you are _migrating to_ iris, you might not want to import the Reset Collectio
 
 The Reset collection currently consists of a reasonably common 'reset', but also contains work towards providing different resets to aid migration. It **does** set styles on base DOM elements like `html, body, p, h1, h2, h3, h4, h5` etc and **therefore will add weight to your final CSS file**.
 
+### Components
+
+- `%action-group`
+- `%anchor`
+- `%breadcrumbs`
+- `%buttons`
+- `%checkbox-group`
+- `%form-elements`
+- `%notice`
+- `%pill`
+- `%radio-group`
+- `%sliding-toggle`
+- `%sort-control`
+- `%stats-card`
+- `%table`
+- `%tabs`
+- `%toggle-button`
+- `%tooltip`
+
+More information to come...
 
 
 ## Rationale
