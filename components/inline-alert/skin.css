@@ -2,6 +2,7 @@
   font-style: normal;
   font-weight: normal;
 }
+%inline-alert-success,
 %inline-alert-info,
 %inline-alert-error,
 %inline-alert-warning {
@@ -15,6 +16,10 @@
 }
 %inline-alert::before {
   font-size: 14px;
+}
+%inline-alert-success::before {
+  @extend %with-check-circle-fill-color-icon;
+  @extend %as-pseudo;
 }
 %inline-alert-error::before {
   @extend %with-cancel-square-fill-color-icon;

@@ -11,9 +11,15 @@
       label {
         @extend %form-element;
       }
+      legend,
       label > strong,
       %form-element-note {
         @extend %p3;
+      }
+      legend,
+      label.success strong,
+      strong.success {
+        @extend %inline-alert-success;
       }
       label.info strong,
       strong.info {
@@ -27,10 +33,20 @@
       strong.error {
         @extend %inline-alert-error;
       }
+      p {
+        margin-bottom: 1em;
+      }
     </style>
     <body>
       <form>
         <fieldset>
+          <legend>Success</legend>
+          <label class="type-text success">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is successful</strong>
+          </label>
           <label class="type-text info">
             <span>Text Input</span>
             <input type="text" value="" placeholder="Placeholder" />
@@ -51,7 +67,7 @@
           </label>
         </fieldset>
         <p>
-          What <strong class="info">does</strong> it look <strong class="warning">like</strong> in <strong class="error">amongst</strong> some text?
+        <strong class="success">What</strong> <strong class="info">does</strong> it look <strong class="warning">like</strong> in <strong class="error">amongst</strong> some text?
         </p>
       </form>
     </body>
