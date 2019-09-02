@@ -12,6 +12,8 @@ import tabs from '../fixtures/components/tabs.html';
 import statsCard from '../fixtures/components/stats-card.html';
 import sortControl from '../fixtures/components/sort-control.html';
 import radioGroup from '../fixtures/components/radio-group.html';
+import checkboxGroup from '../fixtures/components/checkbox-group.html';
+import slidingToggle from '../fixtures/components/sliding-toggle.html';
 // potentially shouldn't be in components?
 import table from '../fixtures/components/table.html';
 import anchors from '../fixtures/components/anchors.html';
@@ -32,4 +34,6 @@ storiesOf('Components', module)
   .add('StatsCard', () => statsCard)
   .add('SortControl', () => sortControl)
   .add('FormElements', () => formElements)
-  .add('RadioGroup', () => radioGroup);
+  .add('RadioGroup', () => radioGroup)
+  .add('CheckboxGroup', () => checkboxGroup)
+  .add('SlidingToggle', () => slidingToggle);

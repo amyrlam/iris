@@ -1,0 +1,65 @@
+<html>
+    <head>
+      <title>sliding-toggle</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      form {
+        width: 700px;
+        display: flex;
+      }
+      fieldset {
+        width: 22%;
+      }
+      fieldset:not(:last-child) {
+        margin-right: 1%;
+      }
+      legend {
+        font-style: italic;
+      }
+      .type-toggle {
+        @extend %sliding-toggle;
+      }
+      .type-toggle-negative {
+        @extend %sliding-toggle-negative;
+      }
+    </style>
+    <body>
+      <form>
+        <fieldset>
+          <legend>Normal</legend>
+          <div class="type-toggle">
+            <label>
+                <input type="checkbox" name="json" checked="checked" />
+                <span>Default Checked</span>
+            </label>
+          </div>
+          <div class="type-toggle">
+            <label>
+                <input type="checkbox" name="json" />
+                <span>Default Unchecked</span>
+            </label>
+          </div>
+          <div class="type-toggle type-toggle-negative">
+            <label>
+                <input type="checkbox" name="json" checked="checked" />
+                <span>Negative Checked</span>
+            </label>
+          </div>
+          <div class="type-toggle type-toggle-negative">
+            <label>
+                <input type="checkbox" name="json" />
+                <span>Negative Unchecked</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Error</legend>
+        </fieldset>
+
+      </form>
+    </body>
+</html>

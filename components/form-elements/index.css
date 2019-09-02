@@ -1,5 +1,7 @@
 @import './skin.css';
 @import './layout.css';
+/* TODO: This is positioning the element */
+/* probably should be in a special %form class*/
 %form-element {
   @extend %form-row;
 }

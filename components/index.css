@@ -12,4 +12,6 @@
 @import './sort-control/index.css';
 @import './form-elements/index.css';
 @import './radio-group/index.css';
+@import './checkbox-group/index.css';
+@import './sliding-toggle/index.css';
 
