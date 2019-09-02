@@ -4,8 +4,8 @@
 
 Iris is a collection of 'low-level' CSS delivered in a lightweight format.
 
-- [Usage](#usage)
 - [Development](#development)
+- [Usage](#usage)
 - [Collections/Reference](#collections)
 - [Rationale](#rationale)
 
