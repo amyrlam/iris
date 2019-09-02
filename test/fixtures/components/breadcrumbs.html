@@ -16,9 +16,29 @@
       a {
         text-decoration: none;
       }
+      .milestone {
+        @extend %breadcrumbs-milestone;
+      }
+      .filesystem {
+        @extend %breadcrumbs-filesystem;
+      }
     </style>
     <body>
       <ol>
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">Three</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+      <ol class="milestone">
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">Three</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+      <ol class="filesystem">
         <li><a href="">One</a></li>
         <li><a href="">Two</a></li>
         <li><a href="">Three</a></li>

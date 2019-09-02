@@ -243,6 +243,11 @@
       background-image: var(--folder-fill-svg);
     }
 
+%with-folder-outline-color-icon {
+      @extend %with-icon;
+      background-image: var(--folder-outline-color-svg);
+    }
+
 %with-folder-outline-icon {
       @extend %with-icon;
       background-image: var(--folder-outline-svg);
