@@ -27,8 +27,8 @@
   "scripts": {
     "test": "mocha ./test/index.js",
     "build": "./bin/iris",
-    "start": "start-storybook -p 4200 -c ./test/storybook",
-    "storybook": "start-storybook -p 4200 -c ./test/storybook",
+    "start": "start-storybook -p 6006 -c ./test/storybook",
+    "storybook": "start-storybook -p 6006 -c ./test/storybook",
     "build-storybook": "build-storybook -c ./test/storybook"
   },
   "bin": {

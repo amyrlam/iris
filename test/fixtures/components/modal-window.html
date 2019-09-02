@@ -1,0 +1,39 @@
+<html>
+    <head>
+      <title>sliding-toggle</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      [role=dialog] {
+        @extend %modal-window;
+        min-width: 500px;
+      }
+      /* TODO: this needs to go into the component */
+      %modal-window header > * {
+        margin: 0;
+      }
+      button {
+        @extend %primary-button;
+      }
+    </style>
+    <body>
+      <div role="dialog" aria-modal="true">
+        <header>
+          <label for="modal_close">Close</label>
+          <h2>Modal Window Header</h2>
+        </header>
+        <div>
+          <p>Contents of modal window</p>
+          <p>Contents of modal window</p>
+          <p>Contents of modal window</p>
+          <p>Contents of modal window</p>
+        </div>
+        <footer>
+          <button>Button</button>
+        </footer>
+      </div>
+    </body>
+</html>

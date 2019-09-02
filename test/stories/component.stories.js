@@ -14,6 +14,8 @@ import sortControl from '../fixtures/components/sort-control.html';
 import radioGroup from '../fixtures/components/radio-group.html';
 import checkboxGroup from '../fixtures/components/checkbox-group.html';
 import slidingToggle from '../fixtures/components/sliding-toggle.html';
+import modalWindow from '../fixtures/components/modal-window.html';
+import modalDialog from '../fixtures/components/modal-dialog.html';
 // potentially shouldn't be in components?
 import table from '../fixtures/components/table.html';
 import anchors from '../fixtures/components/anchors.html';
@@ -36,4 +38,6 @@ storiesOf('Components', module)
   .add('FormElements', () => formElements)
   .add('RadioGroup', () => radioGroup)
   .add('CheckboxGroup', () => checkboxGroup)
-  .add('SlidingToggle', () => slidingToggle);
+  .add('SlidingToggle', () => slidingToggle)
+  .add('ModalWindow', () => modalWindow)
+  .add('ModalDialog', () => modalDialog);

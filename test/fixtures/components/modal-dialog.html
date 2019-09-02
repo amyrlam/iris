@@ -1,0 +1,53 @@
+<html>
+    <head>
+      <title>modal-dialog</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      [role=dialog] {
+        @extend %modal-dialog;
+      }
+      %modal-window {
+        min-width: 500px;
+      }
+      input[name='modal'] {
+        @extend %modal-control;
+      }
+      /* TODO: this needs to go into the component */
+      %modal-window header > * {
+        margin: 0;
+      }
+      button, [for="modal_open"] {
+        @extend %primary-button;
+      }
+    </style>
+    <body>
+      <input id="modal_close" type="radio" name="modal" />
+      <label for="modal_open">Click to open modal</label>
+      <input id="modal_open" type="radio" name="modal" checked="checked" />
+      <div role="dialog" aria-modal="true">
+        <label for="modal_close"></label>
+        <div>
+          <div>
+              <header>
+                <label for="modal_close">Close</label>
+                <h2>Modal Window Header</h2>
+              </header>
+              <div>
+                <p>Contents of modal window</p>
+                <p>Contents of modal window</p>
+                <p>Contents of modal window</p>
+                <p>Contents of modal window</p>
+              </div>
+              <footer>
+                <button>Button</button>
+              </footer>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
+
