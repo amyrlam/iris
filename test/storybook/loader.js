@@ -2,12 +2,8 @@ const parse5 = require('parse5');
 const domWalk = require('dom-walk');
 const postcss = require('postcss');
 const loadCss = require('postcss-import/lib/load-content');
-const TemplateFactory = require('@gardenhq/tick-control');
+const template = require('backtick-template');
 
-const Template = TemplateFactory();
-const template = function(str) {
-  return new Template(str).render();
-}
 const flatten = function(source, from, add) {
   return postcss(
     [
@@ -18,7 +14,8 @@ const flatten = function(source, from, add) {
             return loadCss.apply(null, arguments);
           }
         }
-      )
+      ),
+      require('postcss-hexrgba')
     ]
   ).process(
     source,
