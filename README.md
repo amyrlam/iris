@@ -180,6 +180,9 @@ The Reset collection currently consists of a reasonably common 'reset', but also
 - `%tabs`
 - `%toggle-button`
 - `%tooltip`
+- `%modal-window`
+- `%modal-dialog`
+- `%inline-alert`
 
 More information to come...
 

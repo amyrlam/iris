@@ -1,8 +1,8 @@
 %form-element-note {
   font-style: normal;
 }
-%form-element-error > strong {
-  font-weight: normal;
+%form-element-label {
+  font-weight: var(--typo-weight-semibold);
 }
 %form-element-text-input {
   -moz-appearance: none;
@@ -18,16 +18,9 @@
 %form-element-note > code {
   border-radius: var(--decor-radius-100);
 }
-%form-element > strong:before {
-  @extend %with-cancel-square-fill-color-icon;
-  @extend %as-pseudo;
-}
 %form-element-error > input,
 %form-element-error > textarea {
   border-color: var(--color-failure) !important;
-}
-%form-element-error > strong {
-  color: var(--color-failure);
 }
 %form-element-text-input {
   color: var(--gray-500);

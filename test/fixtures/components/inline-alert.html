@@ -1,0 +1,58 @@
+<html>
+    <head>
+      <title>inline-alert</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body,
+      %form-element-text-input {
+        @extend %typo-body;
+      }
+      label {
+        @extend %form-element;
+      }
+      label > strong,
+      %form-element-note {
+        @extend %p3;
+      }
+      label.info strong,
+      strong.info {
+        @extend %inline-alert-info;
+      }
+      label.warning strong,
+      strong.warning {
+        @extend %inline-alert-warning;
+      }
+      label.error strong,
+      strong.error {
+        @extend %inline-alert-error;
+      }
+    </style>
+    <body>
+      <form>
+        <fieldset>
+          <label class="type-text info">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is some info</strong>
+          </label>
+          <label class="type-text type-password warning">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is a warning</strong>
+          </label>
+          <label class="type-text error">
+            <span>Text Input</span>
+            <input type="text" value="" placeholder="Placeholder" />
+            <em>A note/hint with <code>some code</code></em>
+            <strong>This is an error</strong>
+          </label>
+        </fieldset>
+        <p>
+          What <strong class="info">does</strong> it look <strong class="warning">like</strong> in <strong class="error">amongst</strong> some text?
+        </p>
+      </form>
+    </body>
+</html>

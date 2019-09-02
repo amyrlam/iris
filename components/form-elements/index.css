@@ -11,6 +11,9 @@
 %form-element > em {
   @extend %form-element-note;
 }
+%form-element-error > strong {
+  @extend %inline-alert-error;
+}
 %form-element [type='text'],
 %form-element [type='password'],
 %form-element textarea {

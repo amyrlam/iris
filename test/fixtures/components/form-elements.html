@@ -10,7 +10,10 @@
       }
       %form-element-label {
         @extend %p2;
-        font-weight: var(--typo-weight-semibold);
+      }
+      %form-element-error strong,
+      %form-element-note {
+        @extend %p3;
       }
       form {
         width: 1000px;
