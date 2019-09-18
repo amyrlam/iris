@@ -4,24 +4,15 @@
     </head>
     <style>
       @import '../../../index.css';
-      body {
+      body, button, label {
         @extend %typo-body;
       }
       .action-group {
         @extend %action-group;
       }
-      li:first-child button::after {
-        @extend %with-calendar-icon;
-        @extend %as-pseudo;
-        margin-left: 5px;
-      }
-      li:last-child button::before {
-        @extend %with-loading-icon;
-        @extend %as-pseudo;
-        margin-right: 5px;
-      }
-      [data-tooltip] {
-        @extend %with-pseudo-tooltip;
+
+      %action-group-confirm-toggle:checked + div {
+        min-height: 175px;
       }
     </style>
     <body>
@@ -35,24 +26,51 @@
                   <label for="actions_0">
                       <span>Open</span>
                   </label>
+
                   <label for="actions_close">
                       <span>Close</span>
                   </label>
-                  <ul ${i == 0 ? ` class="above"` : ``}${i == 2 ? ` class="above left"` : ``}>
-                    <li>
-                      <button type="button">Action One</button>
-                    </li>
-                    <li data-tooltip="Explanation">
-                      <button type="button">Action Two</button>
-                    </li>
-                    <li>
-                      <button type="button">Action Three</button>
-                    </li>
-                  </ul>
+
+                  <input type="checkbox" id="confirm_${i}" />
+                  <div ${i == 0 ? ` class="above"` : ``}${i == 2 ? ` class="above left"` : ``}>
+                      <ul>
+                        <li>
+                          <button type="button">Action One</button>
+                        </li>
+                        <li>
+                          <button type="button">Action Two</button>
+                        </li>
+                        <li class="dangerous">
+                          <label for="confirm_${i}">Action Three</label>
+                        </li>
+                      </ul>
+                      <div class="confirmation-alert">
+                        <div>
+                          <header>
+                            Delete this
+                          </header>
+                          <p>
+                            This will permanently delete this thing
+                          </p>
+                        </div>
+                        <ul>
+                            <li class="dangerous">
+                              <button type="button">Confirm</button>
+                            </li>
+                            <li>
+                              <label for="confirm_${i}">Cancel</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                  </div>
+
+
                 </div>
               `
             ).join('')
           }
+
         </div>
     </body>
 </html>

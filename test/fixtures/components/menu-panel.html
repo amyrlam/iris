@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>menu-panel</title>
+    </head>
+    <style>
+      @import '../../../index.css';
+      body {
+        @extend %typo-body;
+      }
+      li:first-child button::after {
+        @extend %with-calendar-icon;
+        @extend %as-pseudo;
+        margin-left: 5px;
+      }
+      li:last-child button::before {
+        @extend %with-loading-icon;
+        @extend %as-pseudo;
+        margin-right: 5px;
+      }
+      #wrapper > div {
+        @extend %menu-panel;
+      }
+      #wrapper > button {
+        @extend %dangerous-button;
+      }
+    </style>
+    <body>
+      <div id="wrapper" style="position: relative;">
+        <button type="button">trigger</button>
+          ${
+            [0, 1, 2].map(
+              i => `
+                <div${i == 0 ? ` class="above"` : (i == 2 ? ` class="above left"` : ``)}>
+                  <ul>
+                    <li>
+                      <button type="button">Action One</button>
+                    </li>
+                    <li>
+                      <button type="button">Action Two</button>
+                    </li>
+                    <li>
+                      <button type="button">Action Three</button>
+                    </li>
+                  </ul>
+                </div>
+              `
+            ).join('')
+          }
+        </div>
+    </body>
+</html>
