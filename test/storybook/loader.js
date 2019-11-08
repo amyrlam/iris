@@ -38,6 +38,26 @@ const getElementsByTagName = function(tree, tagName) {
   return els;
 }
 
+const compile = function(source, htmlFilePath = '') {
+  return postcss(
+    [
+      require('postcss-extend')()
+    ]
+  ).process(
+    source,
+    {
+      from: htmlFilePath,
+    }
+  ).then(
+    function(result) {
+      return result.css.toString()
+    }
+  ).then(
+    function(css) {
+      return `<link href="data:text/css;base64, ${Buffer(css).toString('base64')}" rel="stylesheet" type="text/css" />`;
+    }
+  );
+}
 module.exports = function (source) {
   const cb = this.async();
   const htmlFilePath = this.resourcePath;
@@ -55,29 +75,15 @@ ${style}`
   );
   flatten(style, htmlFilePath, o.addDependency.bind(this)).then(
     function(result) {
-      // console.log(result);
       return result.css;
     }
   ).then(
     function(source) {
-      return postcss(
-        [
-          require('postcss-extend')()
-        ]
-      ).process(
-        source,
-        {
-          from: htmlFilePath,
-        }
-      );
-    }
-  ).then(
-    function(result) {
-      return result.css.toString()
+      return compile(source, htmlFilePath);
     }
   ).then(
     function(css) {
-      cb(null, '<link href="data:text/css;base64,' +Buffer(css).toString('base64') +  '" rel="stylesheet" type="text/css" />' + parse5.serialize(parsed));
+      cb(null, `${css}${parse5.serialize(parsed)}`);
     }
   );
 };

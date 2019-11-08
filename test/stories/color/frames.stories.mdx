@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Source } from '@storybook/addon-docs/blocks';
+import source from '../../fixtures/frames.html';
+
+<Meta title="Color|Frames" component={source} />
+
+# Frames
+
+
+```css
+  @extend %frame-red-500;
+```
+
+A 'frame', similar to framing a picture, describes how certain colors go together based on each other (they are quite tightly coupled).
+
+For example, if you were to frame a mainly black painting, you'd possibly choose a black frame, a white 'inner surround' and then the picture itself is mainly black. For a redish painting you might choose a red frame, a white-y red shade for the inner surround and the painting itself is red.
+
+Transferring this idea to CSS, this means we group/couple certain shades/colors of border-color (the frame), background-color (the inner surround) and color (the painting/content). Now it make sense to make classes/placeholders based on these 'frames'.
+
+For example, error messages usually have a red border, a white-y red background and red text. 'Dangerous buttons' use a very similar rule etc etc.
+
+`%frames` are `border-style: solid` and `border-width: 0` by default. This means you can define whether you actually want a border or not, and also define where you want it, and what thickness you want it for your component / layout (e.g. `border-width: 1px`, `border-bottom-width: 2px`). Setting `border-style: solid` as default means that even though it may seem a bit tedious to have to specify your components border thickness when mainly you just want `1px` it means that this is as configurable from the outside as much as possible without using CSS overwriting, and is just a one liner.
+
+```css
+.dangerous-button {
+  @extend %frame-red-500;
+}
+```
+```html
+  <button class="dangerous-button">Don't Click Me!</button>
+```
+
+<Preview>
+  <Story name="Reference">{source}</Story>
+</Preview>
+
