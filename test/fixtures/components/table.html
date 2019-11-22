@@ -3,6 +3,14 @@
       <title>tables</title>
       <style>
         @import '../../../index.css';
+        html, body, #root {
+          height: 100%;
+        }
+        #root {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         body {
           @extend %typo-body;
         }
@@ -37,6 +45,10 @@
           font-style: normal;
           white-space: normal !important;
         }
+        td em {
+          display: block;
+          font-style: normal;
+        }
 
       </style>
     </head>
@@ -61,9 +73,18 @@
                   [0, 1, 2, 3].map(
                     i => `
                       <tr>
-                        <td><a href="">One ${i}${i === 0 ? 'lots of long text to test truncation' : ''}</a></td>
-                        <td><p>Two ${i}${i === 0 ? 'lots of long text to test truncation' : ''}</p></td>
-                        <td><p>Three ${i}</p></td>
+                        <td>
+                          <a href="">
+                            One ${i}${i === 0 ? 'lots of long text to test truncation' : ''}
+                            <em>subtitle</em>
+                          </a>
+                        </td>
+                        <td>
+                          <p>Two ${i}${i === 0 ? 'lots of long text to test truncation' : ''}</p>
+                        </td>
+                        <td>
+                          <p>Three ${i}</p>
+                        </td>
                       </tr>
                     `
                   ).join('')

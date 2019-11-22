@@ -39,22 +39,22 @@ const getElementsByTagName = function(tree, tagName) {
 }
 
 const compile = function(source, htmlFilePath = '') {
-  return postcss(
-    [
-      require('postcss-extend')()
-    ]
-  ).process(
-    source,
-    {
-      from: htmlFilePath,
-    }
-  ).then(
+  return Promise.resolve(source).then(
     function(result) {
-      return result.css.toString()
+      const sass = require('node-sass');
+      return sass.renderSync(
+        {
+          data: result.toString()
+        }
+      );
     }
   ).then(
     function(css) {
-      return `<link href="data:text/css;base64, ${Buffer(css).toString('base64')}" rel="stylesheet" type="text/css" />`;
+      return `<link href="data:text/css;base64, ${css.css.toString('base64')}" rel="stylesheet" type="text/css" />`;
+    }
+  ).catch(
+    function(e) {
+      console.error(e);
     }
   );
 }
@@ -62,7 +62,6 @@ module.exports = function (source) {
   const cb = this.async();
   const htmlFilePath = this.resourcePath;
   const parsed = parse5.parse(template(source));
-  const o = this;
   let $styles = getElementsByTagName(parsed, 'style');
   const style = $styles.reduce(
     function(prev, item) {
@@ -73,7 +72,7 @@ ${style}`
     },
     ''
   );
-  flatten(style, htmlFilePath, o.addDependency.bind(this)).then(
+  flatten(style, htmlFilePath, this.addDependency.bind(this)).then(
     function(result) {
       return result.css;
     }

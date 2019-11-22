@@ -1,3 +1,4 @@
+@import './reset/base-variables.css';
 @import './decoration/index.css';
 @import './color/index.css';
 @import './animation/index.css';

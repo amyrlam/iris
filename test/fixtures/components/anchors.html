@@ -4,8 +4,21 @@
     </head>
     <style>
       @import '../../../index.css';
+      html, body, #wrapper, #root {
+        height: 100%;
+      }
+      #wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       body {
         @extend %typo-body;
+      }
+      a::after {
+        display: inline-block;
+        content: ' ';
+        margin-right: 10px;
       }
       a:nth-child(1) {
         @extend %anchor;
