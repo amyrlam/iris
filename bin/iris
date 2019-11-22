@@ -88,6 +88,10 @@ const placeholderIcons = Object.keys(items).sort().map(
       @extend %with-icon;
       background-image: var(--${property});
     }
+    %with-${property.replace('svg', 'mask')} {
+      @extend %with-mask;
+      -webkit-mask-image: var(--${property});
+    }
 `
   }
 ).reduce(

@@ -2,6 +2,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+%with-mask {
+  -webkit-mask-repeat: no-repeat;
+  -webkit-position: center;
+}
 %as-pseudo {
   display: inline-block;
   content: '';
