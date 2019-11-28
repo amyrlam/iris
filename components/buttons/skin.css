@@ -102,7 +102,7 @@
   @extend %frame-red-700;
 }
 %internal-button-intent {
-  background-color: var(--gray-100);
+  background-color: var(--gray-050);
 }
 %internal-button:focus,
 %internal-button:hover {
