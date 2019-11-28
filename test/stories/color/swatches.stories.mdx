@@ -1,10 +1,39 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, SourceState } from '@storybook/addon-docs/blocks';
 import source from '../../fixtures/index.html';
 
 <Meta title="Color|Swatches" component={source} />
 
 # Swatches
 
+There are different “levels” of tints and shades for each color that are used on a scale from 0-1000, with the base level of each color at the `500` level. The tints of each color get lighter as they get closer to `0` (white), and shades get darker as they get closer to `1000` (black). Some of these levels will be more commonly used than others, and we often use the `300` level as a light version of the color (as in “light blue”), and the `700` level as a dark version (as in “dark blue”).
+
 <Preview>
+  <Story name="Example" height="35px">
+    <style>
+    /* --{color}-{000-900}*/
+    p {
+      color: var(--red-500);
+      background-color: var(--white);
+    }
+    </style>
+    <p>
+      Colored Text
+    </p>
+  </Story>
+</Preview>
+
+
+Additionally there is a set of semantic names for color related functions which map back to certainnumbered  color properties/variables to easily use common values.
+
+```css
+/* --color-primary may map to --blue-500 */
+p {
+  color: var(--color-primary);
+}
+```
+
+See `color/base-variables.css` for reference
+
+<Preview withSource={SourceState.NONE}>
   <Story name="Reference">{source}</Story>
 </Preview>

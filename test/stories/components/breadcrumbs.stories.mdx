@@ -3,6 +3,55 @@ import source from '../../fixtures/components/breadcrumbs.html';
 
 <Meta title="Components|Breadcrumbs" component={source} />
 
+# Breadcrumbs
+
 <Preview>
-  <Story name="Reference">{source}</Story>
+  <Story name="Example" height="55px">
+    <style>
+        ol {
+          @extend %breadcrumbs;
+        }
+        a {
+          text-decoration: none;
+        }
+        .milestone {
+          @extend %breadcrumbs-milestone;
+        }
+        .filesystem {
+          @extend %breadcrumbs-filesystem;
+        }
+    </style>
+      <ol>
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">&hellip;</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+      <ol class="milestone">
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">&hellip;</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+      <ol class="filesystem">
+        <li><a href="">One</a></li>
+        <li><a href="">Two</a></li>
+        <li><a href="">&hellip;</a></li>
+        <li><a href="">Four</a></li>
+        <li><strong>Five</strong></li>
+      </ol>
+  </Story>
+</Preview>
+
+| Do                                                   | Don't                                                                                             |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| ...use standard link styles                          | ...use breadcrumbs to denote browser history, since this can be both unpredictable and unreliable |
+| ...use breadcrumbs to denote hierarchy               | ...use labels that differ significantly from the page title, if possible                          |
+| ...use ellipses to trim excessively long breadcrumbs | ...include the current page in the breadcrumb                                                     |
+| ...use the path variation when browsing directories  |                                                                                                   |
+
+<Preview>
+  <Story name="Reference" height="55px">{source}</Story>
 </Preview>

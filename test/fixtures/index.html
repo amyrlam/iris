@@ -15,18 +15,43 @@
         }
 
         li li {
-          display: block;
-          width: 180px;
-          height: 20px;
-          padding: 16px;
+          display: flex;
+          padding: 5px 10px;
           font-family: sans-serif;
           font-size: .9rem;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        li li:first-child {
+          padding: 10px;
         }
         div > ul {
           overflow: hidden;
         }
         div > ul > li {
+          width: 140px;
           float: left;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+        div > ul > li:nth-child(12),
+        div > ul > li:nth-child(6) {
+          margin-right: 0;
+        }
+        div > ul > li:nth-child(6) {
+          clear: right;
+        }
+        div > ul > li:nth-child(7) {
+          clear: left;
+        }
+        h2 {
+          margin: 0;
+          width: 100%;
+          font-size: 1rem;
+          font-weight: normal;
+        }
+        strong {
+          font-weight: normal;
         }
     </style>
     <body>
@@ -34,20 +59,26 @@
             <ul>
                 ${
                   [
-                    'steel', 'cobalt', 'indigo', 'magenta',
-                    'teal', 'cyan',
-                    'gray',
-                    'green', 'red', 'orange', 'yellow', 'blue'
+                    'gray', 'green', 'red', 'orange', 'yellow', 'blue',
+                    'indigo', 'steel', 'magenta', 'teal', 'cobalt', 'cyan'
                   ].map(
                   (item, i, arr) => {
                       return `
                         <li>
                           <ul>
+                            <li style="background-color: var(--${item}-500);color: var(--white);">
+                              <h2>${item.substr(0, 1).toUpperCase()}${item.substr(1)}</h2>
+                              <strong>500</strong>
+                              <code>#</code>
+                            </li>
                             ${
                             ['050'].concat([...Array.from(Array(11).keys()).map(item => `${item}00`).slice(1, -1)]).map(
                                 (index, i, arr) => {
                                   return `
-                                  <li style="background-color: var(--${item}-${index});color: var(${ i > 5 ? '--ui-white' : '--ui-black' });">${item}-${index}</li>
+                                  <li style="background-color: var(--${item}-${index});color: var(${ i > 5 ? '--white' : '--black' });">
+                                    <strong>${item}-${index}</strong>
+                                    <code>#</code>
+                                  </li>
                                   `;
                                 }
                               ).join('')

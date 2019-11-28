@@ -15,6 +15,9 @@ As well as other tests, a storybook based install is provided to help with
 development of CSS. Components **should not use** frontend javascript but be
 built with CSS and HTML only.
 
+
+Iris comes with a Storybook:
+
 ```bash
 npm install
 npm run storybook
