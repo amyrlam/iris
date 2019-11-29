@@ -1,8 +1,106 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import source from '../../fixtures/icons/backgrounds.html';
+import pseudo from '../../fixtures/icons/pseudo.html';
+import masked from '../../fixtures/icons/masks.html';
 
 <Meta title="Icons|Backgrounds" component={source} />
 
+# Icons
+
+Icons are provided via various CSS background techniques:
+
+1. Via `background-image` / `background-size` (no coloring)
+2. Via `background-image` / `font-size` (using a pseudo element, no coloring)
+3. Via `mask-image` / `mask-image-size` / `mask-image-position` / `background-color`
+3. Via `mask-image` / `font-size` / `background-color` (using a psuedo element)
+
+
+<Preview>
+  <Story name="Example" height="110px">
+    <style>
+      section div:nth-child(1) {
+        @extend %with-alert-circle-fill-icon;
+        background-size: 36px;
+      }
+      section div:nth-child(2)::before {
+        @extend %with-alert-circle-fill-icon, %as-pseudo;
+        font-size: 1.6em;
+      }
+      section div:nth-child(3) {
+        /*TODO: Full placeholders are coming */
+        @extend %with-mask;
+        -webkit-mask-image: var(--alert-circle-fill-svg);
+        -webkit-mask-size: 36px;
+        -webkit-mask-position: center;
+        background-color: var(--red-500);
+      }
+      section div:nth-child(4)::before {
+        /*TODO: Full placeholders are coming */
+        @extend %with-mask, %as-pseudo;
+        -webkit-mask-image: var(--alert-circle-fill-svg);
+        background-color: var(--red-500);
+        font-size: 1.2em;
+      }
+      section {
+        display: flex;
+      }
+      section div {
+        width: 100px;
+        height: 100px;
+        margin-right: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--gray-050);
+      }
+    </style>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </Story>
+</Preview>
+
+Various extendable placeholders exist, along with CSS properties / variables,
+plus 3 helper placeholders to enable easy composition if a helper placeholder
+doesn't exist for your icon.
+
+```sass
+/* Specifically named icon placeholders */
+@extend %with-{icon-name}-icon;
+@extend %with-{icon-name}-mask; /*TODO: %with-{icon-name}-mask*/
+
+/* Usage with pseudo element */
+@extend %with-{icon-name}-icon, %as-pseudo;
+@extend %with-{icon-name}-mask, %as-psuedo;
+
+/* Specifically named icon variables */
+background-image: var(--with-{icon-name}-svg);
+mask-image: var(--with-{icon-name}-svg);
+
+/* Generic helper placeholders */
+@extend %with-icon;
+@extend %with-mask;
+@extend %as-psuedo;
+```
+
+`%as-pseudo` should be used if you are using a psuedo element for your icon.
+
+Depending on which method you are using sizing if done via `font-size: 1.2em`
+or `background-size / mask-image-size`. Pseudo elements can be
+resizing using `font-size` and is therefore preferred as it will resize along
+with the size of the text.
+
 <Preview>
   <Story name="Reference">{source}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Pseudos">{pseudo}</Story>
+</Preview>
+
+<Preview>
+  <Story name="Masks / Colored">{masked}</Story>
 </Preview>

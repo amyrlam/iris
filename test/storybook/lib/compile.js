@@ -11,7 +11,7 @@ module.exports = function(source, htmlFilePath = '') {
     }
   ).then(
     function(css) {
-      return `<link href="data:text/css;base64, ${css.css.toString('base64')}" rel="stylesheet" type="text/css" />`;
+      return `<link href="data:text/css;base64,${css.css.toString('base64')}" rel="stylesheet" type="text/css" />`;
     }
   ).catch(
     function(e) {
