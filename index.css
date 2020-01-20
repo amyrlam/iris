@@ -1,4 +1,12 @@
 @import './reset/base-variables.css';
+
+@import './color/base-variables.css';
+@import './color/semantic-variables.css';
+@import './typography/base-variables.css';
+
+@import './reset/system.css';
+@import './reset/minireset.css';
+
 @import './decoration/index.css';
 @import './color/index.css';
 @import './animation/index.css';
