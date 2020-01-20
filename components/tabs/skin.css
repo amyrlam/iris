@@ -1,6 +1,7 @@
 %tab-nav {
   /* %frame-gray-something */
   border-bottom: var(--decor-border-100);
+  /* TODO: structure tabs don't actually have a top border */
   border-top: var(--decor-border-200);
 }
 %tab-nav {
@@ -18,7 +19,7 @@
   text-decoration: none;
 }
 %tab-button {
-  border-bottom: var(--decor-border-200);
+  border-bottom: var(--decor-border-300);
 }
 %tab-button {
   border-color: var(--color-transparent);

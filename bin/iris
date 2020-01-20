@@ -91,6 +91,7 @@ const placeholderIcons = Object.keys(items).sort().map(
     %with-${property.replace('svg', 'mask')} {
       @extend %with-mask;
       -webkit-mask-image: var(--${property});
+      mask-image: var(--${property});
     }
 `
   }

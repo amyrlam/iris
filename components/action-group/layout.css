@@ -30,11 +30,11 @@
   top: 0;
 }
 %action-group input[type='radio'],
-%action-group input[type='radio'] ~ ul,
+%action-group input[type='radio'] ~ div,
 %action-group input[type='radio'] ~ .with-confirmation > ul {
   display: none;
 }
-%action-group input[type='radio']:checked ~ ul,
+%action-group input[type='radio']:checked ~ div,
 %action-group input[type='radio']:checked ~ .with-confirmation > ul {
   display: block;
 }

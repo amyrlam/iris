@@ -82,91 +82,90 @@
             "edit.svg",
             "exit.svg",
             "expand-less.svg",
-                  "expand-more.svg",
-                  "eye.svg",
-                  "file-fill.svg",
-                  "file-outline.svg",
-                  "filter.svg",
-                  "flag.svg",
-                  "folder-fill.svg",
-                  "folder-outline.svg",
-                  "git-branch.svg",
-                  "git-commit.svg",
-                  "git-pull-request.svg",
-                  "hashicorp-logo.svg",
-                  "help-circle-fill.svg",
-                  "help-circle-outline.svg",
-                  "history.svg",
-                  "info-circle-fill.svg",
-                  "info-circle-outline.svg",
-                  "kubernetes-logo-color.svg",
-                  "learn.svg",
-                  "link.svg",
-                  "loading.svg",
-                  "lock-closed.svg",
-                  "lock-disabled.svg",
-                  "lock-open.svg",
-                  "menu.svg",
-                  "minus-circle-fill.svg",
-                  "minus-circle-outline.svg",
-                  "minus-plain.svg",
-                  "minus-square-fill.svg",
-                  "minus.svg",
-                  "more-horizontal.svg",
-                  "more-vertical.svg",
-                  "nomad-logo-color.svg",
-                  "plus-circle-fill.svg",
-                  "plus-circle-outline.svg",
-                  "plus-plain.svg",
-                  "plus-square-fill.svg",
-                  "queue.svg",
-                  "refresh.svg",
-                  "run.svg",
-                  "search-color.svg",
-                  "search.svg",
-                  "service-identity.svg",
-                  "settings.svg",
-                  "star-fill.svg",
-                  "star-outline.svg",
-                  "star.svg",
-                  "sub-arrow-left.svg",
-                  "sub-arrow-right.svg",
-                  "swap-horizontal.svg",
-                  "swap-vertical.svg",
-                  "terraform-logo-color.svg",
-                  "tier-enterprise.svg",
-                  "tier-oss.svg",
-                  "trash.svg",
-                  "tune.svg",
-                  "unfold-less.svg",
-                  "unfold-more.svg",
-                  "upload.svg",
-                  "user-organization.svg",
-                  "user-plain.svg",
-                  "user-square-fill.svg",
-                  "user-square-outline.svg",
-                  "user-team.svg",
-                  "visibility-hide.svg",
-                  "visibility-show.svg"
-                ].map(
-                  (item, i, arr) => {
-                    const name = item.replace('.svg', '-svg');
-                    return `
+            "expand-more.svg",
+            "file-fill.svg",
+            "file-outline.svg",
+            "filter.svg",
+            "flag.svg",
+            "folder-fill.svg",
+            "folder-outline.svg",
+            "git-branch.svg",
+            "git-commit.svg",
+            "git-pull-request.svg",
+            "hashicorp-logo.svg",
+            "help-circle-fill.svg",
+            "help-circle-outline.svg",
+            "history.svg",
+            "info-circle-fill.svg",
+            "info-circle-outline.svg",
+            "kubernetes-logo-color.svg",
+            "learn.svg",
+            "link.svg",
+            "loading.svg",
+            "lock-closed.svg",
+            "lock-disabled.svg",
+            "lock-open.svg",
+            "menu.svg",
+            "minus-circle-fill.svg",
+            "minus-circle-outline.svg",
+            "minus-plain.svg",
+            "minus-square-fill.svg",
+            "minus.svg",
+            "more-horizontal.svg",
+            "more-vertical.svg",
+            "nomad-logo-color.svg",
+            "plus-circle-fill.svg",
+            "plus-circle-outline.svg",
+            "plus-plain.svg",
+            "plus-square-fill.svg",
+            "queue.svg",
+            "refresh.svg",
+            "run.svg",
+            "search-color.svg",
+            "search.svg",
+            "service-identity.svg",
+            "settings.svg",
+            "star-fill.svg",
+            "star-outline.svg",
+            "star.svg",
+            "sub-arrow-left.svg",
+            "sub-arrow-right.svg",
+            "swap-horizontal.svg",
+            "swap-vertical.svg",
+            "terraform-logo-color.svg",
+            "tier-enterprise.svg",
+            "tier-oss.svg",
+            "trash.svg",
+            "tune.svg",
+            "unfold-less.svg",
+            "unfold-more.svg",
+            "upload.svg",
+            "user-organization.svg",
+            "user-plain.svg",
+            "user-square-fill.svg",
+            "user-square-outline.svg",
+            "user-team.svg",
+            "visibility-hide.svg",
+            "visibility-show.svg"
+          ].map(
+            (item, i, arr) => {
+              const name = item.replace('.svg', '-svg');
+              return `
 
-                      li:nth-child(${i + 1}) figure span::before {
-                        @extend %with-mask, %as-pseudo;
-                        -webkit-mask-image: var(--${name});
-                        background-color: var(--${
-                          [
-                            'gray', 'green', 'red', 'orange', 'yellow', 'blue',
-                            'indigo', 'steel', 'magenta', 'teal', 'cobalt', 'cyan'
-                          ].sort(() => Math.random() - 0.5).pop()}-500);
-                      }
+                li:nth-child(${i + 1}) figure span::before {
+                  @extend %with-mask, %as-pseudo;
+                  -webkit-mask-image: var(--${name});
+                  background-color: var(--${
+                    [
+                      'gray', 'green', 'red', 'orange', 'yellow', 'blue',
+                      'indigo', 'steel', 'magenta', 'teal', 'cobalt', 'cyan'
+                    ].sort(() => Math.random() - 0.5).pop()}-500);
+                }
 
-                    `;
-                  }
-                ).join('')
-              }
+              `;
+            }
+          ).join('')
+        }
     </style>
     <body>
         <div id="wrapper">
@@ -210,7 +209,6 @@
                     "exit.svg",
                     "expand-less.svg",
                     "expand-more.svg",
-                    "eye.svg",
                     "file-fill.svg",
                     "file-outline.svg",
                     "filter.svg",

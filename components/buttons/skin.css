@@ -14,15 +14,11 @@
   min-height: 17px;
 }
 %copy-button::before {
-  @extend %with-copy-action-icon;
-  @extend %as-pseudo;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  left: 12px;
+  @extend %with-copy-action-mask, %as-pseudo;
+  background-color: var(--gray-500);
 }
-%copy-button:not(:empty) {
-  padding-left: 38px !important;
+%copy-button:not(:empty)::before {
+  margin-right: 10px;
 }
 %primary-button,
 %secondary-button,
@@ -43,7 +39,8 @@
   color: var(--color-action);
   background-color: var(--gray-050);
 }
-%copy-button:disabled {
+%copy-button:hover::before {
+  background-color: var(--blue-500);
 }
 %copy-button:active {
   background-color: var(--gray-200);
@@ -94,7 +91,9 @@
   @extend %frame-red-900;
 }
 
-
+%internal-button {
+  color: var(--gray-900);
+}
 %internal-button-dangerous {
   @extend %frame-red-300;
 }

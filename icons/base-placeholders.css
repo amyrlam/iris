@@ -4,7 +4,9 @@
 }
 %with-mask {
   -webkit-mask-repeat: no-repeat;
-  -webkit-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 %as-pseudo {
   display: inline-block;

@@ -13,3 +13,6 @@
 %action-group .confirmation-alert {
   @extend %confirmation-alert;
 }
+%action-group .type-delete {
+  @extend %internal-button-dangerous;
+}

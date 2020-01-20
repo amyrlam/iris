@@ -11,6 +11,9 @@
   @extend %tab-button-active;
 }
 /* TODO: need to add an empty class here */
+%tab-button-selected {
+  content: '';
+}
 %tab-nav .selected a {
   @extend %tab-button-selected;
 }
