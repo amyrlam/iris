@@ -88,6 +88,56 @@
       mask-image: var(--arrow-up-svg);
     }
 
+%with-aws-logo-color-icon {
+      @extend %with-icon;
+      background-image: var(--aws-logo-color-svg);
+    }
+    %with-aws-logo-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--aws-logo-color-svg);
+      mask-image: var(--aws-logo-color-svg);
+    }
+
+%with-bolt-icon {
+      @extend %with-icon;
+      background-image: var(--bolt-svg);
+    }
+    %with-bolt-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--bolt-svg);
+      mask-image: var(--bolt-svg);
+    }
+
+%with-box-check-fill-icon {
+      @extend %with-icon;
+      background-image: var(--box-check-fill-svg);
+    }
+    %with-box-check-fill-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--box-check-fill-svg);
+      mask-image: var(--box-check-fill-svg);
+    }
+
+%with-box-outline-icon {
+      @extend %with-icon;
+      background-image: var(--box-outline-svg);
+    }
+    %with-box-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--box-outline-svg);
+      mask-image: var(--box-outline-svg);
+    }
+
+%with-bug-icon {
+      @extend %with-icon;
+      background-image: var(--bug-svg);
+    }
+    %with-bug-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--bug-svg);
+      mask-image: var(--bug-svg);
+    }
+
 %with-calendar-icon {
       @extend %with-icon;
       background-image: var(--calendar-svg);
@@ -348,6 +398,26 @@
       mask-image: var(--copy-success-svg);
     }
 
+%with-database-icon {
+      @extend %with-icon;
+      background-image: var(--database-svg);
+    }
+    %with-database-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--database-svg);
+      mask-image: var(--database-svg);
+    }
+
+%with-deny-alt-icon {
+      @extend %with-icon;
+      background-image: var(--deny-alt-svg);
+    }
+    %with-deny-alt-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--deny-alt-svg);
+      mask-image: var(--deny-alt-svg);
+    }
+
 %with-deny-color-icon {
       @extend %with-icon;
       background-image: var(--deny-color-svg);
@@ -356,6 +426,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--deny-color-svg);
       mask-image: var(--deny-color-svg);
+    }
+
+%with-deny-default-icon {
+      @extend %with-icon;
+      background-image: var(--deny-default-svg);
+    }
+    %with-deny-default-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--deny-default-svg);
+      mask-image: var(--deny-default-svg);
     }
 
 %with-deny-icon {
@@ -406,6 +486,46 @@
       @extend %with-mask;
       -webkit-mask-image: var(--edit-svg);
       mask-image: var(--edit-svg);
+    }
+
+%with-envelope-sealed-fill-icon {
+      @extend %with-icon;
+      background-image: var(--envelope-sealed-fill-svg);
+    }
+    %with-envelope-sealed-fill-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--envelope-sealed-fill-svg);
+      mask-image: var(--envelope-sealed-fill-svg);
+    }
+
+%with-envelope-sealed-outline-icon {
+      @extend %with-icon;
+      background-image: var(--envelope-sealed-outline-svg);
+    }
+    %with-envelope-sealed-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--envelope-sealed-outline-svg);
+      mask-image: var(--envelope-sealed-outline-svg);
+    }
+
+%with-envelope-unsealed--outline-icon {
+      @extend %with-icon;
+      background-image: var(--envelope-unsealed--outline-svg);
+    }
+    %with-envelope-unsealed--outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--envelope-unsealed--outline-svg);
+      mask-image: var(--envelope-unsealed--outline-svg);
+    }
+
+%with-envelope-unsealed-fill-icon {
+      @extend %with-icon;
+      background-image: var(--envelope-unsealed-fill-svg);
+    }
+    %with-envelope-unsealed-fill-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--envelope-unsealed-fill-svg);
+      mask-image: var(--envelope-unsealed-fill-svg);
     }
 
 %with-exit-icon {
@@ -508,6 +628,26 @@
       mask-image: var(--folder-outline-svg);
     }
 
+%with-gift-fill-icon {
+      @extend %with-icon;
+      background-image: var(--gift-fill-svg);
+    }
+    %with-gift-fill-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--gift-fill-svg);
+      mask-image: var(--gift-fill-svg);
+    }
+
+%with-gift-outline-icon {
+      @extend %with-icon;
+      background-image: var(--gift-outline-svg);
+    }
+    %with-gift-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--gift-outline-svg);
+      mask-image: var(--gift-outline-svg);
+    }
+
 %with-git-branch-icon {
       @extend %with-icon;
       background-image: var(--git-branch-svg);
@@ -538,6 +678,16 @@
       mask-image: var(--git-pull-request-svg);
     }
 
+%with-git-repository-icon {
+      @extend %with-icon;
+      background-image: var(--git-repository-svg);
+    }
+    %with-git-repository-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--git-repository-svg);
+      mask-image: var(--git-repository-svg);
+    }
+
 %with-hashicorp-logo-icon {
       @extend %with-icon;
       background-image: var(--hashicorp-logo-svg);
@@ -546,6 +696,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--hashicorp-logo-svg);
       mask-image: var(--hashicorp-logo-svg);
+    }
+
+%with-health-icon {
+      @extend %with-icon;
+      background-image: var(--health-svg);
+    }
+    %with-health-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--health-svg);
+      mask-image: var(--health-svg);
     }
 
 %with-help-circle-fill-icon {
@@ -606,6 +766,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--info-circle-outline-svg);
       mask-image: var(--info-circle-outline-svg);
+    }
+
+%with-key-icon {
+      @extend %with-icon;
+      background-image: var(--key-svg);
+    }
+    %with-key-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--key-svg);
+      mask-image: var(--key-svg);
     }
 
 %with-kubernetes-logo-color-icon {
@@ -678,6 +848,226 @@
       mask-image: var(--lock-open-svg);
     }
 
+%with-logo-alicloud-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-alicloud-color-svg);
+    }
+    %with-logo-alicloud-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-alicloud-color-svg);
+      mask-image: var(--logo-alicloud-color-svg);
+    }
+
+%with-logo-alicloud-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-alicloud-monochrome-svg);
+    }
+    %with-logo-alicloud-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-alicloud-monochrome-svg);
+      mask-image: var(--logo-alicloud-monochrome-svg);
+    }
+
+%with-logo-aws-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-aws-color-svg);
+    }
+    %with-logo-aws-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-aws-color-svg);
+      mask-image: var(--logo-aws-color-svg);
+    }
+
+%with-logo-aws-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-aws-monochrome-svg);
+    }
+    %with-logo-aws-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-aws-monochrome-svg);
+      mask-image: var(--logo-aws-monochrome-svg);
+    }
+
+%with-logo-azure-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-azure-color-svg);
+    }
+    %with-logo-azure-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-azure-color-svg);
+      mask-image: var(--logo-azure-color-svg);
+    }
+
+%with-logo-azure-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-azure-monochrome-svg);
+    }
+    %with-logo-azure-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-azure-monochrome-svg);
+      mask-image: var(--logo-azure-monochrome-svg);
+    }
+
+%with-logo-bitbucket-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-bitbucket-color-svg);
+    }
+    %with-logo-bitbucket-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-bitbucket-color-svg);
+      mask-image: var(--logo-bitbucket-color-svg);
+    }
+
+%with-logo-bitbucket-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-bitbucket-monochrome-svg);
+    }
+    %with-logo-bitbucket-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-bitbucket-monochrome-svg);
+      mask-image: var(--logo-bitbucket-monochrome-svg);
+    }
+
+%with-logo-gcp-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-gcp-color-svg);
+    }
+    %with-logo-gcp-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-gcp-color-svg);
+      mask-image: var(--logo-gcp-color-svg);
+    }
+
+%with-logo-gcp-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-gcp-monochrome-svg);
+    }
+    %with-logo-gcp-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-gcp-monochrome-svg);
+      mask-image: var(--logo-gcp-monochrome-svg);
+    }
+
+%with-logo-github-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-github-color-svg);
+    }
+    %with-logo-github-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-github-color-svg);
+      mask-image: var(--logo-github-color-svg);
+    }
+
+%with-logo-github-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-github-monochrome-svg);
+    }
+    %with-logo-github-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-github-monochrome-svg);
+      mask-image: var(--logo-github-monochrome-svg);
+    }
+
+%with-logo-gitlab-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-gitlab-color-svg);
+    }
+    %with-logo-gitlab-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-gitlab-color-svg);
+      mask-image: var(--logo-gitlab-color-svg);
+    }
+
+%with-logo-gitlab-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-gitlab-monochrome-svg);
+    }
+    %with-logo-gitlab-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-gitlab-monochrome-svg);
+      mask-image: var(--logo-gitlab-monochrome-svg);
+    }
+
+%with-logo-kubernetes-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-kubernetes-color-svg);
+    }
+    %with-logo-kubernetes-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-kubernetes-color-svg);
+      mask-image: var(--logo-kubernetes-color-svg);
+    }
+
+%with-logo-kubernetes-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-kubernetes-monochrome-svg);
+    }
+    %with-logo-kubernetes-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-kubernetes-monochrome-svg);
+      mask-image: var(--logo-kubernetes-monochrome-svg);
+    }
+
+%with-logo-oracle-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-oracle-color-svg);
+    }
+    %with-logo-oracle-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-oracle-color-svg);
+      mask-image: var(--logo-oracle-color-svg);
+    }
+
+%with-logo-oracle-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-oracle-monochrome-svg);
+    }
+    %with-logo-oracle-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-oracle-monochrome-svg);
+      mask-image: var(--logo-oracle-monochrome-svg);
+    }
+
+%with-logo-slack-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-slack-color-svg);
+    }
+    %with-logo-slack-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-slack-color-svg);
+      mask-image: var(--logo-slack-color-svg);
+    }
+
+%with-logo-slack-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-slack-monochrome-svg);
+    }
+    %with-logo-slack-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-slack-monochrome-svg);
+      mask-image: var(--logo-slack-monochrome-svg);
+    }
+
+%with-logo-vmware-color-icon {
+      @extend %with-icon;
+      background-image: var(--logo-vmware-color-svg);
+    }
+    %with-logo-vmware-color-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-vmware-color-svg);
+      mask-image: var(--logo-vmware-color-svg);
+    }
+
+%with-logo-vmware-monochrome-icon {
+      @extend %with-icon;
+      background-image: var(--logo-vmware-monochrome-svg);
+    }
+    %with-logo-vmware-monochrome-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--logo-vmware-monochrome-svg);
+      mask-image: var(--logo-vmware-monochrome-svg);
+    }
+
 %with-menu-icon {
       @extend %with-icon;
       background-image: var(--menu-svg);
@@ -686,6 +1076,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--menu-svg);
       mask-image: var(--menu-svg);
+    }
+
+%with-message-icon {
+      @extend %with-icon;
+      background-image: var(--message-svg);
+    }
+    %with-message-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--message-svg);
+      mask-image: var(--message-svg);
     }
 
 %with-minus-circle-fill-icon {
@@ -748,6 +1148,16 @@
       mask-image: var(--minus-svg);
     }
 
+%with-module-icon {
+      @extend %with-icon;
+      background-image: var(--module-svg);
+    }
+    %with-module-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--module-svg);
+      mask-image: var(--module-svg);
+    }
+
 %with-more-horizontal-icon {
       @extend %with-icon;
       background-image: var(--more-horizontal-svg);
@@ -776,6 +1186,66 @@
       @extend %with-mask;
       -webkit-mask-image: var(--nomad-logo-color-svg);
       mask-image: var(--nomad-logo-color-svg);
+    }
+
+%with-notification-disabled-icon {
+      @extend %with-icon;
+      background-image: var(--notification-disabled-svg);
+    }
+    %with-notification-disabled-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--notification-disabled-svg);
+      mask-image: var(--notification-disabled-svg);
+    }
+
+%with-notification-fill-icon {
+      @extend %with-icon;
+      background-image: var(--notification-fill-svg);
+    }
+    %with-notification-fill-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--notification-fill-svg);
+      mask-image: var(--notification-fill-svg);
+    }
+
+%with-notification-outline-icon {
+      @extend %with-icon;
+      background-image: var(--notification-outline-svg);
+    }
+    %with-notification-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--notification-outline-svg);
+      mask-image: var(--notification-outline-svg);
+    }
+
+%with-outline-icon {
+      @extend %with-icon;
+      background-image: var(--outline-svg);
+    }
+    %with-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--outline-svg);
+      mask-image: var(--outline-svg);
+    }
+
+%with-page-outline-icon {
+      @extend %with-icon;
+      background-image: var(--page-outline-svg);
+    }
+    %with-page-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--page-outline-svg);
+      mask-image: var(--page-outline-svg);
+    }
+
+%with-partner-icon {
+      @extend %with-icon;
+      background-image: var(--partner-svg);
+    }
+    %with-partner-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--partner-svg);
+      mask-image: var(--partner-svg);
     }
 
 %with-plus-circle-fill-icon {
@@ -818,6 +1288,36 @@
       mask-image: var(--plus-square-fill-svg);
     }
 
+%with-provider-icon {
+      @extend %with-icon;
+      background-image: var(--provider-svg);
+    }
+    %with-provider-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--provider-svg);
+      mask-image: var(--provider-svg);
+    }
+
+%with-public-default-icon {
+      @extend %with-icon;
+      background-image: var(--public-default-svg);
+    }
+    %with-public-default-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--public-default-svg);
+      mask-image: var(--public-default-svg);
+    }
+
+%with-public-locked-icon {
+      @extend %with-icon;
+      background-image: var(--public-locked-svg);
+    }
+    %with-public-locked-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--public-locked-svg);
+      mask-image: var(--public-locked-svg);
+    }
+
 %with-queue-icon {
       @extend %with-icon;
       background-image: var(--queue-svg);
@@ -826,6 +1326,36 @@
       @extend %with-mask;
       -webkit-mask-image: var(--queue-svg);
       mask-image: var(--queue-svg);
+    }
+
+%with-radio-button-checked-icon {
+      @extend %with-icon;
+      background-image: var(--radio-button-checked-svg);
+    }
+    %with-radio-button-checked-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--radio-button-checked-svg);
+      mask-image: var(--radio-button-checked-svg);
+    }
+
+%with-radio-button-unchecked-icon {
+      @extend %with-icon;
+      background-image: var(--radio-button-unchecked-svg);
+    }
+    %with-radio-button-unchecked-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--radio-button-unchecked-svg);
+      mask-image: var(--radio-button-unchecked-svg);
+    }
+
+%with-random-icon {
+      @extend %with-icon;
+      background-image: var(--random-svg);
+    }
+    %with-random-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--random-svg);
+      mask-image: var(--random-svg);
     }
 
 %with-redirect-icon {
@@ -838,14 +1368,44 @@
       mask-image: var(--redirect-svg);
     }
 
-%with-refresh-icon {
+%with-refresh-alert-icon {
       @extend %with-icon;
-      background-image: var(--refresh-svg);
+      background-image: var(--refresh-alert-svg);
     }
-    %with-refresh-mask {
+    %with-refresh-alert-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--refresh-svg);
-      mask-image: var(--refresh-svg);
+      -webkit-mask-image: var(--refresh-alert-svg);
+      mask-image: var(--refresh-alert-svg);
+    }
+
+%with-refresh-default-icon {
+      @extend %with-icon;
+      background-image: var(--refresh-default-svg);
+    }
+    %with-refresh-default-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--refresh-default-svg);
+      mask-image: var(--refresh-default-svg);
+    }
+
+%with-remix-icon {
+      @extend %with-icon;
+      background-image: var(--remix-svg);
+    }
+    %with-remix-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--remix-svg);
+      mask-image: var(--remix-svg);
+    }
+
+%with-ribbon-icon {
+      @extend %with-icon;
+      background-image: var(--ribbon-svg);
+    }
+    %with-ribbon-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--ribbon-svg);
+      mask-image: var(--ribbon-svg);
     }
 
 %with-run-icon {
@@ -898,6 +1458,16 @@
       mask-image: var(--settings-svg);
     }
 
+%with-source-file-icon {
+      @extend %with-icon;
+      background-image: var(--source-file-svg);
+    }
+    %with-source-file-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--source-file-svg);
+      mask-image: var(--source-file-svg);
+    }
+
 %with-star-fill-icon {
       @extend %with-icon;
       background-image: var(--star-fill-svg);
@@ -928,24 +1498,34 @@
       mask-image: var(--star-svg);
     }
 
-%with-sub-arrow-left-icon {
+%with-sub-left-icon {
       @extend %with-icon;
-      background-image: var(--sub-arrow-left-svg);
+      background-image: var(--sub-left-svg);
     }
-    %with-sub-arrow-left-mask {
+    %with-sub-left-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--sub-arrow-left-svg);
-      mask-image: var(--sub-arrow-left-svg);
+      -webkit-mask-image: var(--sub-left-svg);
+      mask-image: var(--sub-left-svg);
     }
 
-%with-sub-arrow-right-icon {
+%with-sub-right-icon {
       @extend %with-icon;
-      background-image: var(--sub-arrow-right-svg);
+      background-image: var(--sub-right-svg);
     }
-    %with-sub-arrow-right-mask {
+    %with-sub-right-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--sub-arrow-right-svg);
-      mask-image: var(--sub-arrow-right-svg);
+      -webkit-mask-image: var(--sub-right-svg);
+      mask-image: var(--sub-right-svg);
+    }
+
+%with-support-icon {
+      @extend %with-icon;
+      background-image: var(--support-svg);
+    }
+    %with-support-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--support-svg);
+      mask-image: var(--support-svg);
     }
 
 %with-swap-horizontal-icon {
@@ -976,26 +1556,6 @@
       @extend %with-mask;
       -webkit-mask-image: var(--terraform-logo-color-svg);
       mask-image: var(--terraform-logo-color-svg);
-    }
-
-%with-tier-enterprise-icon {
-      @extend %with-icon;
-      background-image: var(--tier-enterprise-svg);
-    }
-    %with-tier-enterprise-mask {
-      @extend %with-mask;
-      -webkit-mask-image: var(--tier-enterprise-svg);
-      mask-image: var(--tier-enterprise-svg);
-    }
-
-%with-tier-oss-icon {
-      @extend %with-icon;
-      background-image: var(--tier-oss-svg);
-    }
-    %with-tier-oss-mask {
-      @extend %with-mask;
-      -webkit-mask-image: var(--tier-oss-svg);
-      mask-image: var(--tier-oss-svg);
     }
 
 %with-trash-icon {
@@ -1046,6 +1606,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--upload-svg);
       mask-image: var(--upload-svg);
+    }
+
+%with-user-add-icon {
+      @extend %with-icon;
+      background-image: var(--user-add-svg);
+    }
+    %with-user-add-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--user-add-svg);
+      mask-image: var(--user-add-svg);
     }
 
 %with-user-organization-icon {
@@ -1116,4 +1686,14 @@
       @extend %with-mask;
       -webkit-mask-image: var(--visibility-show-svg);
       mask-image: var(--visibility-show-svg);
+    }
+
+%with-webhook-icon {
+      @extend %with-icon;
+      background-image: var(--webhook-svg);
+    }
+    %with-webhook-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--webhook-svg);
+      mask-image: var(--webhook-svg);
     }
