@@ -79,6 +79,9 @@ ${item}`;
 fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
   ${inlineIcons}
 }`);
+fs.writeFileSync(options.inputPath + '/icons/index.txt', `[
+'${Object.keys(items).sort().join("',\n'")}'
+]`);
 
 console.log(`Writing inline icons to icon %with- placeholders:`);
 const placeholderIcons = Object.keys(items).sort().map(
