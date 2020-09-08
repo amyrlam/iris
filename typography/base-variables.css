@@ -14,6 +14,7 @@
   --typo-size-300: 1.3rem;
   /* mktg only ^ */
   --typo-size-400: 1.2rem; /* $size-large? 24 */
+  --typo-size-450: 1.125rem;
   --typo-size-500: 1rem; /* $size-medium? // 18 */
   --typo-size-600: 0.875rem; /* $size-normal? // 14 */
   --typo-size-700: 0.8125rem; /* $size-small? // 13 */

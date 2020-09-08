@@ -1,5 +1,9 @@
 @import './skin.css';
 @import './layout.css';
+%with-animated-tab-selection ul::after,
+%tab-button-selected {
+  @extend %frame-brand-300;
+}
 %tab-nav li a {
   @extend %tab-button;
 }
@@ -9,10 +13,6 @@
 }
 %tab-nav li:not(.selected) a:active {
   @extend %tab-button-active;
-}
-/* TODO: need to add an empty class here */
-%tab-button-selected {
-  content: '';
 }
 %tab-nav .selected a {
   @extend %tab-button-selected;

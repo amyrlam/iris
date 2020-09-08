@@ -2,10 +2,11 @@
   clear: both;
 }
 %tab-nav ul {
-  padding: 0;
-  margin: 0;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 %tab-button {
   padding-left: 16px;

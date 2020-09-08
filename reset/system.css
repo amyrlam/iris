@@ -19,6 +19,9 @@ html {
 hr {
   background-color: var(--gray-500);
 }
+button {
+  background-color: var(--transparent);
+}
 html {
   font-size: var(--typo-size-000);
 }

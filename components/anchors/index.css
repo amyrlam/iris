@@ -1,6 +1,8 @@
 %anchor-decoration,
 %anchor-decoration-active {
   text-decoration: none;
+  cursor: pointer;
+  background-color: var(--transparent);
 }
 %anchor-decoration-intent {
   text-decoration: underline;
@@ -9,6 +11,9 @@
 %anchor-intent,
 %anchor-active {
   color: var(--color-action);
+}
+%anchor-active {
+  outline: 0;
 }
 %anchor-decoration:hover,
 %anchor-decoration:focus {

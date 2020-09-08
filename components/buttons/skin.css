@@ -3,6 +3,7 @@
   @extend %user-select-none;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 %button:disabled,
 %internal-button:disabled {
@@ -93,6 +94,7 @@
 
 %internal-button {
   color: var(--gray-900);
+  background-color: var(--white);
 }
 %internal-button-dangerous {
   @extend %frame-red-300;
@@ -110,4 +112,23 @@
 %internal-button-dangerous:focus,
 %internal-button-dangerous:hover {
   @extend %internal-button-dangerous-intent;
+}
+%split-button span::after {
+  @extend %as-pseudo;
+  position: absolute;
+  width: 1px;
+  top: 0;
+  height: 100%;
+  margin-left: 8px;
+  background-color: var(--gray-300);
+}
+%sort-button::before {
+  @extend %with-sort-mask, %as-pseudo;
+  position: relative;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+}
+%sort-button::after {
+  top: 0 !important;
 }

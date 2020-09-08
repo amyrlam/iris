@@ -12,6 +12,8 @@
   border: var(--decor-border-100);
   outline: none;
 }
+%form fieldset > p,
+%form-element-note,
 %form-element-text-input::placeholder {
   color: var(--gray-400);
 }

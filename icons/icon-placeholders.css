@@ -388,6 +388,16 @@
       mask-image: var(--database-svg);
     }
 
+%with-delay-icon {
+      @extend %with-icon;
+      background-image: var(--delay-svg);
+    }
+    %with-delay-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--delay-svg);
+      mask-image: var(--delay-svg);
+    }
+
 %with-deny-alt-icon {
       @extend %with-icon;
       background-image: var(--deny-alt-svg);
@@ -606,6 +616,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--folder-outline-svg);
       mask-image: var(--folder-outline-svg);
+    }
+
+%with-gateway-icon {
+      @extend %with-icon;
+      background-image: var(--gateway-svg);
+    }
+    %with-gateway-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--gateway-svg);
+      mask-image: var(--gateway-svg);
     }
 
 %with-gift-fill-icon {
@@ -1278,6 +1298,16 @@
       mask-image: var(--partner-svg);
     }
 
+%with-path-icon {
+      @extend %with-icon;
+      background-image: var(--path-svg);
+    }
+    %with-path-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--path-svg);
+      mask-image: var(--path-svg);
+    }
+
 %with-plus-circle-fill-icon {
       @extend %with-icon;
       background-image: var(--plus-circle-fill-svg);
@@ -1316,6 +1346,26 @@
       @extend %with-mask;
       -webkit-mask-image: var(--plus-square-fill-svg);
       mask-image: var(--plus-square-fill-svg);
+    }
+
+%with-port-icon {
+      @extend %with-icon;
+      background-image: var(--port-svg);
+    }
+    %with-port-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--port-svg);
+      mask-image: var(--port-svg);
+    }
+
+%with-protocol-icon {
+      @extend %with-icon;
+      background-image: var(--protocol-svg);
+    }
+    %with-protocol-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--protocol-svg);
+      mask-image: var(--protocol-svg);
     }
 
 %with-provider-icon {
@@ -1488,6 +1538,16 @@
       mask-image: var(--settings-svg);
     }
 
+%with-sort-icon {
+      @extend %with-icon;
+      background-image: var(--sort-svg);
+    }
+    %with-sort-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--sort-svg);
+      mask-image: var(--sort-svg);
+    }
+
 %with-source-file-icon {
       @extend %with-icon;
       background-image: var(--source-file-svg);
@@ -1496,6 +1556,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--source-file-svg);
       mask-image: var(--source-file-svg);
+    }
+
+%with-star-circle-outline-icon {
+      @extend %with-icon;
+      background-image: var(--star-circle-outline-svg);
+    }
+    %with-star-circle-outline-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--star-circle-outline-svg);
+      mask-image: var(--star-circle-outline-svg);
     }
 
 %with-star-fill-icon {
@@ -1576,6 +1646,16 @@
       @extend %with-mask;
       -webkit-mask-image: var(--swap-vertical-svg);
       mask-image: var(--swap-vertical-svg);
+    }
+
+%with-tag-icon {
+      @extend %with-icon;
+      background-image: var(--tag-svg);
+    }
+    %with-tag-mask {
+      @extend %with-mask;
+      -webkit-mask-image: var(--tag-svg);
+      mask-image: var(--tag-svg);
     }
 
 %with-trash-icon {

@@ -7,6 +7,7 @@
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   mask-position: center;
+  background-color: currentColor;
 }
 %as-pseudo {
   display: inline-block;

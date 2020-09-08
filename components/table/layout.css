@@ -31,7 +31,7 @@
 }
 %table td:not(.actions),
 %table td:not(.actions) > *:only-child {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 %table td:not(.actions) > * {
   white-space: nowrap;
@@ -41,6 +41,7 @@
 }
 %table td {
   height: 50px;
+  vertical-align: middle;
 }
 %table caption {
   margin-bottom: 0.8em;
