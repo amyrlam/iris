@@ -1,1869 +1,1329 @@
 %with-alert-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--alert-circle-fill-svg);
     }
     %with-alert-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--alert-circle-fill-svg);
-      mask-image: var(--alert-circle-fill-svg);
     }
 
 %with-alert-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--alert-circle-outline-svg);
     }
     %with-alert-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--alert-circle-outline-svg);
-      mask-image: var(--alert-circle-outline-svg);
     }
 
 %with-alert-triangle-color-icon {
       @extend %with-icon;
-      background-image: var(--alert-triangle-color-svg);
     }
     %with-alert-triangle-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--alert-triangle-color-svg);
-      mask-image: var(--alert-triangle-color-svg);
     }
 
 %with-alert-triangle-icon {
       @extend %with-icon;
-      background-image: var(--alert-triangle-svg);
     }
     %with-alert-triangle-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--alert-triangle-svg);
-      mask-image: var(--alert-triangle-svg);
     }
 
 %with-arrow-down-icon {
       @extend %with-icon;
-      background-image: var(--arrow-down-svg);
     }
     %with-arrow-down-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--arrow-down-svg);
-      mask-image: var(--arrow-down-svg);
     }
 
 %with-arrow-left-icon {
       @extend %with-icon;
-      background-image: var(--arrow-left-svg);
     }
     %with-arrow-left-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--arrow-left-svg);
-      mask-image: var(--arrow-left-svg);
     }
 
 %with-arrow-right-color-icon {
       @extend %with-icon;
-      background-image: var(--arrow-right-color-svg);
     }
     %with-arrow-right-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--arrow-right-color-svg);
-      mask-image: var(--arrow-right-color-svg);
     }
 
 %with-arrow-right-icon {
       @extend %with-icon;
-      background-image: var(--arrow-right-svg);
     }
     %with-arrow-right-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--arrow-right-svg);
-      mask-image: var(--arrow-right-svg);
     }
 
 %with-arrow-up-icon {
       @extend %with-icon;
-      background-image: var(--arrow-up-svg);
     }
     %with-arrow-up-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--arrow-up-svg);
-      mask-image: var(--arrow-up-svg);
     }
 
 %with-aws-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--aws-logo-color-svg);
     }
     %with-aws-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--aws-logo-color-svg);
-      mask-image: var(--aws-logo-color-svg);
     }
 
 %with-bolt-icon {
       @extend %with-icon;
-      background-image: var(--bolt-svg);
     }
     %with-bolt-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--bolt-svg);
-      mask-image: var(--bolt-svg);
     }
 
 %with-box-check-fill-icon {
       @extend %with-icon;
-      background-image: var(--box-check-fill-svg);
     }
     %with-box-check-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--box-check-fill-svg);
-      mask-image: var(--box-check-fill-svg);
     }
 
 %with-box-outline-icon {
       @extend %with-icon;
-      background-image: var(--box-outline-svg);
     }
     %with-box-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--box-outline-svg);
-      mask-image: var(--box-outline-svg);
     }
 
 %with-bug-icon {
       @extend %with-icon;
-      background-image: var(--bug-svg);
     }
     %with-bug-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--bug-svg);
-      mask-image: var(--bug-svg);
     }
 
 %with-calendar-icon {
       @extend %with-icon;
-      background-image: var(--calendar-svg);
     }
     %with-calendar-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--calendar-svg);
-      mask-image: var(--calendar-svg);
     }
 
 %with-cancel-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--cancel-circle-fill-svg);
     }
     %with-cancel-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-circle-fill-svg);
-      mask-image: var(--cancel-circle-fill-svg);
     }
 
 %with-cancel-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--cancel-circle-outline-svg);
     }
     %with-cancel-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-circle-outline-svg);
-      mask-image: var(--cancel-circle-outline-svg);
     }
 
 %with-cancel-plain-icon {
       @extend %with-icon;
-      background-image: var(--cancel-plain-svg);
     }
     %with-cancel-plain-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-plain-svg);
-      mask-image: var(--cancel-plain-svg);
     }
 
 %with-cancel-square-fill-color-icon {
       @extend %with-icon;
-      background-image: var(--cancel-square-fill-color-svg);
     }
     %with-cancel-square-fill-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-square-fill-color-svg);
-      mask-image: var(--cancel-square-fill-color-svg);
     }
 
 %with-cancel-square-fill-icon {
       @extend %with-icon;
-      background-image: var(--cancel-square-fill-svg);
     }
     %with-cancel-square-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-square-fill-svg);
-      mask-image: var(--cancel-square-fill-svg);
     }
 
 %with-cancel-square-outline-icon {
       @extend %with-icon;
-      background-image: var(--cancel-square-outline-svg);
     }
     %with-cancel-square-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cancel-square-outline-svg);
-      mask-image: var(--cancel-square-outline-svg);
     }
 
 %with-caret-down-icon {
       @extend %with-icon;
-      background-image: var(--caret-down-svg);
     }
     %with-caret-down-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--caret-down-svg);
-      mask-image: var(--caret-down-svg);
     }
 
 %with-caret-up-icon {
       @extend %with-icon;
-      background-image: var(--caret-up-svg);
     }
     %with-caret-up-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--caret-up-svg);
-      mask-image: var(--caret-up-svg);
     }
 
 %with-check-circle-fill-color-icon {
       @extend %with-icon;
-      background-image: var(--check-circle-fill-color-svg);
     }
     %with-check-circle-fill-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--check-circle-fill-color-svg);
-      mask-image: var(--check-circle-fill-color-svg);
     }
 
 %with-check-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--check-circle-fill-svg);
     }
     %with-check-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--check-circle-fill-svg);
-      mask-image: var(--check-circle-fill-svg);
     }
 
 %with-check-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--check-circle-outline-svg);
     }
     %with-check-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--check-circle-outline-svg);
-      mask-image: var(--check-circle-outline-svg);
     }
 
 %with-check-plain-icon {
       @extend %with-icon;
-      background-image: var(--check-plain-svg);
     }
     %with-check-plain-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--check-plain-svg);
-      mask-image: var(--check-plain-svg);
     }
 
 %with-chevron-down-2-icon {
       @extend %with-icon;
-      background-image: var(--chevron-down-2-svg);
     }
     %with-chevron-down-2-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-down-2-svg);
-      mask-image: var(--chevron-down-2-svg);
     }
 
 %with-chevron-down-icon {
       @extend %with-icon;
-      background-image: var(--chevron-down-svg);
     }
     %with-chevron-down-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-down-svg);
-      mask-image: var(--chevron-down-svg);
     }
 
 %with-chevron-left-icon {
       @extend %with-icon;
-      background-image: var(--chevron-left-svg);
     }
     %with-chevron-left-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-left-svg);
-      mask-image: var(--chevron-left-svg);
     }
 
 %with-chevron-right-icon {
       @extend %with-icon;
-      background-image: var(--chevron-right-svg);
     }
     %with-chevron-right-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-right-svg);
-      mask-image: var(--chevron-right-svg);
     }
 
 %with-chevron-up-icon {
       @extend %with-icon;
-      background-image: var(--chevron-up-svg);
     }
     %with-chevron-up-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-up-svg);
-      mask-image: var(--chevron-up-svg);
     }
 
 %with-chevron-icon {
       @extend %with-icon;
-      background-image: var(--chevron-svg);
     }
     %with-chevron-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--chevron-svg);
-      mask-image: var(--chevron-svg);
     }
 
 %with-clock-fill-icon {
       @extend %with-icon;
-      background-image: var(--clock-fill-svg);
     }
     %with-clock-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--clock-fill-svg);
-      mask-image: var(--clock-fill-svg);
     }
 
 %with-clock-outline-icon {
       @extend %with-icon;
-      background-image: var(--clock-outline-svg);
     }
     %with-clock-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--clock-outline-svg);
-      mask-image: var(--clock-outline-svg);
     }
 
 %with-cloud-cross-icon {
       @extend %with-icon;
-      background-image: var(--cloud-cross-svg);
     }
     %with-cloud-cross-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--cloud-cross-svg);
-      mask-image: var(--cloud-cross-svg);
     }
 
 %with-code-icon {
       @extend %with-icon;
-      background-image: var(--code-svg);
     }
     %with-code-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--code-svg);
-      mask-image: var(--code-svg);
     }
 
 %with-consul-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--consul-logo-color-svg);
     }
     %with-consul-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--consul-logo-color-svg);
-      mask-image: var(--consul-logo-color-svg);
     }
 
 %with-copy-action-icon {
       @extend %with-icon;
-      background-image: var(--copy-action-svg);
     }
     %with-copy-action-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--copy-action-svg);
-      mask-image: var(--copy-action-svg);
     }
 
 %with-copy-success-icon {
       @extend %with-icon;
-      background-image: var(--copy-success-svg);
     }
     %with-copy-success-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--copy-success-svg);
-      mask-image: var(--copy-success-svg);
     }
 
 %with-database-icon {
       @extend %with-icon;
-      background-image: var(--database-svg);
     }
     %with-database-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--database-svg);
-      mask-image: var(--database-svg);
     }
 
 %with-delay-icon {
       @extend %with-icon;
-      background-image: var(--delay-svg);
     }
     %with-delay-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--delay-svg);
-      mask-image: var(--delay-svg);
     }
 
 %with-deny-alt-icon {
       @extend %with-icon;
-      background-image: var(--deny-alt-svg);
     }
     %with-deny-alt-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--deny-alt-svg);
-      mask-image: var(--deny-alt-svg);
     }
 
 %with-deny-color-icon {
       @extend %with-icon;
-      background-image: var(--deny-color-svg);
     }
     %with-deny-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--deny-color-svg);
-      mask-image: var(--deny-color-svg);
     }
 
 %with-deny-default-icon {
       @extend %with-icon;
-      background-image: var(--deny-default-svg);
     }
     %with-deny-default-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--deny-default-svg);
-      mask-image: var(--deny-default-svg);
     }
 
 %with-deny-icon {
       @extend %with-icon;
-      background-image: var(--deny-svg);
     }
     %with-deny-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--deny-svg);
-      mask-image: var(--deny-svg);
     }
 
 %with-disabled-icon {
       @extend %with-icon;
-      background-image: var(--disabled-svg);
     }
     %with-disabled-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--disabled-svg);
-      mask-image: var(--disabled-svg);
     }
 
 %with-docs-icon {
       @extend %with-icon;
-      background-image: var(--docs-svg);
     }
     %with-docs-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--docs-svg);
-      mask-image: var(--docs-svg);
     }
 
 %with-download-icon {
       @extend %with-icon;
-      background-image: var(--download-svg);
     }
     %with-download-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--download-svg);
-      mask-image: var(--download-svg);
     }
 
 %with-edit-icon {
       @extend %with-icon;
-      background-image: var(--edit-svg);
     }
     %with-edit-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--edit-svg);
-      mask-image: var(--edit-svg);
     }
 
 %with-ember-circle-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--ember-circle-logo-color-svg);
     }
     %with-ember-circle-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--ember-circle-logo-color-svg);
-      mask-image: var(--ember-circle-logo-color-svg);
     }
 
 %with-envelope-sealed-fill-icon {
       @extend %with-icon;
-      background-image: var(--envelope-sealed-fill-svg);
     }
     %with-envelope-sealed-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--envelope-sealed-fill-svg);
-      mask-image: var(--envelope-sealed-fill-svg);
     }
 
 %with-envelope-sealed-outline-icon {
       @extend %with-icon;
-      background-image: var(--envelope-sealed-outline-svg);
     }
     %with-envelope-sealed-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--envelope-sealed-outline-svg);
-      mask-image: var(--envelope-sealed-outline-svg);
     }
 
 %with-envelope-unsealed--outline-icon {
       @extend %with-icon;
-      background-image: var(--envelope-unsealed--outline-svg);
     }
     %with-envelope-unsealed--outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--envelope-unsealed--outline-svg);
-      mask-image: var(--envelope-unsealed--outline-svg);
     }
 
 %with-envelope-unsealed-fill-icon {
       @extend %with-icon;
-      background-image: var(--envelope-unsealed-fill-svg);
     }
     %with-envelope-unsealed-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--envelope-unsealed-fill-svg);
-      mask-image: var(--envelope-unsealed-fill-svg);
     }
 
 %with-exit-icon {
       @extend %with-icon;
-      background-image: var(--exit-svg);
     }
     %with-exit-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--exit-svg);
-      mask-image: var(--exit-svg);
     }
 
 %with-expand-less-icon {
       @extend %with-icon;
-      background-image: var(--expand-less-svg);
     }
     %with-expand-less-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--expand-less-svg);
-      mask-image: var(--expand-less-svg);
     }
 
 %with-expand-more-icon {
       @extend %with-icon;
-      background-image: var(--expand-more-svg);
     }
     %with-expand-more-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--expand-more-svg);
-      mask-image: var(--expand-more-svg);
     }
 
 %with-file-fill-icon {
       @extend %with-icon;
-      background-image: var(--file-fill-svg);
     }
     %with-file-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--file-fill-svg);
-      mask-image: var(--file-fill-svg);
     }
 
 %with-file-outline-icon {
       @extend %with-icon;
-      background-image: var(--file-outline-svg);
     }
     %with-file-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--file-outline-svg);
-      mask-image: var(--file-outline-svg);
     }
 
 %with-filter-icon {
       @extend %with-icon;
-      background-image: var(--filter-svg);
     }
     %with-filter-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--filter-svg);
-      mask-image: var(--filter-svg);
     }
 
 %with-flag-icon {
       @extend %with-icon;
-      background-image: var(--flag-svg);
     }
     %with-flag-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--flag-svg);
-      mask-image: var(--flag-svg);
     }
 
 %with-folder-fill-icon {
       @extend %with-icon;
-      background-image: var(--folder-fill-svg);
     }
     %with-folder-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--folder-fill-svg);
-      mask-image: var(--folder-fill-svg);
     }
 
 %with-folder-outline-color-icon {
       @extend %with-icon;
-      background-image: var(--folder-outline-color-svg);
     }
     %with-folder-outline-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--folder-outline-color-svg);
-      mask-image: var(--folder-outline-color-svg);
     }
 
 %with-folder-outline-icon {
       @extend %with-icon;
-      background-image: var(--folder-outline-svg);
     }
     %with-folder-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--folder-outline-svg);
-      mask-image: var(--folder-outline-svg);
     }
 
 %with-gateway-icon {
       @extend %with-icon;
-      background-image: var(--gateway-svg);
     }
     %with-gateway-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--gateway-svg);
-      mask-image: var(--gateway-svg);
     }
 
 %with-gift-fill-icon {
       @extend %with-icon;
-      background-image: var(--gift-fill-svg);
     }
     %with-gift-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--gift-fill-svg);
-      mask-image: var(--gift-fill-svg);
     }
 
 %with-gift-outline-icon {
       @extend %with-icon;
-      background-image: var(--gift-outline-svg);
     }
     %with-gift-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--gift-outline-svg);
-      mask-image: var(--gift-outline-svg);
     }
 
 %with-git-branch-icon {
       @extend %with-icon;
-      background-image: var(--git-branch-svg);
     }
     %with-git-branch-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--git-branch-svg);
-      mask-image: var(--git-branch-svg);
     }
 
 %with-git-commit-icon {
       @extend %with-icon;
-      background-image: var(--git-commit-svg);
     }
     %with-git-commit-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--git-commit-svg);
-      mask-image: var(--git-commit-svg);
     }
 
 %with-git-pull-request-icon {
       @extend %with-icon;
-      background-image: var(--git-pull-request-svg);
     }
     %with-git-pull-request-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--git-pull-request-svg);
-      mask-image: var(--git-pull-request-svg);
     }
 
 %with-git-repository-icon {
       @extend %with-icon;
-      background-image: var(--git-repository-svg);
     }
     %with-git-repository-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--git-repository-svg);
-      mask-image: var(--git-repository-svg);
     }
 
 %with-glimmer-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--glimmer-logo-color-svg);
     }
     %with-glimmer-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--glimmer-logo-color-svg);
-      mask-image: var(--glimmer-logo-color-svg);
     }
 
 %with-hashicorp-logo-icon {
       @extend %with-icon;
-      background-image: var(--hashicorp-logo-svg);
     }
     %with-hashicorp-logo-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--hashicorp-logo-svg);
-      mask-image: var(--hashicorp-logo-svg);
     }
 
 %with-health-icon {
       @extend %with-icon;
-      background-image: var(--health-svg);
     }
     %with-health-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--health-svg);
-      mask-image: var(--health-svg);
     }
 
 %with-help-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--help-circle-fill-svg);
     }
     %with-help-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--help-circle-fill-svg);
-      mask-image: var(--help-circle-fill-svg);
     }
 
 %with-help-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--help-circle-outline-svg);
     }
     %with-help-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--help-circle-outline-svg);
-      mask-image: var(--help-circle-outline-svg);
     }
 
 %with-history-icon {
       @extend %with-icon;
-      background-image: var(--history-svg);
     }
     %with-history-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--history-svg);
-      mask-image: var(--history-svg);
     }
 
 %with-info-circle-fill-color-icon {
       @extend %with-icon;
-      background-image: var(--info-circle-fill-color-svg);
     }
     %with-info-circle-fill-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--info-circle-fill-color-svg);
-      mask-image: var(--info-circle-fill-color-svg);
     }
 
 %with-info-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--info-circle-fill-svg);
     }
     %with-info-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--info-circle-fill-svg);
-      mask-image: var(--info-circle-fill-svg);
     }
 
 %with-info-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--info-circle-outline-svg);
     }
     %with-info-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--info-circle-outline-svg);
-      mask-image: var(--info-circle-outline-svg);
     }
 
 %with-jwt-logo-icon {
       @extend %with-icon;
-      background-image: var(--jwt-logo-svg);
     }
     %with-jwt-logo-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--jwt-logo-svg);
-      mask-image: var(--jwt-logo-svg);
     }
 
 %with-key-icon {
       @extend %with-icon;
-      background-image: var(--key-svg);
     }
     %with-key-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--key-svg);
-      mask-image: var(--key-svg);
     }
 
 %with-kubernetes-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--kubernetes-logo-color-svg);
     }
     %with-kubernetes-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--kubernetes-logo-color-svg);
-      mask-image: var(--kubernetes-logo-color-svg);
     }
 
 %with-layers-icon {
       @extend %with-icon;
-      background-image: var(--layers-svg);
     }
     %with-layers-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--layers-svg);
-      mask-image: var(--layers-svg);
     }
 
 %with-learn-icon {
       @extend %with-icon;
-      background-image: var(--learn-svg);
     }
     %with-learn-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--learn-svg);
-      mask-image: var(--learn-svg);
     }
 
 %with-link-icon {
       @extend %with-icon;
-      background-image: var(--link-svg);
     }
     %with-link-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--link-svg);
-      mask-image: var(--link-svg);
     }
 
 %with-loading-icon {
       @extend %with-icon;
-      background-image: var(--loading-svg);
     }
     %with-loading-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--loading-svg);
-      mask-image: var(--loading-svg);
     }
 
 %with-lock-closed-icon {
       @extend %with-icon;
-      background-image: var(--lock-closed-svg);
     }
     %with-lock-closed-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--lock-closed-svg);
-      mask-image: var(--lock-closed-svg);
     }
 
 %with-lock-disabled-icon {
       @extend %with-icon;
-      background-image: var(--lock-disabled-svg);
     }
     %with-lock-disabled-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--lock-disabled-svg);
-      mask-image: var(--lock-disabled-svg);
     }
 
 %with-lock-open-icon {
       @extend %with-icon;
-      background-image: var(--lock-open-svg);
     }
     %with-lock-open-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--lock-open-svg);
-      mask-image: var(--lock-open-svg);
     }
 
 %with-logo-alicloud-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-alicloud-color-svg);
     }
     %with-logo-alicloud-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-alicloud-color-svg);
-      mask-image: var(--logo-alicloud-color-svg);
     }
 
 %with-logo-alicloud-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-alicloud-monochrome-svg);
     }
     %with-logo-alicloud-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-alicloud-monochrome-svg);
-      mask-image: var(--logo-alicloud-monochrome-svg);
     }
 
 %with-logo-auth0-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-auth0-color-svg);
     }
     %with-logo-auth0-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-auth0-color-svg);
-      mask-image: var(--logo-auth0-color-svg);
     }
 
 %with-logo-aws-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-aws-color-svg);
     }
     %with-logo-aws-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-aws-color-svg);
-      mask-image: var(--logo-aws-color-svg);
     }
 
 %with-logo-aws-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-aws-monochrome-svg);
     }
     %with-logo-aws-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-aws-monochrome-svg);
-      mask-image: var(--logo-aws-monochrome-svg);
     }
 
 %with-logo-azure-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-azure-color-svg);
     }
     %with-logo-azure-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-azure-color-svg);
-      mask-image: var(--logo-azure-color-svg);
     }
 
 %with-logo-azure-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-azure-monochrome-svg);
     }
     %with-logo-azure-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-azure-monochrome-svg);
-      mask-image: var(--logo-azure-monochrome-svg);
     }
 
 %with-logo-bitbucket-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-bitbucket-color-svg);
     }
     %with-logo-bitbucket-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-bitbucket-color-svg);
-      mask-image: var(--logo-bitbucket-color-svg);
     }
 
 %with-logo-bitbucket-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-bitbucket-monochrome-svg);
     }
     %with-logo-bitbucket-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-bitbucket-monochrome-svg);
-      mask-image: var(--logo-bitbucket-monochrome-svg);
+    }
+
+%with-logo-consul-color-icon {
+      @extend %with-icon;
+    }
+    %with-logo-consul-color-mask {
+      @extend %with-mask;
     }
 
 %with-logo-gcp-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-gcp-color-svg);
     }
     %with-logo-gcp-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-gcp-color-svg);
-      mask-image: var(--logo-gcp-color-svg);
     }
 
 %with-logo-gcp-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-gcp-monochrome-svg);
     }
     %with-logo-gcp-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-gcp-monochrome-svg);
-      mask-image: var(--logo-gcp-monochrome-svg);
     }
 
 %with-logo-github-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-github-color-svg);
     }
     %with-logo-github-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-github-color-svg);
-      mask-image: var(--logo-github-color-svg);
     }
 
 %with-logo-github-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-github-monochrome-svg);
     }
     %with-logo-github-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-github-monochrome-svg);
-      mask-image: var(--logo-github-monochrome-svg);
     }
 
 %with-logo-gitlab-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-gitlab-color-svg);
     }
     %with-logo-gitlab-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-gitlab-color-svg);
-      mask-image: var(--logo-gitlab-color-svg);
     }
 
 %with-logo-gitlab-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-gitlab-monochrome-svg);
     }
     %with-logo-gitlab-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-gitlab-monochrome-svg);
-      mask-image: var(--logo-gitlab-monochrome-svg);
     }
 
 %with-logo-google-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-google-color-svg);
     }
     %with-logo-google-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-google-color-svg);
-      mask-image: var(--logo-google-color-svg);
     }
 
 %with-logo-kubernetes-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-kubernetes-color-svg);
     }
     %with-logo-kubernetes-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-kubernetes-color-svg);
-      mask-image: var(--logo-kubernetes-color-svg);
     }
 
 %with-logo-kubernetes-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-kubernetes-monochrome-svg);
     }
     %with-logo-kubernetes-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-kubernetes-monochrome-svg);
-      mask-image: var(--logo-kubernetes-monochrome-svg);
     }
 
 %with-logo-microsoft-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-microsoft-color-svg);
     }
     %with-logo-microsoft-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-microsoft-color-svg);
-      mask-image: var(--logo-microsoft-color-svg);
+    }
+
+%with-logo-nomad-color-icon {
+      @extend %with-icon;
+    }
+    %with-logo-nomad-color-mask {
+      @extend %with-mask;
     }
 
 %with-logo-okta-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-okta-color-svg);
     }
     %with-logo-okta-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-okta-color-svg);
-      mask-image: var(--logo-okta-color-svg);
     }
 
 %with-logo-oracle-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-oracle-color-svg);
     }
     %with-logo-oracle-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-oracle-color-svg);
-      mask-image: var(--logo-oracle-color-svg);
     }
 
 %with-logo-oracle-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-oracle-monochrome-svg);
     }
     %with-logo-oracle-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-oracle-monochrome-svg);
-      mask-image: var(--logo-oracle-monochrome-svg);
     }
 
 %with-logo-slack-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-slack-color-svg);
     }
     %with-logo-slack-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-slack-color-svg);
-      mask-image: var(--logo-slack-color-svg);
     }
 
 %with-logo-slack-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-slack-monochrome-svg);
     }
     %with-logo-slack-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-slack-monochrome-svg);
-      mask-image: var(--logo-slack-monochrome-svg);
+    }
+
+%with-logo-terraform-color-icon {
+      @extend %with-icon;
+    }
+    %with-logo-terraform-color-mask {
+      @extend %with-mask;
     }
 
 %with-logo-vmware-color-icon {
       @extend %with-icon;
-      background-image: var(--logo-vmware-color-svg);
     }
     %with-logo-vmware-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-vmware-color-svg);
-      mask-image: var(--logo-vmware-color-svg);
     }
 
 %with-logo-vmware-monochrome-icon {
       @extend %with-icon;
-      background-image: var(--logo-vmware-monochrome-svg);
     }
     %with-logo-vmware-monochrome-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--logo-vmware-monochrome-svg);
-      mask-image: var(--logo-vmware-monochrome-svg);
     }
 
 %with-menu-icon {
       @extend %with-icon;
-      background-image: var(--menu-svg);
     }
     %with-menu-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--menu-svg);
-      mask-image: var(--menu-svg);
     }
 
 %with-mesh-icon {
       @extend %with-icon;
-      background-image: var(--mesh-svg);
     }
     %with-mesh-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--mesh-svg);
-      mask-image: var(--mesh-svg);
     }
 
 %with-message-icon {
       @extend %with-icon;
-      background-image: var(--message-svg);
     }
     %with-message-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--message-svg);
-      mask-image: var(--message-svg);
     }
 
 %with-minus-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--minus-circle-fill-svg);
     }
     %with-minus-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-circle-fill-svg);
-      mask-image: var(--minus-circle-fill-svg);
     }
 
 %with-minus-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--minus-circle-outline-svg);
     }
     %with-minus-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-circle-outline-svg);
-      mask-image: var(--minus-circle-outline-svg);
     }
 
 %with-minus-plain-icon {
       @extend %with-icon;
-      background-image: var(--minus-plain-svg);
     }
     %with-minus-plain-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-plain-svg);
-      mask-image: var(--minus-plain-svg);
     }
 
 %with-minus-square-fill-color-icon {
       @extend %with-icon;
-      background-image: var(--minus-square-fill-color-svg);
     }
     %with-minus-square-fill-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-square-fill-color-svg);
-      mask-image: var(--minus-square-fill-color-svg);
     }
 
 %with-minus-square-fill-icon {
       @extend %with-icon;
-      background-image: var(--minus-square-fill-svg);
     }
     %with-minus-square-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-square-fill-svg);
-      mask-image: var(--minus-square-fill-svg);
     }
 
 %with-minus-icon {
       @extend %with-icon;
-      background-image: var(--minus-svg);
     }
     %with-minus-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--minus-svg);
-      mask-image: var(--minus-svg);
     }
 
 %with-module-icon {
       @extend %with-icon;
-      background-image: var(--module-svg);
     }
     %with-module-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--module-svg);
-      mask-image: var(--module-svg);
     }
 
 %with-more-horizontal-icon {
       @extend %with-icon;
-      background-image: var(--more-horizontal-svg);
     }
     %with-more-horizontal-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--more-horizontal-svg);
-      mask-image: var(--more-horizontal-svg);
     }
 
 %with-more-vertical-icon {
       @extend %with-icon;
-      background-image: var(--more-vertical-svg);
     }
     %with-more-vertical-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--more-vertical-svg);
-      mask-image: var(--more-vertical-svg);
     }
 
 %with-nomad-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--nomad-logo-color-svg);
     }
     %with-nomad-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--nomad-logo-color-svg);
-      mask-image: var(--nomad-logo-color-svg);
     }
 
 %with-notification-disabled-icon {
       @extend %with-icon;
-      background-image: var(--notification-disabled-svg);
     }
     %with-notification-disabled-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--notification-disabled-svg);
-      mask-image: var(--notification-disabled-svg);
     }
 
 %with-notification-fill-icon {
       @extend %with-icon;
-      background-image: var(--notification-fill-svg);
     }
     %with-notification-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--notification-fill-svg);
-      mask-image: var(--notification-fill-svg);
     }
 
 %with-notification-outline-icon {
       @extend %with-icon;
-      background-image: var(--notification-outline-svg);
     }
     %with-notification-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--notification-outline-svg);
-      mask-image: var(--notification-outline-svg);
     }
 
 %with-oidc-logo-icon {
       @extend %with-icon;
-      background-image: var(--oidc-logo-svg);
     }
     %with-oidc-logo-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--oidc-logo-svg);
-      mask-image: var(--oidc-logo-svg);
     }
 
 %with-outline-icon {
       @extend %with-icon;
-      background-image: var(--outline-svg);
     }
     %with-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--outline-svg);
-      mask-image: var(--outline-svg);
     }
 
 %with-page-outline-icon {
       @extend %with-icon;
-      background-image: var(--page-outline-svg);
     }
     %with-page-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--page-outline-svg);
-      mask-image: var(--page-outline-svg);
     }
 
 %with-partner-icon {
       @extend %with-icon;
-      background-image: var(--partner-svg);
     }
     %with-partner-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--partner-svg);
-      mask-image: var(--partner-svg);
     }
 
 %with-path-icon {
       @extend %with-icon;
-      background-image: var(--path-svg);
     }
     %with-path-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--path-svg);
-      mask-image: var(--path-svg);
     }
 
 %with-plus-circle-fill-icon {
       @extend %with-icon;
-      background-image: var(--plus-circle-fill-svg);
     }
     %with-plus-circle-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--plus-circle-fill-svg);
-      mask-image: var(--plus-circle-fill-svg);
     }
 
 %with-plus-circle-outline-icon {
       @extend %with-icon;
-      background-image: var(--plus-circle-outline-svg);
     }
     %with-plus-circle-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--plus-circle-outline-svg);
-      mask-image: var(--plus-circle-outline-svg);
     }
 
 %with-plus-plain-icon {
       @extend %with-icon;
-      background-image: var(--plus-plain-svg);
     }
     %with-plus-plain-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--plus-plain-svg);
-      mask-image: var(--plus-plain-svg);
     }
 
 %with-plus-square-fill-icon {
       @extend %with-icon;
-      background-image: var(--plus-square-fill-svg);
     }
     %with-plus-square-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--plus-square-fill-svg);
-      mask-image: var(--plus-square-fill-svg);
     }
 
 %with-port-icon {
       @extend %with-icon;
-      background-image: var(--port-svg);
     }
     %with-port-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--port-svg);
-      mask-image: var(--port-svg);
     }
 
 %with-protocol-icon {
       @extend %with-icon;
-      background-image: var(--protocol-svg);
     }
     %with-protocol-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--protocol-svg);
-      mask-image: var(--protocol-svg);
     }
 
 %with-provider-icon {
       @extend %with-icon;
-      background-image: var(--provider-svg);
     }
     %with-provider-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--provider-svg);
-      mask-image: var(--provider-svg);
     }
 
 %with-public-default-icon {
       @extend %with-icon;
-      background-image: var(--public-default-svg);
     }
     %with-public-default-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--public-default-svg);
-      mask-image: var(--public-default-svg);
     }
 
 %with-public-locked-icon {
       @extend %with-icon;
-      background-image: var(--public-locked-svg);
     }
     %with-public-locked-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--public-locked-svg);
-      mask-image: var(--public-locked-svg);
     }
 
 %with-queue-icon {
       @extend %with-icon;
-      background-image: var(--queue-svg);
     }
     %with-queue-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--queue-svg);
-      mask-image: var(--queue-svg);
     }
 
 %with-radio-button-checked-icon {
       @extend %with-icon;
-      background-image: var(--radio-button-checked-svg);
     }
     %with-radio-button-checked-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--radio-button-checked-svg);
-      mask-image: var(--radio-button-checked-svg);
     }
 
 %with-radio-button-unchecked-icon {
       @extend %with-icon;
-      background-image: var(--radio-button-unchecked-svg);
     }
     %with-radio-button-unchecked-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--radio-button-unchecked-svg);
-      mask-image: var(--radio-button-unchecked-svg);
     }
 
 %with-random-icon {
       @extend %with-icon;
-      background-image: var(--random-svg);
     }
     %with-random-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--random-svg);
-      mask-image: var(--random-svg);
     }
 
 %with-redirect-icon {
       @extend %with-icon;
-      background-image: var(--redirect-svg);
     }
     %with-redirect-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--redirect-svg);
-      mask-image: var(--redirect-svg);
     }
 
 %with-refresh-alert-icon {
       @extend %with-icon;
-      background-image: var(--refresh-alert-svg);
     }
     %with-refresh-alert-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--refresh-alert-svg);
-      mask-image: var(--refresh-alert-svg);
     }
 
 %with-refresh-default-icon {
       @extend %with-icon;
-      background-image: var(--refresh-default-svg);
     }
     %with-refresh-default-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--refresh-default-svg);
-      mask-image: var(--refresh-default-svg);
     }
 
 %with-remix-icon {
       @extend %with-icon;
-      background-image: var(--remix-svg);
     }
     %with-remix-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--remix-svg);
-      mask-image: var(--remix-svg);
     }
 
 %with-ribbon-icon {
       @extend %with-icon;
-      background-image: var(--ribbon-svg);
     }
     %with-ribbon-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--ribbon-svg);
-      mask-image: var(--ribbon-svg);
     }
 
 %with-run-icon {
       @extend %with-icon;
-      background-image: var(--run-svg);
     }
     %with-run-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--run-svg);
-      mask-image: var(--run-svg);
     }
 
 %with-search-color-icon {
       @extend %with-icon;
-      background-image: var(--search-color-svg);
     }
     %with-search-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--search-color-svg);
-      mask-image: var(--search-color-svg);
     }
 
 %with-search-icon {
       @extend %with-icon;
-      background-image: var(--search-svg);
     }
     %with-search-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--search-svg);
-      mask-image: var(--search-svg);
     }
 
 %with-service-identity-icon {
       @extend %with-icon;
-      background-image: var(--service-identity-svg);
     }
     %with-service-identity-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--service-identity-svg);
-      mask-image: var(--service-identity-svg);
     }
 
 %with-settings-icon {
       @extend %with-icon;
-      background-image: var(--settings-svg);
     }
     %with-settings-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--settings-svg);
-      mask-image: var(--settings-svg);
     }
 
 %with-sort-icon {
       @extend %with-icon;
-      background-image: var(--sort-svg);
     }
     %with-sort-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--sort-svg);
-      mask-image: var(--sort-svg);
     }
 
 %with-source-file-icon {
       @extend %with-icon;
-      background-image: var(--source-file-svg);
     }
     %with-source-file-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--source-file-svg);
-      mask-image: var(--source-file-svg);
     }
 
 %with-star-fill-icon {
       @extend %with-icon;
-      background-image: var(--star-fill-svg);
     }
     %with-star-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--star-fill-svg);
-      mask-image: var(--star-fill-svg);
     }
 
 %with-star-outline-icon {
       @extend %with-icon;
-      background-image: var(--star-outline-svg);
     }
     %with-star-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--star-outline-svg);
-      mask-image: var(--star-outline-svg);
     }
 
 %with-star-icon {
       @extend %with-icon;
-      background-image: var(--star-svg);
     }
     %with-star-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--star-svg);
-      mask-image: var(--star-svg);
     }
 
 %with-sub-left-icon {
       @extend %with-icon;
-      background-image: var(--sub-left-svg);
     }
     %with-sub-left-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--sub-left-svg);
-      mask-image: var(--sub-left-svg);
     }
 
 %with-sub-right-icon {
       @extend %with-icon;
-      background-image: var(--sub-right-svg);
     }
     %with-sub-right-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--sub-right-svg);
-      mask-image: var(--sub-right-svg);
     }
 
 %with-support-icon {
       @extend %with-icon;
-      background-image: var(--support-svg);
     }
     %with-support-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--support-svg);
-      mask-image: var(--support-svg);
     }
 
 %with-swap-horizontal-icon {
       @extend %with-icon;
-      background-image: var(--swap-horizontal-svg);
     }
     %with-swap-horizontal-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--swap-horizontal-svg);
-      mask-image: var(--swap-horizontal-svg);
     }
 
 %with-swap-vertical-icon {
       @extend %with-icon;
-      background-image: var(--swap-vertical-svg);
     }
     %with-swap-vertical-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--swap-vertical-svg);
-      mask-image: var(--swap-vertical-svg);
     }
 
 %with-tag-icon {
       @extend %with-icon;
-      background-image: var(--tag-svg);
     }
     %with-tag-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--tag-svg);
-      mask-image: var(--tag-svg);
     }
 
 %with-terraform-logo-color-icon {
       @extend %with-icon;
-      background-image: var(--terraform-logo-color-svg);
     }
     %with-terraform-logo-color-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--terraform-logo-color-svg);
-      mask-image: var(--terraform-logo-color-svg);
     }
 
 %with-trash-icon {
       @extend %with-icon;
-      background-image: var(--trash-svg);
     }
     %with-trash-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--trash-svg);
-      mask-image: var(--trash-svg);
     }
 
 %with-tune-icon {
       @extend %with-icon;
-      background-image: var(--tune-svg);
     }
     %with-tune-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--tune-svg);
-      mask-image: var(--tune-svg);
     }
 
 %with-unfold-less-icon {
       @extend %with-icon;
-      background-image: var(--unfold-less-svg);
     }
     %with-unfold-less-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--unfold-less-svg);
-      mask-image: var(--unfold-less-svg);
     }
 
 %with-unfold-more-icon {
       @extend %with-icon;
-      background-image: var(--unfold-more-svg);
     }
     %with-unfold-more-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--unfold-more-svg);
-      mask-image: var(--unfold-more-svg);
     }
 
 %with-upload-icon {
       @extend %with-icon;
-      background-image: var(--upload-svg);
     }
     %with-upload-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--upload-svg);
-      mask-image: var(--upload-svg);
     }
 
 %with-user-add-icon {
       @extend %with-icon;
-      background-image: var(--user-add-svg);
     }
     %with-user-add-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-add-svg);
-      mask-image: var(--user-add-svg);
     }
 
 %with-user-organization-icon {
       @extend %with-icon;
-      background-image: var(--user-organization-svg);
     }
     %with-user-organization-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-organization-svg);
-      mask-image: var(--user-organization-svg);
     }
 
 %with-user-plain-icon {
       @extend %with-icon;
-      background-image: var(--user-plain-svg);
     }
     %with-user-plain-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-plain-svg);
-      mask-image: var(--user-plain-svg);
     }
 
 %with-user-square-fill-icon {
       @extend %with-icon;
-      background-image: var(--user-square-fill-svg);
     }
     %with-user-square-fill-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-square-fill-svg);
-      mask-image: var(--user-square-fill-svg);
     }
 
 %with-user-square-outline-icon {
       @extend %with-icon;
-      background-image: var(--user-square-outline-svg);
     }
     %with-user-square-outline-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-square-outline-svg);
-      mask-image: var(--user-square-outline-svg);
     }
 
 %with-user-team-icon {
       @extend %with-icon;
-      background-image: var(--user-team-svg);
     }
     %with-user-team-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--user-team-svg);
-      mask-image: var(--user-team-svg);
     }
 
 %with-visibility-hide-icon {
       @extend %with-icon;
-      background-image: var(--visibility-hide-svg);
     }
     %with-visibility-hide-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--visibility-hide-svg);
-      mask-image: var(--visibility-hide-svg);
     }
 
 %with-visibility-show-icon {
       @extend %with-icon;
-      background-image: var(--visibility-show-svg);
     }
     %with-visibility-show-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--visibility-show-svg);
-      mask-image: var(--visibility-show-svg);
     }
 
 %with-webhook-icon {
       @extend %with-icon;
-      background-image: var(--webhook-svg);
     }
     %with-webhook-mask {
       @extend %with-mask;
-      -webkit-mask-image: var(--webhook-svg);
-      mask-image: var(--webhook-svg);
     }

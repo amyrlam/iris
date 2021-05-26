@@ -63,8 +63,12 @@ const items = {
 const inlineIcons = Object.keys(items).sort().reduce(
   function(prev, key) {
     // console.log(`"${key}",`);
-    prev.push(
-      `--${key.replace('.', '-').replace(' ', '-')}: url('data:image/svg+xml;charset=UTF-8,${items[key].trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');`
+    const name = key.replace('.', '-').replace(' ', '-');
+    prev.push(`
+%${name}-prop {
+  --${name}: url('data:image/svg+xml;charset=UTF-8,${items[key].trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');
+}
+`
     );
     return prev;
   },
@@ -76,9 +80,7 @@ ${item}`;
   }
 );
 
-fs.writeFileSync(options.inputPath + '/icons/base-variables.css', `:root {
-  ${inlineIcons}
-}`);
+fs.writeFileSync(options.inputPath + '/icons/base-variables.css', inlineIcons);
 fs.writeFileSync(options.inputPath + '/icons/index.txt', `[
 '${Object.keys(items).sort().join("',\n'")}'
 ]`);
@@ -88,11 +90,11 @@ const placeholderIcons = Object.keys(items).sort().map(
   function(item) {
     const property = item.replace('.', '-').replace(' ', '-');
     return `%with-${property.replace('svg', 'icon')} {
-      @extend %with-icon;
+      @extend %with-icon, %${property}-prop;
       background-image: var(--${property});
     }
     %with-${property.replace('svg', 'mask')} {
-      @extend %with-mask;
+      @extend %with-mask, %${property}-prop;
       -webkit-mask-image: var(--${property});
       mask-image: var(--${property});
     }
