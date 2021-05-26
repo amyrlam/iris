@@ -9,8 +9,8 @@
 %frame-brand-300 {
   @extend %frame-border-000;
   background-color: var(--transparent);
-  border-color: var(--decor-brand-600);
-  color: var(--typo-brand-600);
+  border-color: var(--decor-brand-600, inherit);
+  color: var(--typo-brand-600, inherit);
 }
 
 /* possibly filter bar */
@@ -107,6 +107,18 @@
   border-color: var(--green-800);
   color: var(--white);
 }
+%frame-blue-200 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--blue-300);
+  color: var(--blue-300);
+}
+%frame-blue-300 {
+  @extend %frame-border-000;
+  background-color: var(--white);
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+}
 %frame-blue-500 {
   @extend %frame-border-000;
   background-color: var(--blue-050);
@@ -139,7 +151,7 @@
 }
 %frame-red-300 {
   @extend %frame-border-000;
-  background-color: var(--white);
+  background-color: var(--transparent);
   border-color: var(--red-500);
   color: var(--red-500);
 }

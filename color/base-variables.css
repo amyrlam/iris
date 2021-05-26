@@ -85,6 +85,8 @@
   --cyan-900: #003346;
 
 /* ui */
+
+/* removed to prevent confusion
   --gray-1: #191a1c;
   --gray-2: #323538;
   --gray-3: #4c4f54;
@@ -95,10 +97,12 @@
   --gray-8: #d0d2d5;
   --gray-9: #ebecee;
   --gray-10: #f3f4f6;
+*/
 
   --gray-010: #fbfbfc;
   --gray-050: #f7f8fa;
   --gray-100: #ebeef2;
+  --gray-150: #ebeef2;
   --gray-200: #dce0e6;
   --gray-300: #bac1cc;
   --gray-400: #8e96a3;
@@ -106,7 +110,9 @@
   --gray-600: #626873;
   --gray-700: #525761;
   --gray-800: #373a42;
+  --gray-850: #2c2e33;
   --gray-900: #1f2124;
+  --gray-950: #15171c;
 
 /* status */
   --green-050: #ecf7ed;
@@ -120,6 +126,7 @@
   --green-800: #15501a;
   --green-900: #0d3010;
 
+  --blue-010: #fbfcff;
   --blue-050: #f0f5ff;
   --blue-100: #bfd4ff;
   --blue-200: #8ab1ff;
@@ -131,6 +138,7 @@
   --blue-800: #0a2d74;
   --blue-900: #061b46;
 
+  --red-010: #fdfafb;
   --red-050: #f9ecee;
   --red-100: #efc7cc;
   --red-200: #e5a2aa;
