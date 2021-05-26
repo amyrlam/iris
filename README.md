@@ -80,7 +80,6 @@ yarn run format:css
 - [Typography](#typography)
 - [Decoration](#decoration)
 - [Reset](#reset)
-- [Components](#components)
 
 All examples below use CSS properties for examples, but if you are using SASS these can be interchanged with SASS variables (i.e. --blue-500 = $blue-500)
 
@@ -164,30 +163,6 @@ The Reset Collection is slightly different from the rest of the collections in t
 If you are _migrating to_ iris, you might not want to import the Reset Collection immediately and continue to use whatever reset you are already using.
 
 The Reset collection currently consists of a reasonably common 'reset', but also contains work towards providing different resets to aid migration. It **does** set styles on base DOM elements like `html, body, p, h1, h2, h3, h4, h5` etc and **therefore will add weight to your final CSS file**.
-
-### Components
-
-- `%action-group`
-- `%anchor`
-- `%breadcrumbs`
-- `%buttons`
-- `%checkbox-group`
-- `%form-elements`
-- `%notice`
-- `%pill`
-- `%radio-group`
-- `%sliding-toggle`
-- `%sort-control`
-- `%stats-card`
-- `%table`
-- `%tabs`
-- `%toggle-button`
-- `%tooltip`
-- `%modal-window`
-- `%modal-dialog`
-- `%inline-alert`
-
-More information to come...
 
 
 ## Rationale
