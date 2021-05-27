@@ -235,12 +235,11 @@
 'webhook.svg'
                     ].map(
             (item, i, arr) => {
-              const name = item.replace('.svg', '-svg');
+              const name = item.replace('.svg', '');
               return `
 
                 li:nth-child(${i + 1}) figure span::before {
-                  @extend %with-mask, %as-pseudo;
-                  -webkit-mask-image: var(--${name});
+                  @extend %with-${name}-mask, %as-pseudo;
                   background-color: var(--${
                     [
                       'gray', 'green', 'red', 'orange', 'yellow', 'blue',
