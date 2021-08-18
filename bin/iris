@@ -5,6 +5,7 @@ const promisify = require('util.promisify');
 const fs = require('fs');
 const glob = promisify(require('glob'));
 const varibilify = require('../lib/varibilify.js');
+
 const options = process.argv.reduce(
   function(prev, item, i, arr) {
     switch(true) {
@@ -41,6 +42,7 @@ const compile = function(src) {
 };
 
 const STRUCTURE_ICONS = '/node_modules/@hashicorp/structure-icons/dist';
+const FLIGHT_ICONS = '/node_modules/@hashicorp/ember-flight-icons/public/icons';
 const IRIS_ICONS = '/svg';
 console.log(`Writing SVG icons to inline CSS properties:`);
 const icons = function(path) {
@@ -57,19 +59,36 @@ const icons = function(path) {
   )
 }
 const items = {
+  ...icons(FLIGHT_ICONS),
   ...icons(STRUCTURE_ICONS),
   ...icons(IRIS_ICONS)
 };
+const mappings = JSON.parse(fs.readFileSync(options.inputPath + '/node_modules/@hashicorp/ember-flight-icons/structure-mappings.json'));
 const inlineIcons = Object.keys(items).sort().reduce(
-  function(prev, key) {
+  function(prev, item) {
     // console.log(`"${key}",`);
-    const name = key.replace('.', '-').replace(' ', '-');
-    prev.push(`
+    const key = item.replace('.svg', '');
+    const name = item.replace('.', '-').replace(' ', '-');
+    if((mappings[key] || '').length > 0) {
+      prev.push(`
 %${name}-prop {
-  --${name}: url('data:image/svg+xml;charset=UTF-8,${items[key].trim().replace(/#/g, "%23").replace('currentColor', '%23000')}');
+  @extend %${mappings[key]}-24-svg-prop !optional;
 }
-`
-    );
+`);
+    } else {
+      prev.push(`
+%${name}-prop {
+  --${name}: url('data:image/svg+xml;charset=UTF-8,${
+      items[item].trim()
+        .replace(/#/g, "%23")
+        .replace('currentColor', '%23000')
+        .replace('width="24" height="24"', 'viewBox="0 0 24 24"')
+      }');
+}
+`);
+
+    }
+
     return prev;
   },
   []
@@ -88,15 +107,20 @@ fs.writeFileSync(options.inputPath + '/icons/index.txt', `[
 console.log(`Writing inline icons to icon %with- placeholders:`);
 const placeholderIcons = Object.keys(items).sort().map(
   function(item) {
+    const key = item.replace('.svg', '');
     const property = item.replace('.', '-').replace(' ', '-');
+    let ext = property;
+    if((mappings[key] || '').length > 0) {
+      ext = `${mappings[key]}-24-svg`;
+    }
     return `%with-${property.replace('svg', 'icon')} {
-      @extend %with-icon, %${property}-prop;
-      background-image: var(--${property});
+      @extend %with-icon, %${ext}-prop !optional;
+      background-image: var(--${ext});
     }
     %with-${property.replace('svg', 'mask')} {
-      @extend %with-mask, %${property}-prop;
-      -webkit-mask-image: var(--${property});
-      mask-image: var(--${property});
+      @extend %with-mask, %${ext}-prop !optional;
+      -webkit-mask-image: var(--${ext});
+      mask-image: var(--${ext});
     }
 `
   }
