@@ -6,6 +6,7 @@ const fs = require('fs');
 const glob = promisify(require('glob'));
 const varibilify = require('../lib/varibilify.js');
 
+// Simple no-dep CLI flag parsing
 const options = process.argv.reduce(
   function(prev, item, i, arr) {
     switch(true) {
@@ -30,6 +31,9 @@ const options = process.argv.reduce(
     includeHeader: true
   }
 );
+//
+
+// make some utils to use later
 const filter = require('../lib/filter.js')(path.resolve(options.inputPath), path.resolve(options.outputPath), options.includeHeader);
 
 const compiler = postcss().use(varibilify())
@@ -40,11 +44,16 @@ const compile = function(src) {
     }
   );
 };
+//
 
+// where to look for svgs
 const STRUCTURE_ICONS = '/node_modules/@hashicorp/structure-icons/dist';
 const FLIGHT_ICONS = '/node_modules/@hashicorp/ember-flight-icons/public/icons';
 const IRIS_ICONS = '/svg';
-console.log(`Writing SVG icons to inline CSS properties:`);
+//
+
+console.log(`Writing SVG icons to inline CSS custom properties:`);
+// get all the svg's as strings
 const icons = function(path) {
   return fs.readdirSync(`${options.inputPath}${path}`).filter(
     function(item) {
@@ -63,12 +72,22 @@ const items = {
   ...icons(STRUCTURE_ICONS),
   ...icons(IRIS_ICONS)
 };
+//
+
+// get the db of "structure to flight" mappings
 const mappings = JSON.parse(fs.readFileSync(options.inputPath + '/node_modules/@hashicorp/ember-flight-icons/structure-mappings.json'));
 const inlineIcons = Object.keys(items).sort().reduce(
   function(prev, item) {
     // console.log(`"${key}",`);
+    
+    // make some safe property names
     const key = item.replace('.svg', '');
     const name = item.replace('.', '-').replace(' ', '-');
+
+    // if we have a flight mapping, don't inline the structure icon, extend the
+    // flight inlined icon instead.
+    // We need to use optional here as I don't think the mapping is entirely
+    // up-to-date with the svgs in the folder in flight
     if((mappings[key] || '').length > 0) {
       prev.push(`
 %${name}-prop {
@@ -76,6 +95,17 @@ const inlineIcons = Object.keys(items).sort().reduce(
 }
 `);
     } else {
+      // if its a non-mapped structure icon, or a flight icon, inline the svg as
+      // a CSS custom property made available via a tree-shakable %placeholder
+      //
+      // %name-of-icon-prop {
+      //   --name-of-icon: url(the-encoded-svg);
+      // }
+      //
+      // Here we also:
+      // 1. Convert any #'s to %23
+      // 2. Swap currentColor for black
+      // 3. Swap any width/height to a viewbob
       prev.push(`
 %${name}-prop {
   --${name}: url('data:image/svg+xml;charset=UTF-8,${
@@ -99,10 +129,33 @@ ${item}`;
   }
 );
 
+// write all the icons back out to a CSS file
 fs.writeFileSync(options.inputPath + '/icons/base-variables.css', inlineIcons);
+// make an index of our icons for access for testing and/or documentation
+// purposes
 fs.writeFileSync(options.inputPath + '/icons/index.txt', `[
 '${Object.keys(items).sort().join("',\n'")}'
 ]`);
+
+// for every CSS custom property icon, compose a much easier to use `%with-` placeholder
+// with a little additional tweaking for the new 24/16 flight icons
+// These are the ones the 'end user' actually uses in their CSS.
+// %with-name-icon {
+//   @extend: %with-icon, %name-prop;
+//   background-image: var(--name);
+// }
+// %with-name-mask {
+//   @extend: %with-mask, %name-prop;
+//   -webkit-mask-image: var(--name);
+//   mask-image: var(--name);
+// }
+//
+// %with-name-icon ones are just black svg bg-images, which we could probablt
+// remove now as we barely use them.
+// %with-name-mask ones are the same black svgs but as background masks so they
+// either inherit the currentColor or you can set the color of them using CSS
+// via color/background-color. Also see iris/icons/base-placeholders.css
+
 
 console.log(`Writing inline icons to icon %with- placeholders:`);
 const placeholderIcons = Object.keys(items).sort().map(
@@ -130,8 +183,21 @@ const placeholderIcons = Object.keys(items).sort().map(
 ${item}`;
   }
 );
+// write out all of the %with-name-icon placeholders
 fs.writeFileSync(options.inputPath + '/icons/icon-placeholders.css', placeholderIcons);
 
+
+// all of the above has the self-imposed restriction that it should be as native
+// CSS as possible (along with %placeholders/@extends which work in both SASS
+// and PostCSS)
+// As we generally use SASS in products, all of the following is just converting
+// things to SASS variables and SASS-like filenames etc.
+// This is not just for icons, but also for colors, 'decoration' (like borders
+// and things) and typography
+
+
+// Theres another branch I have were we stop using SASS vars altogether so a lot
+// of this is no longer needed since we stopped supporting IE11
 
 console.log(`Writing CSS custom properties to SASS variables:`);
 console.log(`Writing CSS @imports to SASS @imports:`);
