@@ -158,6 +158,7 @@
 'search-color.svg',
 'search.svg',
 'settings.svg',
+'socket.svg',
 'sort.svg',
 'source-file.svg',
 'star-fill.svg',
