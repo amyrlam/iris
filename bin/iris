@@ -48,7 +48,7 @@ const compile = function(src) {
 
 // where to look for svgs
 const STRUCTURE_ICONS = '/node_modules/@hashicorp/structure-icons/dist';
-const FLIGHT_ICONS = '/node_modules/@hashicorp/ember-flight-icons/public/icons';
+const FLIGHT_ICONS = '/node_modules/@hashicorp/flight-icons';
 const IRIS_ICONS = '/svg';
 //
 
@@ -75,7 +75,7 @@ const items = {
 //
 
 // get the db of "structure to flight" mappings
-const mappings = JSON.parse(fs.readFileSync(options.inputPath + '/node_modules/@hashicorp/ember-flight-icons/structure-mappings.json'));
+const mappings = JSON.parse(fs.readFileSync(options.inputPath + '/structure-mappings.json'));
 const inlineIcons = Object.keys(items).sort().reduce(
   function(prev, item) {
     // console.log(`"${key}",`);
